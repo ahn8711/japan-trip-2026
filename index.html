@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSAKA 2026 - Travel Planner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+:root{--bg:#fff;--text:#222;--text2:#6a6a6a;--text3:#999;--accent:#ff385c;--border:#ebebeb;--surface:#f7f7f7;--shadow:0 0 0 1px rgba(0,0,0,.02),0 2px 6px rgba(0,0,0,.04),0 4px 8px rgba(0,0,0,.1);--r-sm:8px;--r-md:14px;--r-lg:20px}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
+
+.header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.header-inner{max-width:1200px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:22px;font-weight:700;letter-spacing:-.5px}.logo span{color:var(--accent)}
+.header-tags{display:flex;gap:10px;font-size:13px;color:var(--text2)}
+.tag{background:var(--surface);padding:5px 12px;border-radius:20px;font-weight:500}
+
+.tabs-wrap{position:sticky;top:57px;z-index:99;background:rgba(255,255,255,.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
+.tabs{max-width:1200px;margin:0 auto;padding:0 24px;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{flex-shrink:0;padding:12px 20px;font-size:14px;font-weight:500;color:var(--text2);cursor:pointer;border-bottom:2px solid transparent;transition:.2s;white-space:nowrap;text-align:center}
+.tab:hover{color:var(--text)}.tab.active{color:var(--text);font-weight:600;border-bottom-color:var(--text)}
+.tab small{display:block;font-size:11px;color:var(--text3);margin-top:2px;font-weight:400}
+
+.main{max-width:1200px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px;min-height:calc(100vh - 120px)}
+.panel{display:flex;flex-direction:column;gap:12px}
+
+.day-head{display:flex;align-items:baseline;gap:12px;margin-bottom:4px}
+.day-head h2{font-size:26px;font-weight:700;letter-spacing:-.5px}
+.day-head .label{font-size:14px;color:var(--text2);font-weight:500}
+
+.flight{background:linear-gradient(135deg,#1a1a2e,#16213e);color:#fff;border-radius:var(--r-lg);padding:22px}
+.flight-route{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.flight-city{text-align:center}.flight-city .city{font-size:22px;font-weight:700}.flight-city .time{font-size:13px;opacity:.7;margin-top:4px}
+.flight-line{flex:1;display:flex;align-items:center;justify-content:center;padding:0 16px;position:relative}
+.flight-line::before{content:'';width:100%;height:1px;background:rgba(255,255,255,.3);position:absolute}
+.flight-line .plane{background:#1a1a2e;padding:0 8px;position:relative;font-size:16px}
+.flight-code{font-size:12px;opacity:.6;text-align:center}
+
+.ev{background:var(--bg);border:1px solid var(--border);border-radius:var(--r-md);padding:14px 18px;display:flex;gap:14px;align-items:flex-start;transition:.2s}
+.ev:hover{box-shadow:var(--shadow)}
+.ev-time{flex-shrink:0;width:80px;font-size:13px;font-weight:600;color:var(--accent);padding-top:1px}
+.ev-body{flex:1}.ev-title{font-size:14px;font-weight:600;margin-bottom:3px}.ev-note{font-size:12px;color:var(--text2)}
+
+.accom{background:var(--surface);border-radius:var(--r-lg);padding:18px 22px}
+.accom h3{font-size:15px;font-weight:600;margin-bottom:10px}
+.accom-grid{display:grid;grid-template-columns:auto 1fr;gap:5px 12px;font-size:12px}
+.accom-grid dt{color:var(--text2);font-weight:500}.accom-grid dd{color:var(--text)}
+
+.special{border-radius:var(--r-lg);padding:22px;color:#fff;font-size:13px;line-height:1.8}
+.special h3{font-size:17px;margin-bottom:10px}
+.special .dim{opacity:.6;margin-top:10px}
+
+hr.div{border:none;border-top:1px solid var(--border);margin:8px 0}
+
+.area-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
+.area-chip{padding:8px 12px;background:var(--surface);border-radius:var(--r-sm);font-size:12px;cursor:pointer;transition:.2s}
+.area-chip:hover{background:#eee}.area-chip.on{background:var(--text);color:#fff}.area-chip.on .ac{color:rgba(255,255,255,.7)}.area-chip .an{font-weight:600}.area-chip .ac{color:var(--text2);font-size:11px}
+.leaflet-tooltip{font-family:'Inter',sans-serif;font-size:12px;font-weight:500;padding:4px 10px;border-radius:6px;border:none;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+
+.filters{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px}
+.chip{padding:5px 12px;border-radius:20px;font-size:12px;font-weight:500;border:1px solid var(--border);background:var(--bg);cursor:pointer;transition:.2s;white-space:nowrap}
+.chip:hover{background:var(--surface)}.chip.on{background:var(--text);color:#fff;border-color:var(--text)}
+.chip .dot{display:inline-block;width:6px;height:6px;border-radius:50%;margin-right:4px;vertical-align:middle}
+
+.counter{font-size:12px;color:var(--text2);padding:4px 0}.counter strong{color:var(--accent)}
+
+.plist{display:flex;flex-direction:column;gap:6px;max-height:calc(100vh - 340px);overflow-y:auto;padding-right:4px}
+.plist::-webkit-scrollbar{width:3px}.plist::-webkit-scrollbar-thumb{background:#ddd;border-radius:3px}
+
+.pc{display:flex;align-items:center;gap:10px;padding:10px 14px;border:1px solid var(--border);border-radius:var(--r-sm);transition:.2s;cursor:pointer}
+.pc:hover{border-color:#ccc;box-shadow:var(--shadow);transform:translateY(-1px)}
+.pc.done{opacity:.45;background:var(--surface)}.pc.done .pn{text-decoration:line-through}
+.chk{width:18px;height:18px;border-radius:50%;border:2px solid var(--border);flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:.2s;font-size:10px;color:#fff}
+.pc.done .chk{background:var(--accent);border-color:var(--accent)}
+.pc.done .chk::after{content:'\2713'}
+.cdot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
+.pi{flex:1;min-width:0}.pn{font-size:13px;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pm{font-size:11px;color:var(--text2);display:flex;gap:6px;margin-top:1px}
+.pnote{font-size:11px;color:var(--accent);font-weight:500;margin-top:1px}
+.mbtn{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;transition:.2s}
+.mbtn:hover{background:#eee;transform:scale(1.1)}
+
+.map-wrap{position:sticky;top:120px;height:calc(100vh - 150px);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border)}
+#map{width:100%;height:100%}
+
+@media(max-width:768px){
+  .main{grid-template-columns:1fr;padding:16px}
+  .map-wrap{position:relative;top:0;height:280px;order:-1}
+  .header-tags{display:none}
+  .day-head h2{font-size:20px}
+  .plist{max-height:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header"><div class="header-inner">
+  <div class="logo">OSAKA <span>2026</span></div>
+  <div class="header-tags"><span class="tag">4/16 ~ 4/20</span><span class="tag" id="pc"></span></div>
+</div></header>
+
+<nav class="tabs-wrap"><div class="tabs" id="tabs"></div></nav>
+
+<main class="main">
+  <div class="panel" id="panel"></div>
+  <div class="map-wrap"><div id="map"></div></div>
+</main>
+
+<script>
+const DATA={"places":[{"name":"스시킨 화이티 우메다점","lat":34.703473,"lng":135.499631,"area":"우메다","cat":"스시"},{"name":"구로몬사카에스시","lat":34.666185,"lng":135.507347,"area":"구로몬시장","cat":"스시"},{"name":"사카에스시 타마야초점","lat":34.670268,"lng":135.504477,"area":"도톤보리","cat":"스시"},{"name":"슈하리","lat":34.682254,"lng":135.514565,"area":"신사이바시","cat":"스시"},{"name":"난반테이","lat":34.659368,"lng":135.504279,"area":"신세카이","cat":"꼬치","note":"현금만"},{"name":"HALAL Mori BBQ","lat":34.662739,"lng":135.508699,"area":"난바","cat":"꼬치"},{"name":"Takoshige","lat":34.660226,"lng":135.508055,"area":"난바","cat":"타코야키","note":"흡연 가능"},{"name":"Tottotto 난바센니치마에점","lat":34.666783,"lng":135.501811,"area":"난바","cat":"이자카야","note":"로바타야끼"},{"name":"Mallory Pork Steak","lat":34.663149,"lng":135.501563,"area":"난바","cat":"스테이크"},{"name":"치보 오코노미야키","lat":34.668807,"lng":135.503907,"area":"도톤보리","cat":"오코노미야키"},{"name":"야바톤 (나고야)","lat":35.167981,"lng":136.905446,"area":"나고야","cat":"미소카츠","note":"지브리 당일"},{"name":"모헤지 우메다 루쿠아점","lat":34.703255,"lng":135.495578,"area":"우메다","cat":"모츠나베"},{"name":"모지오 몬자야키","lat":34.664794,"lng":135.50528,"area":"난바","cat":"몬자야키"},{"name":"무겐라멘 난바 본점","lat":34.659759,"lng":135.498499,"area":"난바","cat":"라멘"},{"name":"이치란 도톤보리점","lat":34.6693,"lng":135.503072,"area":"도톤보리","cat":"라멘"},{"name":"오코노미야키 미즈노","lat":34.668355,"lng":135.503223,"area":"도톤보리","cat":"오코노미야키"},{"name":"토마토라멘 키오","lat":34.668615,"lng":135.499443,"area":"난바","cat":"라멘"},{"name":"노구치타로라멘 신사이바시","lat":34.672508,"lng":135.503377,"area":"신사이바시","cat":"라멘"},{"name":"무기토 토리","lat":34.677905,"lng":135.502502,"area":"신사이바시","cat":"라멘"},{"name":"라멘 텐도","lat":34.666267,"lng":135.505852,"area":"난바","cat":"라멘"},{"name":"라멘 초로","lat":34.683275,"lng":135.512317,"area":"신사이바시","cat":"라멘"},{"name":"NY Ramen 신사이바시","lat":34.672931,"lng":135.503387,"area":"신사이바시","cat":"라멘"},{"name":"킨무기 아메무라점","lat":34.672749,"lng":135.497121,"area":"아메무라","cat":"라멘"},{"name":"무한라멘 신이마미야","lat":34.649992,"lng":135.503747,"area":"신세카이","cat":"라멘"},{"name":"点心の気持ち","lat":34.666433,"lng":135.478697,"area":"난바","cat":"딤섬"},{"name":"야키니쿠 고리짱 우메다","lat":34.703724,"lng":135.503299,"area":"우메다","cat":"야키니쿠"},{"name":"마구로 잇테츠","lat":34.66762,"lng":135.503479,"area":"도톤보리","cat":"스시"},{"name":"카미나리 스시","lat":34.667599,"lng":135.503516,"area":"도톤보리","cat":"스시"},{"name":"우사기야","lat":34.653855,"lng":135.505959,"area":"신세카이","cat":"이자카야"},{"name":"우오토요","lat":34.664532,"lng":135.506716,"area":"난바","cat":"해산물"},{"name":"하치마루 오뎅","lat":34.665425,"lng":135.507851,"area":"난바","cat":"오뎅"},{"name":"잇포테이 본점","lat":34.662392,"lng":135.503725,"area":"난바","cat":"꼬치"},{"name":"쿠시카츠 다루마 총본점","lat":34.65157,"lng":135.506203,"area":"신세카이","cat":"쿠시카츠"},{"name":"Hanamichi","lat":34.651491,"lng":135.506234,"area":"신세카이","cat":"꼬치"},{"name":"오니기리 고리짱","lat":34.649417,"lng":135.505911,"area":"신세카이","cat":"오니기리"},{"name":"로쿠센 스시","lat":34.652747,"lng":135.506269,"area":"신세카이","cat":"스시"},{"name":"규카츠 다이후쿠","lat":34.653438,"lng":135.505999,"area":"신세카이","cat":"규카츠"},{"name":"고에몬","lat":34.651984,"lng":135.506634,"area":"신세카이","cat":"꼬치"},{"name":"수키야넨 오코노미야키","lat":34.671137,"lng":135.507576,"area":"신사이바시","cat":"오코노미야키"},{"name":"유세이 우라난바","lat":34.664884,"lng":135.505456,"area":"난바","cat":"이자카야"},{"name":"사시스 우메다점","lat":34.702602,"lng":135.499668,"area":"우메다","cat":"스시"},{"name":"사시스 난바점","lat":34.667016,"lng":135.505144,"area":"난바","cat":"스시"},{"name":"Tegetege","lat":34.662243,"lng":135.509144,"area":"난바","cat":"이자카야"},{"name":"Maruki","lat":34.655923,"lng":135.507219,"area":"신세카이","cat":"이자카야"},{"name":"규카츠 토미타","lat":34.662744,"lng":135.503953,"area":"난바","cat":"규카츠"},{"name":"마도라스카레","lat":34.659852,"lng":135.506648,"area":"신세카이","cat":"카레"},{"name":"쥬테이","lat":34.666213,"lng":135.502171,"area":"난바","cat":"이자카야"},{"name":"도톤보리 이마이","lat":34.668633,"lng":135.502714,"area":"도톤보리","cat":"우동"},{"name":"551 호라이만두","lat":34.666409,"lng":135.501346,"area":"난바","cat":"만두"},{"name":"Inanozi","lat":34.667812,"lng":135.504216,"area":"도톤보리","cat":"이자카야"},{"name":"和和鍋 道頓堀","lat":34.668829,"lng":135.501811,"area":"도톤보리","cat":"나베"},{"name":"무구니","lat":34.670574,"lng":135.499335,"area":"도톤보리","cat":"라멘"},{"name":"규카츠 모토무라 난바","lat":34.666617,"lng":135.501974,"area":"난바","cat":"규카츠"},{"name":"야키니쿠 호르몬 타카라","lat":34.66545,"lng":135.504074,"area":"구로몬시장","cat":"야키니쿠"},{"name":"토리키조쿠 난바","lat":34.664022,"lng":135.502738,"area":"난바","cat":"이자카야"},{"name":"후쿠타로","lat":34.665526,"lng":135.504499,"area":"난바","cat":"타코야키"},{"name":"멜론 브레드","lat":34.668784,"lng":135.503491,"area":"도톤보리","cat":"빵"}],
+"spots":[{"name":"도톤보리 글리코상","lat":34.6687,"lng":135.5025,"area":"도톤보리","cat":"관광","note":"인증샷 필수"},{"name":"도톤보리 크루즈","lat":34.669,"lng":135.503,"area":"도톤보리","cat":"관광","note":"밤에 타면 좋음"},{"name":"신세카이/츠텐카쿠","lat":34.6526,"lng":135.5063,"area":"신세카이","cat":"관광","note":"꼬치+맥주 거리"},{"name":"덴덴타운","lat":34.659,"lng":135.5055,"area":"닛폰바시","cat":"쇼핑","note":"피규어, 게임 (효진)"},{"name":"닌텐도샵 오사카","lat":34.705,"lng":135.4983,"area":"우메다","cat":"쇼핑","note":"다이마루 13층 (효진 인증샷)"},{"name":"다이마루 백화점 우메다","lat":34.7029,"lng":135.4983,"area":"우메다","cat":"쇼핑"},{"name":"GU 신사이바시","lat":34.6724,"lng":135.5018,"area":"신사이바시","cat":"쇼핑","note":"효진 옷 현지구매"},{"name":"돈키호테 도톤보리","lat":34.6687,"lng":135.502,"area":"도톤보리","cat":"쇼핑","note":"새롬+예진 힛템 리스트"},{"name":"구로몬시장","lat":34.666,"lng":135.5068,"area":"구로몬시장","cat":"관광","note":"오사카의 부엌"}],
+"schedule":{"2026-04-16":{"label":"도착일","flight":{"code":"OZ112","from":"인천","to":"간사이공항","dep":"06:55","arr":"09:00"},"events":[]},"2026-04-17":{"label":"USJ","events":[{"time":"09:00","title":"USJ 도착 목표","note":"영업시간 08:30~"},{"time":"09:45~10:15","title":"VIP 투어 접수","note":"체험 시작 45~15분 전 접수 필수"},{"time":"10:30","title":"25주년 VIP 그룹 투어 시작","note":"닌텐도 월드 우선 입장"},{"time":"15:30~","title":"익스프레스 패스 어트랙션","note":"해리포터, 할리우드 드림 등 3개"}]},"2026-04-18":{"label":"지브리파크","events":[{"time":"07:45","title":"신칸센 출발 (신오사카→나고야)","note":"신칸센 도시락 구매"},{"time":"09:30","title":"지브리파크 도착","note":"야외 에리어부터 (모노노케 마을 등)"},{"time":"14:00","title":"대창고 입장","note":"O-SANPO DAY PASS PREMIUM"},{"time":"17:00~","title":"지브리파크 종료 → 나고야역","note":""},{"time":"18:30~","title":"신칸센 복귀","note":"19:30 신오사카 도착"}]},"2026-04-19":{"label":"자유/쇼핑","events":[]},"2026-04-20":{"label":"귀국","flight":{"code":"OZ1135","from":"간사이공항","to":"김포","dep":"11:10","arr":"13:10"},"events":[{"time":"07:00","title":"숙소 출발","note":"비행기 2시간 전 공항 도착"},{"time":"09:10","title":"간사이공항 도착 목표","note":""}]}},
+"accom":{"name":"大阪之家 (닛폰바시)","addr":"浪速区日本橋5-1-15 3층","lat":34.659,"lng":135.506,"in":"15:00","out":"11:00","phone":"080-9751-9777","station":"에비스초역 4분, 난바역 7분","lock":"오른쪽0→오른쪽0→왼쪽2","note":"짐 아침부터 OK. 흡연불가. 슈퍼 고가다리 아래(새벽1시). 세탁기 옥상."}};
+
+const DAYS=[
+  {d:'2026-04-16',s:'4/16',l:'목',t:'4월 16일 (목)',desc:'오사카 도착'},
+  {d:'2026-04-17',s:'4/17',l:'금',t:'4월 17일 (금)',desc:'유니버셜 스튜디오'},
+  {d:'2026-04-18',s:'4/18',l:'토',t:'4월 18일 (토)',desc:'지브리파크'},
+  {d:'2026-04-19',s:'4/19',l:'일',t:'4월 19일 (일)',desc:'자유일정 · 쇼핑'},
+  {d:'2026-04-20',s:'4/20',l:'월',t:'4월 20일 (월)',desc:'귀국'}
+];
+
+// 카테고리 → 상위 그룹 매핑
+const GROUPS={
+  '🍣 스시/해산물':{color:'#ff6b6b',match:['스시','해산물']},
+  '🍜 면/덮밥':{color:'#ffa94d',match:['라멘','우동','카레','오니기리','딤섬']},
+  '🍢 꼬치/철판':{color:'#ff922b',match:['꼬치','쿠시카츠','타코야키','오코노미야키','몬자야키']},
+  '🥩 고기':{color:'#e64980',match:['야키니쿠','규카츠','스테이크','미소카츠']},
+  '🍺 이자카야/나베':{color:'#7950f2',match:['이자카야','나베','모츠나베','오뎅']},
+  '☕ 카페/간식':{color:'#fd7e14',match:['카페','간식','빵','만두']},
+  '🛍️ 쇼핑':{color:'#228be6',match:['쇼핑']},
+  '📸 관광':{color:'#20c997',match:['관광']}
+};
+const DESC={"스시킨 화이티 우메다점":{"rating":"4.3","desc":"가성비 좋은 서서 먹는 스시집"},"구로몬사카에스시 黒門さかえすし":{"rating":"4.0","desc":"구로몬시장 내 신선한 스시"},"사카에스시 타마야초점":{"rating":"3.9","desc":"가성비 회전스시 체인"},"슈하리":{"rating":"4.2","desc":"정통 일본 가정식 정식"},"난반테이":{"rating":"4.1","desc":"현금만! 숯불 꼬치구이 맛집"},"HALAL Mori BBQ 【食八】木垒烧烤":{"rating":"4.0","desc":"할랄 인증 숯불 꼬치 BBQ"},"Takoshige":{"rating":"4.2","desc":"신세카이 타코야키 전문점"},"炭火海鲜串烧居酒屋 Tottotto 难波千日前店":{"rating":"4.3","desc":"숯불 해산물 로바타야끼 이자카야"},"Mallory Pork Steak Namba CITY Store":{"rating":"3.8","desc":"산 이름 사이즈! 돼지 스테이크"},"치보 오코노미야키":{"rating":"4.0","desc":"1973년 창업 오코노미야키 명가"},"야바톤 사카에 센트라이즈점":{"rating":"3.9","desc":"나고야 명물 미소카츠 원조"},"모헤지 우메다 루쿠아점":{"rating":"3.8","desc":"담백한 돈코츠 라멘"},"모지오 몬자야키":{"rating":"4.0","desc":"도쿄식 몬자야키 전문점"},"무겐라멘 난바 본점":{"rating":"4.1","desc":"진한 돈코츠 라멘 전문점"},"이치란 도톤보리점 본관":{"rating":"4.3","desc":"1인석 돈코츠 라멘의 정석"},"오코노미야키 미즈노":{"rating":"4.3","desc":"70년 전통 야마이모야키 명가"},"규슈라멘 키오-토마토라멘":{"rating":"4.0","desc":"토마토 베이스 퓨전 라멘"},"노구치타로라멘 신사이바시점":{"rating":"4.1","desc":"진한 돈코츠 계열 라멘"},"무기토 토리":{"rating":"4.2","desc":"닭육수 우동 전문점"},"라멘 텐도.":{"rating":"4.0","desc":"구로몬시장 근처 라멘집"},"라멘 초로":{"rating":"4.1","desc":"신사이바시 인기 라멘"},"New York Ramen Shinsaibashi Branch":{"rating":"4.0","desc":"뉴욕 스타일 퓨전 라멘"},"킨무기 아메무라점":{"rating":"4.1","desc":"아메무라 인기 라멘집"},"무한라멘 신이마미야역앞점":{"rating":"4.0","desc":"무한리필 토핑 라멘"},"日式飲茶 点心の気持ち":{"rating":"4.1","desc":"일본식 딤섬·만두 전문점"},"야키니쿠 고리짱 우메다 본점":{"rating":"4.2","desc":"가성비 좋은 야키니쿠 체인"},"타치스시 마구로 잇테츠 센니치마에점":{"rating":"4.1","desc":"참치 전문 서서 먹는 스시"},"카미나리 스시":{"rating":"4.0","desc":"가성비 회전스시"},"우사기야":{"rating":"4.1","desc":"신세카이 서민 이자카야"},"우오토요":{"rating":"4.0","desc":"구로몬시장 해산물 구이 전문"},"하치마루 오뎅":{"rating":"4.1","desc":"구로몬시장 정통 오뎅 전문"},"잇포테이 본점":{"rating":"4.2","desc":"돈코츠 라멘 맛집"},"쿠시카츠 다루마 신세카이 총본점":{"rating":"4.2","desc":"소스 2번 금지! 원조 쿠시카츠"},"Hanamichi":{"rating":"4.0","desc":"신세카이 쿠시카츠·철판요리"},"오니기리 고리짱 에비스요코초점":{"rating":"4.0","desc":"가성비 주먹밥 전문점"},"로쿠센 스시":{"rating":"3.9","desc":"신세카이 가성비 스시"},"규카츠 다이후쿠":{"rating":"4.1","desc":"신세카이 규카츠 전문점"},"고에몬":{"rating":"4.0","desc":"신세카이 쿠시카츠 맛집"},"수키야넨 오코노모야키":{"rating":"4.1","desc":"철판 오코노미야키 전문"},"유세이 우라난바점":{"rating":"4.2","desc":"우라난바 숨은 스시 맛집"},"스시사카바 사시스 화이티우메다점":{"rating":"4.1","desc":"가성비 스시 이자카야 체인"},"스시사카바 사시스":{"rating":"4.1","desc":"가성비 스시 이자카야 체인"},"스시 사카바 사시스 난바점":{"rating":"4.1","desc":"가성비 스시 이자카야 체인"},"Tegetege":{"rating":"4.0","desc":"신세카이 철판 야끼소바"},"Maruki":{"rating":"4.0","desc":"신세카이 서민 식당"},"규카츠 토미타":{"rating":"4.2","desc":"돌판에 직접 굽는 규카츠"},"마도라스카레":{"rating":"4.0","desc":"인도풍 일본식 카레 전문"},"쥬테이":{"rating":"4.2","desc":"자유헌 카레 전문점"},"도톤보리 이마이":{"rating":"4.3","desc":"70년 전통 키츠네우동 명가"},"551 호라이만두":{"rating":"4.4","desc":"오사카 대표 돼지고기 찐만두"},"Inanozi":{"rating":"4.0","desc":"난바 이자카야·꼬치 전문"},"和和鍋 道頓堀":{"rating":"4.1","desc":"도톤보리 일본식 전골 전문"},"아라시야마 요시무라":{"rating":"4.0","desc":"도게츠교 뷰 소바 전문점"},"데마치 후타바":{"rating":"4.3","desc":"교토 대표 마메모치 떡집"},"무구니":{"rating":"4.1","desc":"도톤보리 타코야키 맛집"},"규카츠 모토무라 난바점":{"rating":"4.3","desc":"줄서는 규카츠 인기 체인"},"야키니쿠 호르몬 타카라(구로몬-난바)":{"rating":"4.1","desc":"호르몬(곱창) 야키니쿠 전문"},"토리키조쿠 난바점":{"rating":"3.6","desc":"298엔 균일가 이자카야 체인"},"후쿠타로":{"rating":"4.2","desc":"오코노미야키·네기야키 명가"},"멜론 브레드":{"rating":"4.1","desc":"갓 구운 바삭한 멜론빵"},"grenier 우메다 점":{"rating":"4.2","desc":"크림브륄레 밀푀유 전문점"},"코바토 빵공장":{"rating":"4.1","desc":"호빵맨 캐릭터 빵 베이커리"},"이모야 킨지로 그랜드 프론트 오사카점":{"rating":"4.3","desc":"3대째 전통 고구마 스틱 전문"},"Dr.Fruits":{"rating":"4.2","desc":"신선 과일 주스·디저트"},"앤드류의 에그타르트 도톤보리 본점":{"rating":"4.2","desc":"마카오 정통 에그타르트 전문"},"타바네노시 오사카 신사이바시점":{"rating":"4.0","desc":"일본 전통 과자 선물 전문"},"Naniwaya":{"rating":"4.1","desc":"붕어빵(타이야키) 전문점"},"Mitoya":{"rating":"4.0","desc":"구로몬시장 과일 디저트"},"라이트교자(Right Gyouza)":{"rating":"4.1","desc":"한입 군만두 테이크아웃"},"Dipper Dan Namba Walk":{"rating":"3.8","desc":"크레이프 전문 체인점"},"Takoyaki Senju":{"rating":"4.2","desc":"신세카이 타코야키 인기점"},"파블로(PABLO) 신사이바시 본점":{"rating":"4.1","desc":"레어 치즈타르트 전문점"},"하브스 난바파크스점":{"rating":"4.2","desc":"밀크레이프가 유명한 케이크 카페"},"까눌레 드 재팬 사쿠라가와점":{"rating":"4.3","desc":"겉바속촉 까눌레 전문점"},"Goonies":{"rating":"4.0","desc":"닛폰바시 수제 크레이프"},"mont-bell Umekita Store":{"rating":"4.1","desc":"일본 대표 아웃도어 브랜드"},"KALDI COFFEE FARM":{"rating":"4.0","desc":"수입식품·커피 전문 매장"},"칼디 커피 팜":{"rating":"4.0","desc":"수입식품·커피 전문 매장"},"칼디":{"rating":"4.0","desc":"수입식품·커피 전문 매장"},"DAISO - Umeda station(Underground)":{"rating":"3.8","desc":"100엔숍 우메다 지하점"},"다이소 링크스 우메다점":{"rating":"3.8","desc":"100엔숍 대형 매장"},"Daiso Namba Ebisubashi":{"rating":"3.8","desc":"100엔숍 난바 에비스바시점"},"다이소 난바워크점":{"rating":"3.7","desc":"100엔숍 난바워크 지하점"},"DAISO":{"rating":"3.7","desc":"100엔숍 난바점"},"Standard Products 梅田DTタワー店":{"rating":"4.0","desc":"다이소 프리미엄 300엔숍"},"Standard Products":{"rating":"4.0","desc":"다이소 프리미엄 300엔숍"},"MontBell @ Namba City":{"rating":"4.1","desc":"일본 대표 아웃도어 브랜드"},"Bshop 단톤":{"rating":"4.0","desc":"단톤 등 캐주얼 셀렉트숍"},"한신우메다 본점":{"rating":"4.2","desc":"디파지하 맛집! 백화점"},"한큐 우메다 본점":{"rating":"4.3","desc":"간사이 최대 고급 백화점"},"루쿠아 오사카":{"rating":"4.1","desc":"오사카역 직결 대형 쇼핑몰"},"FREAK'S STORE":{"rating":"3.9","desc":"미국풍 캐주얼 셀렉트숍"},"BEAMS NAMBA":{"rating":"3.9","desc":"일본 대표 셀렉트숍 브랜드"},"SOU・SOU 타비":{"rating":"4.3","desc":"전통 타비 양말·신발 전문"},"SOU・SOU hotei":{"rating":"4.3","desc":"소우소우 가방·소품 매장"},"SOUSOU(소우소우) 이세모멘":{"rating":"4.3","desc":"전통 이세목면 텍스타일 매장"},"SOU・SOU Yousou.":{"rating":"4.3","desc":"현대적 일본 전통의류 매장"},"메가돈키호테 신세카이점":{"rating":"4.0","desc":"면세 대형 디스카운트 스토어"},"GU 난바 마루이점":{"rating":"3.8","desc":"유니클로 자매 저가 패션"},"BILLY'S ENT OSAKA MINAMIHORIE":{"rating":"4.1","desc":"스니커즈 전문 셀렉트숍"},"FREAK ' S STORE Umedarukuamenzuten":{"rating":"3.9","desc":"미국풍 캐주얼 셀렉트숍"},"GU 신사이바시":{"rating":"3.8","desc":"유니클로 자매 저가 패션"},"kindal minamisenba second hand store":{"rating":"4.0","desc":"브랜드 중고 의류·명품 매장"},"마루후쿠 커피 센니치마에 본점":{"rating":"4.2","desc":"1934년 창업 오사카 커피 명가"},"카페 안논 난바":{"rating":"4.1","desc":"팬케이크·파르페 디저트 카페"},"샬롱 드 테 알시온":{"rating":"4.2","desc":"프렌치 케이크·크레이프 카페"},"tolala":{"rating":"4.2","desc":"수제 파이·동물 케이크 카페"},"à la mode osaka アラモード大阪":{"rating":"4.1","desc":"오시카츠(추천활동) 케이크 카페"},"COLONY by EQI 心斎橋アメ村店":{"rating":"4.2","desc":"파티시에의 수플레 팬케이크"},"지브리 파크":{"rating":"4.3","desc":"스튜디오 지브리 공식 테마파크"},"훼미리마트":{"rating":"3.5","desc":"일본 편의점 (한정 간식 체크)"},"세븐일레븐":{"rating":"3.5","desc":"일본 편의점 (디저트 맛집)"},"LAWSON Nihombashi 4 Chome Store":{"rating":"3.5","desc":"일본 편의점 (가라아게쿤!)"},"신세카이 시장":{"rating":"3.9","desc":"로컬 재래시장·먹거리 골목"},"5-chōme-1-15 Nipponbashi":{"rating":"-","desc":"닛폰바시 위치 핀"},"1-chōme-7-27 Tsurumibashi":{"rating":"-","desc":"츠루미바시 위치 핀"},"Higurashi":{"rating":"4.0","desc":"교토 근교 카페·식당"},"모미지":{"rating":"4.0","desc":"일본 가정식·이자카야"},"Osaka Cabinet 荷物預かり所（ロッカー / キャリーケース預かり）行李寄放 / 置物櫃 / luggage storage / 짐보관 / \n락커 / 수하물보관소 / 코인락커":{"rating":"4.2","desc":"구로몬시장 짐보관 서비스"},"야스베 츠케멘":{"rating":"4.2","desc":"진한 어분 츠케멘 전문점"},"그램 팬케이크 카페":{"rating":"4.6","desc":"한정판 프리미엄 수플레 팬케이크"},"다이마루 백화점 신사이바시점":{"rating":"4.2","desc":"신사이바시 랜드마크 백화점"},"Red Roof Inn & Suites Osaka - Namba/Nippombashi":{"rating":"4.0","desc":"난바·닛폰바시 비즈니스 호텔"},"유니버설 스튜디오 재팬":{"rating":"4.4","desc":"닌텐도월드 있는 테마파크"}};
+function catToGroup(c){if(!c)return'🍜 맛집';for(const[g,v]of Object.entries(GROUPS)){if(v.match.includes(c))return g;}return'🍜 맛집';}
+function gc(c){const g=catToGroup(c);return GROUPS[g]?.color||'#868e96';}
+function cc(c){return gc(c)}
+
+let cur='2026-04-16',filt='all',visited=JSON.parse(localStorage.getItem('v')||'{}');
+let map,markers=[];
+
+function allPlaces(){return[...DATA.places,...DATA.spots]}
+function dayPlaces(d){
+  const all=allPlaces();
+  if(d==='2026-04-17'||d==='2026-04-20')return[];
+  if(d==='2026-04-18')return all.filter(p=>p.area==='나고야');
+  return all.filter(p=>p.area!=='나고야');
+}
+
+function renderTabs(){
+  document.getElementById('tabs').innerHTML=DAYS.map(d=>`<div class="tab${d.d===cur?' active':''}" onclick="go('${d.d}')"><div>${d.s} ${d.l}</div><small>${d.desc}</small></div>`).join('');
+}
+
+function go(d){cur=d;filt='all';renderTabs();render()}
+
+function render(){
+  const P=document.getElementById('panel'),day=DAYS.find(x=>x.d===cur),sch=DATA.schedule[cur],places=dayPlaces(cur);
+  let h=`<div class="day-head"><h2>${day.t}</h2><span class="label">${day.desc}</span></div>`;
+
+  if(sch?.flight){const f=sch.flight;h+=`<div class="flight"><div class="flight-route"><div class="flight-city"><div class="city">${f.from}</div><div class="time">${f.dep}</div></div><div class="flight-line"><span class="plane">&#9992;</span></div><div class="flight-city"><div class="city">${f.to}</div><div class="time">${f.arr}</div></div></div><div class="flight-code">${f.code} · Asiana Airlines · Direct</div></div>`}
+
+  // 숙소 — 도착일은 상세, 나머지는 간략
+  {const a=DATA.accom;
+  if(cur==='2026-04-16'){
+    h+=`<div class="accom"><h3>&#127968; 숙소 — ${a.name}</h3><dl class="accom-grid"><dt>주소</dt><dd>${a.addr}</dd><dt>체크인</dt><dd>${a.in} (짐은 아침부터 맡기기 가능)</dd><dt>체크아웃</dt><dd>${a.out}</dd><dt>가까운 역</dt><dd>${a.station}</dd><dt>우편함 비번</dt><dd>${a.lock}</dd><dt>호스트 연락처</dt><dd>${a.phone}</dd><dt>참고</dt><dd>${a.note}</dd></dl></div>`;
+  } else {
+    h+=`<div class="accom" style="padding:12px 18px;cursor:pointer" onclick="fly(${a.lat},${a.lng},'숙소')"><h3 style="margin-bottom:4px;font-size:14px">&#127968; ${a.name}</h3><div style="font-size:12px;color:var(--text2)">${a.station} · ${a.phone}${cur==='2026-04-20'?' · 체크아웃 '+a.out:''}</div></div>`;
+  }}
+
+  if(sch?.events?.length){h+=`<div style="font-size:13px;font-weight:600;color:var(--text2);margin:8px 0 4px;letter-spacing:.5px">&#128197; 오늘의 일정</div>`;sch.events.forEach(e=>{h+=`<div class="ev"><div class="ev-time">${e.time}</div><div class="ev-body"><div class="ev-title">${e.title}</div>${e.note?`<div class="ev-note">${e.note}</div>`:''}</div></div>`});}
+
+  if(cur==='2026-04-17')h+=`<div class="special" style="background:linear-gradient(135deg,#1a1a2e,#0f3460)"><h3>&#127906; Universal Studios Japan</h3><div><strong>1 Day Studio Pass</strong> + 25주년 VIP 그룹 투어</div><div>&#9888;&#65039; VIP 접수: 09:45~10:15</div><div>&#127918; 닌텐도 월드 우선 입장</div><div>&#127917; 익스프레스 패스 x3 (해리포터, 할리우드 드림)</div><div>&#127860; 파크 레스토랑 10% 할인</div><div class="dim">Booking: USJ-P1X0000007NNBQ</div></div>`;
+
+  if(cur==='2026-04-18')h+=`<div class="special" style="background:linear-gradient(135deg,#2d5016,#4a7c23)"><h3>&#127795; Ghibli Park</h3><div><strong>O-SANPO DAY PASS PREMIUM</strong></div><div>&#127939; 야외 에리어: 오전 입장</div><div>&#127970; 대창고: 14:00 입장</div><div>&#9888;&#65039; 여권 필수 (Group Leader: KIHWAN AHN)</div><div>&#128247; E-ticket 북마크 필수 (입구 WiFi 없음)</div><div class="dim">Booking: 7800209855</div></div>`;
+
+  if(places.length){
+    h+='<hr class="div">';
+    h+=`<div style="font-size:13px;font-weight:600;color:var(--text2);margin:4px 0 8px;letter-spacing:.5px">&#127829; 주변 맛집 · 관광 · 쇼핑</div>`;
+    const areas={};places.forEach(p=>{areas[p.area]=(areas[p.area]||0)+1});
+    h+=`<div style="font-size:11px;color:var(--text3);margin-bottom:6px">&#128204; 지역별 보기</div>`;
+    h+='<div class="area-chips">'+Object.entries(areas).sort((a,b)=>b[1]-a[1]).map(([a,c])=>`<div class="area-chip${filt===a?' on':''}" onclick="filt=filt==='${a}'?'all':'${a}';render()"><span class="an">${a}</span> <span class="ac">${c}곳</span></div>`).join('')+'</div>';
+
+    // 그룹 기반 필터 — 음식 / 체험 분리
+    const groupCounts={};
+    places.forEach(p=>{const g=catToGroup(p.cat);groupCounts[g]=(groupCounts[g]||0)+1;});
+    const foodGroups=Object.entries(GROUPS).filter(([g])=>groupCounts[g]&&!g.startsWith('🛍')&&!g.startsWith('📸'));
+    const expGroups=Object.entries(GROUPS).filter(([g])=>groupCounts[g]&&(g.startsWith('🛍')||g.startsWith('📸')));
+
+    h+=`<div style="font-size:11px;color:var(--text3);margin-bottom:4px">&#127860; 뭐 먹을까?</div>`;
+    h+='<div class="filters"><div class="chip'+(filt==='all'?' on':'')+'" onclick="filt=\'all\';render()">전체</div>'+foodGroups.map(([g,v])=>`<div class="chip${filt===g?' on':''}" onclick="filt=filt==='${g}'?'all':'${g}';render()" style="${filt===g?'background:'+v.color+';border-color:'+v.color+';color:#fff':''}"><span class="dot" style="background:${v.color}"></span>${g} <span style="opacity:.6;font-size:11px">${groupCounts[g]||0}</span></div>`).join('')+'</div>';
+
+    if(expGroups.length){
+      h+=`<div style="font-size:11px;color:var(--text3);margin:8px 0 4px">&#128099; 뭐 할까?</div>`;
+      h+='<div class="filters">'+expGroups.map(([g,v])=>`<div class="chip${filt===g?' on':''}" onclick="filt=filt==='${g}'?'all':'${g}';render()" style="${filt===g?'background:'+v.color+';border-color:'+v.color+';color:#fff':''}"><span class="dot" style="background:${v.color}"></span>${g} <span style="opacity:.6;font-size:11px">${groupCounts[g]||0}</span></div>`).join('')+'</div>';
+    }
+
+    const isGrp=g=>Object.keys(GROUPS).includes(g);
+    const fp=filt==='all'?places:isGrp(filt)?places.filter(p=>catToGroup(p.cat)===filt):places.filter(p=>p.area===filt);
+    const vc=fp.filter(p=>visited[p.name]).length;
+    h+=`<div class="counter">방문 체크: <strong>${vc}</strong> / ${fp.length}곳 ${filt!=='all'?'<span style="color:var(--text3)">('+filt+' 필터)</span>':''}</div>`;
+    h+='<div class="plist">'+fp.map(p=>{const done=visited[p.name]?'done':'';const grp=catToGroup(p.cat);return`<div class="pc ${done}" onclick="fly(${p.lat},${p.lng},'${encodeURIComponent(p.name)}')"><div class="cdot" style="background:${gc(p.cat)}"></div><div class="pi"><div class="pn">${p.name}</div><div class="pm"><span>${p.area}</span><span>${p.cat||'맛집'}</span>${DESC[p.name]?`<span style="color:#f59f00">★${DESC[p.name].rating}</span>`:''}</div><div style="font-size:11px;color:var(--text2);margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${DESC[p.name]?.desc||''}</div>${p.note?`<div class="pnote">${p.note}</div>`:''}</div><div class="chk" onclick="event.stopPropagation();toggle('${encodeURIComponent(p.name)}')" title="방문 체크"></div></div>`}).join('')+'</div>';
+  }
+
+  P.innerHTML=h;
+  updateMap();
+}
+
+function toggle(n){const name=decodeURIComponent(n);visited[name]=!visited[name];if(!visited[name])delete visited[name];localStorage.setItem('v',JSON.stringify(visited));render()}
+
+function updateMap(){
+  markers.forEach(m=>map.removeLayer(m));markers=[];
+  const places=dayPlaces(cur);
+
+  // Accommodation
+  const a=DATA.accom;
+  const am=L.circleMarker([a.lat,a.lng],{radius:10,fillColor:'#222',color:'#fff',weight:3,fillOpacity:1}).bindPopup(`<div style="font-family:Inter,sans-serif"><strong>&#127968; ${a.name}</strong><br><small style="color:#666">${a.addr}</small><br><small>${a.station}</small><br><a href="https://www.google.com/maps/search/?api=1&query=${a.lat},${a.lng}" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>`).bindTooltip('&#127968; 숙소',{direction:'top',offset:[0,-8]});
+  am.addTo(map);markers.push(am);
+
+  if(cur==='2026-04-17'){
+    const u=L.circleMarker([34.6654,135.4323],{radius:14,fillColor:'#ff385c',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127906; Universal Studios Japan</strong><br><a href="https://www.google.com/maps/search/?api=1&query=34.6654,135.4323" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127906; USJ',{direction:'top',offset:[0,-10],className:'tt'});
+    u.addTo(map);markers.push(u);map.setView([34.6654,135.4323],14);return;
+  }
+  if(cur==='2026-04-18'&&places.length<=1){
+    const g=L.circleMarker([35.1784,137.0585],{radius:14,fillColor:'#4a7c23',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127795; Ghibli Park</strong><br><a href="https://www.google.com/maps/search/?api=1&query=35.1784,137.0585" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127795; 지브리파크',{direction:'top',offset:[0,-10]});
+    g.addTo(map);markers.push(g);
+    if(places.length){
+      const b=L.latLngBounds([[35.1784,137.0585],[places[0].lat,places[0].lng]]);map.fitBounds(b,{padding:[40,40]});
+    }else map.setView([35.1784,137.0585],11);
+    // still add nagoya places below
+  }
+
+  // 필터 적용된 장소만 지도에 표시
+  const isGroupFilter=filt.startsWith('🍣')||filt.startsWith('🍜')||filt.startsWith('🍢')||filt.startsWith('🥩')||filt.startsWith('🍺')||filt.startsWith('☕')||filt.startsWith('🛍')||filt.startsWith('📸');
+  const fp=filt==='all'?places:isGroupFilter?places.filter(p=>catToGroup(p.cat)===filt):places.filter(p=>p.area===filt);
+  const group=[];
+  fp.forEach(p=>{
+    const v=visited[p.name];
+    const m=L.circleMarker([p.lat,p.lng],{radius:7,fillColor:v?'#ccc':cc(p.cat),color:'#fff',weight:2,fillOpacity:v?.4:.9}).bindPopup(`<div style="font-family:Inter,sans-serif"><strong>${p.name}</strong><br><small style="color:#666">${p.area} · ${p.cat||''}</small>${p.note?'<br><small style="color:#ff385c">'+p.note+'</small>':''}<br><a href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}" target="_blank" style="color:#228be6;font-size:12px">Google Maps에서 보기 &#8599;</a></div>`).bindTooltip(p.name,{direction:'top',offset:[0,-6]});
+    m.addTo(map);markers.push(m);group.push([p.lat,p.lng]);
+  });
+
+  if(group.length>1){map.fitBounds(group,{padding:[40,40]})}
+  else if(group.length===1){map.setView(group[0],15)}
+  else{map.setView([a.lat,a.lng],14)}
+}
+
+function fly(lat,lng,n){
+  map.setView([lat,lng],17);
+  const name=decodeURIComponent(n);
+  markers.forEach(m=>{if(m.getPopup&&m.getPopup()?.getContent()?.includes(name))m.openPopup()});
+}
+
+// Init
+map=L.map('map',{zoomControl:true}).setView([34.665,135.505],14);
+L.tileLayer('https://mt1.google.com/vt/lyrs=m&x={x}&y={y}&z={z}&hl=ko',{attribution:'&copy; Google Maps',maxZoom:20}).addTo(map);
+
+document.getElementById('pc').textContent=allPlaces().length+' Places';
+renderTabs();
+render();
+</script>
+</body>
+</html>

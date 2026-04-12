@@ -1,0 +1,1008 @@
+{
+  "meta": {
+    "listId": "hVTMansrhDfa4gdnJrNVwLn2cT5DLQ",
+    "listName": "맛집",
+    "lastUpdated": "2026-04-11T16:40:23.454604+09:00"
+  },
+  "places": [
+    {
+      "name": "스시킨 화이티 우메다점",
+      "lat": 34.703473,
+      "lng": 135.499631,
+      "area": "우메다",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "구로몬사카에스시 黒門さかえすし",
+      "lat": 34.666185,
+      "lng": 135.507347,
+      "area": "난바",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "사카에스시 타마야초점",
+      "lat": 34.670268,
+      "lng": 135.504477,
+      "area": "도톤보리",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "슈하리",
+      "lat": 34.682254,
+      "lng": 135.514565,
+      "area": "신사이바시",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "난반테이",
+      "lat": 34.659368,
+      "lng": 135.504279,
+      "area": "신세카이",
+      "category": "꼬치",
+      "note": "현금, 꼬치",
+      "source": "googlemap"
+    },
+    {
+      "name": "HALAL Mori BBQ 【食八】木垒烧烤",
+      "lat": 34.662739,
+      "lng": 135.508699,
+      "area": "난바",
+      "category": "꼬치",
+      "note": "꼬치",
+      "source": "googlemap"
+    },
+    {
+      "name": "Takoshige",
+      "lat": 34.660226,
+      "lng": 135.508055,
+      "area": "난바",
+      "category": "타코야키",
+      "note": "흡연",
+      "source": "googlemap"
+    },
+    {
+      "name": "炭火海鲜串烧居酒屋 Tottotto 难波千日前店",
+      "lat": 34.666783,
+      "lng": 135.501811,
+      "area": "난바",
+      "category": "이자카야",
+      "note": "로바타야끼",
+      "source": "googlemap"
+    },
+    {
+      "name": "Mallory Pork Steak Namba CITY Store",
+      "lat": 34.663149,
+      "lng": 135.501563,
+      "area": "난바",
+      "category": "스테이크",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "치보 오코노미야키",
+      "lat": 34.668807,
+      "lng": 135.503907,
+      "area": "난바",
+      "category": "오코노미야키",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "야바톤 사카에 센트라이즈점",
+      "lat": 35.167981,
+      "lng": 136.905446,
+      "area": "나고야",
+      "category": "미소카츠",
+      "note": "지브리 당일 나고야에서",
+      "source": "googlemap"
+    },
+    {
+      "name": "모헤지 우메다 루쿠아점",
+      "lat": 34.703255,
+      "lng": 135.495578,
+      "area": "우메다",
+      "category": "모츠나베",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "모지오 몬자야키",
+      "lat": 34.664794,
+      "lng": 135.50528,
+      "area": "난바",
+      "category": "몬자야키",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "무겐라멘 난바 본점",
+      "lat": 34.659759,
+      "lng": 135.498499,
+      "area": "난바",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "이치란 도톤보리점 본관",
+      "lat": 34.6693,
+      "lng": 135.503072,
+      "area": "난바",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "오코노미야키 미즈노",
+      "lat": 34.668355,
+      "lng": 135.503223,
+      "area": "난바",
+      "category": "오코노미야키",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "규슈라멘 키오-토마토라멘",
+      "lat": 34.668615,
+      "lng": 135.499443,
+      "area": "난바",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "노구치타로라멘 신사이바시점",
+      "lat": 34.672508,
+      "lng": 135.503377,
+      "area": "도톤보리",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "무기토 토리",
+      "lat": 34.677905,
+      "lng": 135.502502,
+      "area": "도톤보리",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "라멘 텐도.",
+      "lat": 34.666267,
+      "lng": 135.505852,
+      "area": "난바",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "라멘 초로",
+      "lat": 34.683275,
+      "lng": 135.512317,
+      "area": "신사이바시",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "New York Ramen Shinsaibashi Branch",
+      "lat": 34.672931,
+      "lng": 135.503387,
+      "area": "도톤보리",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "킨무기 아메무라점",
+      "lat": 34.672749,
+      "lng": 135.497121,
+      "area": "도톤보리",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "무한라멘 신이마미야역앞점",
+      "lat": 34.649992,
+      "lng": 135.503747,
+      "area": "신세카이",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "日式飲茶 点心の気持ち",
+      "lat": 34.666433,
+      "lng": 135.478697,
+      "area": "난바",
+      "category": "딤섬",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "야키니쿠 고리짱 우메다 본점",
+      "lat": 34.703724,
+      "lng": 135.503299,
+      "area": "우메다",
+      "category": "야키니쿠",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "타치스시 마구로 잇테츠 센니치마에점",
+      "lat": 34.66762,
+      "lng": 135.503479,
+      "area": "난바",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "카미나리 스시",
+      "lat": 34.667599,
+      "lng": 135.503516,
+      "area": "난바",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "우사기야",
+      "lat": 34.653855,
+      "lng": 135.505959,
+      "area": "신세카이",
+      "category": "이자카야",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "우오토요",
+      "lat": 34.664532,
+      "lng": 135.506716,
+      "area": "난바",
+      "category": "해산물",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "하치마루 오뎅",
+      "lat": 34.665425,
+      "lng": 135.507851,
+      "area": "난바",
+      "category": "오뎅",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "잇포테이 본점",
+      "lat": 34.662392,
+      "lng": 135.503725,
+      "area": "난바",
+      "category": "꼬치",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "쿠시카츠 다루마 신세카이 총본점",
+      "lat": 34.65157,
+      "lng": 135.506203,
+      "area": "신세카이",
+      "category": "쿠시카츠",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Hanamichi",
+      "lat": 34.651491,
+      "lng": 135.506234,
+      "area": "신세카이",
+      "category": "꼬치",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "오니기리 고리짱 에비스요코초점",
+      "lat": 34.649417,
+      "lng": 135.505911,
+      "area": "신세카이",
+      "category": "오니기리",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "로쿠센 스시",
+      "lat": 34.652747,
+      "lng": 135.506269,
+      "area": "신세카이",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "규카츠 다이후쿠",
+      "lat": 34.653438,
+      "lng": 135.505999,
+      "area": "신세카이",
+      "category": "규카츠",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "고에몬",
+      "lat": 34.651984,
+      "lng": 135.506634,
+      "area": "신세카이",
+      "category": "꼬치",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "수키야넨 오코노모야키",
+      "lat": 34.671137,
+      "lng": 135.507576,
+      "area": "신사이바시",
+      "category": "오코노미야키",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "유세이 우라난바점",
+      "lat": 34.664884,
+      "lng": 135.505456,
+      "area": "난바",
+      "category": "이자카야",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "스시사카바 사시스 화이티우메다점",
+      "lat": 34.702602,
+      "lng": 135.499668,
+      "area": "우메다",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "스시사카바 사시스",
+      "lat": 34.698479,
+      "lng": 135.49975,
+      "area": "도톤보리",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "스시 사카바 사시스 난바점",
+      "lat": 34.667016,
+      "lng": 135.505144,
+      "area": "난바",
+      "category": "스시",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Tegetege",
+      "lat": 34.662243,
+      "lng": 135.509144,
+      "area": "난바",
+      "category": "이자카야",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Maruki",
+      "lat": 34.655923,
+      "lng": 135.507219,
+      "area": "신세카이",
+      "category": "이자카야",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "규카츠 토미타",
+      "lat": 34.662744,
+      "lng": 135.503953,
+      "area": "난바",
+      "category": "규카츠",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "마도라스카레",
+      "lat": 34.659852,
+      "lng": 135.506648,
+      "area": "신세카이",
+      "category": "카레",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Mobomoga",
+      "lat": 35.66248,
+      "lng": 139.697709,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "쥬테이",
+      "lat": 34.666213,
+      "lng": 135.502171,
+      "area": "난바",
+      "category": "이자카야",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "도톤보리 이마이",
+      "lat": 34.668633,
+      "lng": 135.502714,
+      "area": "난바",
+      "category": "우동",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "551 호라이만두",
+      "lat": 34.666409,
+      "lng": 135.501346,
+      "area": "난바",
+      "category": "만두",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Inanozi",
+      "lat": 34.667812,
+      "lng": 135.504216,
+      "area": "난바",
+      "category": "이자카야",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "和和鍋 道頓堀",
+      "lat": 34.668829,
+      "lng": 135.501811,
+      "area": "난바",
+      "category": "나베",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "お蕎麦 結(ゆい)",
+      "lat": 35.310556,
+      "lng": 139.496637,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Sangosho Moana Makai",
+      "lat": 35.305708,
+      "lng": 139.508971,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "NAGI→『広島焼き おっこんゆきちゃん』",
+      "lat": 35.307627,
+      "lng": 139.493775,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "아라시야마 요시무라",
+      "lat": 35.013605,
+      "lng": 135.677274,
+      "area": "교토",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "데마치 후타바",
+      "lat": 35.030105,
+      "lng": 135.769645,
+      "area": "교토",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Ginza Kagari (Roppongi Hills)",
+      "lat": 35.661548,
+      "lng": 139.729663,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "이루카 도쿄 롯폰기",
+      "lat": 35.664801,
+      "lng": 139.731641,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "이마카츠 롯폰기 본점",
+      "lat": 35.66445,
+      "lng": 139.731579,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "샤모지 일정식",
+      "lat": 35.312973,
+      "lng": 139.535858,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Yamataro Onigiri",
+      "lat": 35.719493,
+      "lng": 139.715375,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "키요이",
+      "lat": 35.309092,
+      "lng": 139.49156,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Sangoshō",
+      "lat": 35.309103,
+      "lng": 139.516602,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "규카츠 전문점 가츠규 가마쿠라점",
+      "lat": 35.318869,
+      "lng": 139.549787,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Sometaro",
+      "lat": 35.312674,
+      "lng": 139.535015,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "마고코로",
+      "lat": 35.31031,
+      "lng": 139.538153,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "요리도코로",
+      "lat": 35.304531,
+      "lng": 139.523922,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Yakiuo Ishikawa",
+      "lat": 35.662064,
+      "lng": 139.730838,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "야겐보리 아카사카점",
+      "lat": 35.675651,
+      "lng": 139.736322,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "레이쿄 시부야점",
+      "lat": 35.659469,
+      "lng": 139.697681,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "츠케멘 고노카미제작소",
+      "lat": 35.687335,
+      "lng": 139.703788,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "니혼바시 돈카츠 하지메",
+      "lat": 35.686425,
+      "lng": 139.775473,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "카츠레츠 요츠야 타케다",
+      "lat": 35.686467,
+      "lng": 139.729339,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "요네큐 본점",
+      "lat": 35.715924,
+      "lng": 139.793722,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "Chūka-gai Kichijōji",
+      "lat": 35.703631,
+      "lng": 139.582164,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "몬자사토",
+      "lat": 35.668552,
+      "lng": 139.690044,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "무구니",
+      "lat": 34.670574,
+      "lng": 135.499335,
+      "area": "도톤보리",
+      "category": "라멘",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "규카츠 모토무라 난바점",
+      "lat": 34.666617,
+      "lng": 135.501974,
+      "area": "난바",
+      "category": "규카츠",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "야키니쿠 호르몬 타카라(구로몬-난바)",
+      "lat": 34.66545,
+      "lng": 135.504074,
+      "area": "난바",
+      "category": "야키니쿠",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "토리키조쿠 난바점",
+      "lat": 34.664022,
+      "lng": 135.502738,
+      "area": "난바",
+      "category": "이자카야",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "후쿠타로",
+      "lat": 34.665526,
+      "lng": 135.504499,
+      "area": "난바",
+      "category": "타코야키",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "오미규 불고기 니쿠 TATSU 긴자점",
+      "lat": 35.670925,
+      "lng": 139.764379,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "스시잔마이",
+      "lat": 35.665877,
+      "lng": 139.77068,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "아게.산 긴자",
+      "lat": 35.672758,
+      "lng": 139.771294,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "멜론 브레드",
+      "lat": 34.668784,
+      "lng": 135.503491,
+      "area": "난바",
+      "category": "빵",
+      "note": "",
+      "source": "googlemap"
+    },
+    {
+      "name": "츠지한",
+      "lat": 35.680717,
+      "lng": 139.771577,
+      "area": "기타",
+      "category": "",
+      "note": "",
+      "source": "googlemap"
+    }
+  ],
+  "spots": [
+    {
+      "name": "도톤보리 글리코상",
+      "lat": 34.6687,
+      "lng": 135.5025,
+      "area": "도톤보리",
+      "category": "관광",
+      "note": "인증샷 필수",
+      "source": "kakao"
+    },
+    {
+      "name": "도톤보리 크루즈",
+      "lat": 34.669,
+      "lng": 135.503,
+      "area": "도톤보리",
+      "category": "관광",
+      "note": "밤에 타면 좋음",
+      "source": "kakao"
+    },
+    {
+      "name": "신세카이/츠텐카쿠",
+      "lat": 34.6526,
+      "lng": 135.5063,
+      "area": "신세카이",
+      "category": "관광",
+      "note": "꼬치+맥주 거리",
+      "source": "kakao"
+    },
+    {
+      "name": "덴덴타운",
+      "lat": 34.659,
+      "lng": 135.5055,
+      "area": "닛폰바시",
+      "category": "쇼핑",
+      "note": "피규어, 게임, 베르세르크 피규어(효진)",
+      "source": "kakao"
+    },
+    {
+      "name": "닌텐도샵 오사카",
+      "lat": 34.705,
+      "lng": 135.4983,
+      "area": "우메다",
+      "category": "쇼핑",
+      "note": "다이마루 백화점 13층, 인증샷 필수(효진)",
+      "source": "kakao"
+    },
+    {
+      "name": "다이마루 백화점 우메다점",
+      "lat": 34.7029,
+      "lng": 135.4983,
+      "area": "우메다",
+      "category": "쇼핑",
+      "note": "쇼핑",
+      "source": "kakao"
+    },
+    {
+      "name": "GU 신사이바시점",
+      "lat": 34.6724,
+      "lng": 135.5018,
+      "area": "신사이바시",
+      "category": "쇼핑",
+      "note": "효진 옷 현지구매, 예진 추천",
+      "source": "kakao"
+    },
+    {
+      "name": "돈키호테 도톤보리점",
+      "lat": 34.6687,
+      "lng": 135.502,
+      "area": "도톤보리",
+      "category": "쇼핑",
+      "note": "새롬+예진 힛템 리스트",
+      "source": "kakao"
+    },
+    {
+      "name": "구로몬시장",
+      "lat": 34.666,
+      "lng": 135.5068,
+      "area": "구로몬시장",
+      "category": "관광",
+      "note": "오사카의 부엌, 해산물 시식",
+      "source": "kakao"
+    }
+  ],
+  "schedule": {
+    "2026-04-16": {
+      "label": "도착일",
+      "flight": {
+        "code": "OZ112",
+        "from": "인천",
+        "to": "간사이공항",
+        "depart": "06:55",
+        "arrive": "09:00"
+      },
+      "events": []
+    },
+    "2026-04-17": {
+      "label": "USJ",
+      "events": [
+        {
+          "time": "09:00",
+          "title": "USJ 도착 목표",
+          "note": "영업시간 08:30~"
+        },
+        {
+          "time": "09:45~10:15",
+          "title": "VIP 투어 접수",
+          "note": "체험 시작 45~15분 전 접수 필수"
+        },
+        {
+          "time": "10:30",
+          "title": "25주년 VIP 그룹 투어 시작",
+          "note": "닌텐도 월드 우선 입장, 동키콩/마리오카트/요시/죠스"
+        },
+        {
+          "time": "15:30~",
+          "title": "익스프레스 패스 어트랙션",
+          "note": "해리포터, 할리우드 드림 등 3개"
+        }
+      ]
+    },
+    "2026-04-18": {
+      "label": "지브리파크",
+      "events": [
+        {
+          "time": "07:45",
+          "title": "신칸센 출발 (신오사카→나고야)",
+          "note": "신칸센 도시락 구매"
+        },
+        {
+          "time": "09:30~10:00",
+          "title": "지브리파크 도착",
+          "note": "야외 에리어부터 관람 (도코도코 숲, 모노노케 마을 등)"
+        },
+        {
+          "time": "14:00",
+          "title": "대창고 입장",
+          "note": "O-SANPO DAY PASS PREMIUM"
+        },
+        {
+          "time": "17:00~",
+          "title": "지브리파크 종료 → 나고야역 이동",
+          "note": ""
+        },
+        {
+          "time": "18:30~",
+          "title": "신칸센 복귀 (나고야→신오사카)",
+          "note": "19:30 신오사카 도착 예정"
+        }
+      ]
+    },
+    "2026-04-19": {
+      "label": "자유/쇼핑",
+      "events": []
+    },
+    "2026-04-20": {
+      "label": "귀국",
+      "flight": {
+        "code": "OZ1135",
+        "from": "간사이공항",
+        "to": "김포",
+        "depart": "11:10",
+        "arrive": "13:10"
+      },
+      "events": [
+        {
+          "time": "07:00~07:30",
+          "title": "숙소 출발",
+          "note": "체크아웃 11:00이지만 비행기 2시간 전 공항 도착"
+        },
+        {
+          "time": "09:10",
+          "title": "간사이공항 도착 목표",
+          "note": ""
+        }
+      ]
+    }
+  },
+  "accommodation": {
+    "name": "大阪之家 (닛폰바시)",
+    "address": "浪速区日本橋5-1-15 3층, 오사카시",
+    "lat": 34.659,
+    "lng": 135.506,
+    "checkIn": "15:00",
+    "checkOut": "11:00",
+    "phone": "080-9751-9777",
+    "nearestStation": "에비스초역 4분, 난바역 7분",
+    "mailboxCode": "오른쪽0 → 오른쪽0 → 왼쪽2",
+    "note": "짐 아침부터 맡기기 가능 (호스트 확인 완료). 흡연 불가. 슈퍼마켓 고가다리 아래 (새벽1시까지). 세탁기 옥상."
+  },
+  "members": [
+    {
+      "name": "기환",
+      "role": "총괄/기획"
+    },
+    {
+      "name": "이예진",
+      "role": "기환 아내"
+    },
+    {
+      "name": "김효진",
+      "role": "친구"
+    },
+    {
+      "name": "천새롬",
+      "role": "효진 아내"
+    }
+  ]
+}

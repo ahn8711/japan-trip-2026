@@ -29,7 +29,7 @@ body{font-family:'Inter',-apple-system,system-ui,sans-serif;background:var(--bg)
 .tab:hover{color:var(--text)}.tab.active{color:var(--text);font-weight:600;border-bottom-color:var(--text)}
 .tab small{display:block;font-size:11px;color:var(--text3);margin-top:2px;font-weight:400}
 
-.main{max-width:1400px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 1.2fr;gap:24px;min-height:calc(100vh - 120px)}
+.main{max-width:1400px;margin:0 auto;padding:24px;display:grid;grid-template-columns:1fr 1.2fr;gap:24px;min-height:calc(100vh - 120px);align-items:start}
 .panel{display:flex;flex-direction:column;gap:12px}
 
 .day-head{display:flex;align-items:baseline;gap:12px;margin-bottom:4px}
@@ -88,7 +88,7 @@ hr.div{border:none;border-top:1px solid var(--border);margin:8px 0}
 .mbtn{flex-shrink:0;width:28px;height:28px;border-radius:50%;background:var(--surface);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;transition:.2s}
 .mbtn:hover{background:#eee;transform:scale(1.1)}
 
-.map-wrap{position:sticky;top:120px;height:calc(100vh - 150px);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border)}
+.map-wrap{position:sticky;top:120px;height:calc(100vh - 140px);min-height:500px;border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border)}
 #map{width:100%;height:100%}
 
 /* Mobile */

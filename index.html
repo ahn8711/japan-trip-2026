@@ -88,12 +88,20 @@ hr.div{border:none;border-top:1px solid var(--border);margin:8px 0}
 .map-wrap{position:sticky;top:120px;height:calc(100vh - 150px);border-radius:var(--r-lg);overflow:hidden;border:1px solid var(--border)}
 #map{width:100%;height:100%}
 
+/* Mobile: map/list toggle */
+.fab{display:none;position:fixed;bottom:24px;right:20px;z-index:200;background:var(--accent);color:#fff;border:none;border-radius:50px;padding:14px 22px;font-size:14px;font-weight:600;font-family:inherit;cursor:pointer;box-shadow:0 4px 16px rgba(255,56,92,.4);transition:.2s;-webkit-tap-highlight-color:transparent}
+.fab:active{transform:scale(.95)}
+
 @media(max-width:768px){
   .main{grid-template-columns:1fr;padding:16px}
-  .map-wrap{position:relative;top:0;height:280px;order:-1}
+  .map-wrap{position:fixed;top:0;left:0;width:100%;height:100vh;z-index:150;border-radius:0;border:none;display:none}
+  .map-wrap.show{display:block}
   .header-tags{display:none}
   .day-head h2{font-size:20px}
   .plist{max-height:none}
+  .fab{display:flex;align-items:center;gap:6px}
+  .map-close{position:fixed;top:16px;right:16px;z-index:210;background:#fff;border:none;border-radius:50%;width:40px;height:40px;font-size:20px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);display:none;align-items:center;justify-content:center}
+  .map-wrap.show~.map-close,.map-wrap.show+.map-close{display:flex}
 }
 </style>
 </head>
@@ -108,8 +116,10 @@ hr.div{border:none;border-top:1px solid var(--border);margin:8px 0}
 
 <main class="main">
   <div class="panel" id="panel"></div>
-  <div class="map-wrap"><div id="map"></div></div>
+  <div class="map-wrap" id="mapWrap"><div id="map"></div></div>
+  <button class="map-close" id="mapClose" onclick="toggleMap(false)">✕</button>
 </main>
+<button class="fab" id="fab" onclick="toggleMap(true)">&#128506; 지도 보기</button>
 
 <script>
 const DATA={"places":[{"name":"스시킨 화이티 우메다점","lat":34.703473,"lng":135.499631,"area":"우메다","cat":"스시"},{"name":"구로몬사카에스시","lat":34.666185,"lng":135.507347,"area":"구로몬시장","cat":"스시"},{"name":"사카에스시 타마야초점","lat":34.670268,"lng":135.504477,"area":"도톤보리","cat":"스시"},{"name":"슈하리","lat":34.682254,"lng":135.514565,"area":"신사이바시","cat":"스시"},{"name":"난반테이","lat":34.659368,"lng":135.504279,"area":"신세카이","cat":"꼬치","note":"현금만"},{"name":"HALAL Mori BBQ","lat":34.662739,"lng":135.508699,"area":"난바","cat":"꼬치"},{"name":"Takoshige","lat":34.660226,"lng":135.508055,"area":"난바","cat":"타코야키","note":"흡연 가능"},{"name":"Tottotto 난바센니치마에점","lat":34.666783,"lng":135.501811,"area":"난바","cat":"이자카야","note":"로바타야끼"},{"name":"Mallory Pork Steak","lat":34.663149,"lng":135.501563,"area":"난바","cat":"스테이크"},{"name":"치보 오코노미야키","lat":34.668807,"lng":135.503907,"area":"도톤보리","cat":"오코노미야키"},{"name":"야바톤 (나고야)","lat":35.167981,"lng":136.905446,"area":"나고야","cat":"미소카츠","note":"지브리 당일"},{"name":"모헤지 우메다 루쿠아점","lat":34.703255,"lng":135.495578,"area":"우메다","cat":"모츠나베"},{"name":"모지오 몬자야키","lat":34.664794,"lng":135.50528,"area":"난바","cat":"몬자야키"},{"name":"무겐라멘 난바 본점","lat":34.659759,"lng":135.498499,"area":"난바","cat":"라멘"},{"name":"이치란 도톤보리점","lat":34.6693,"lng":135.503072,"area":"도톤보리","cat":"라멘"},{"name":"오코노미야키 미즈노","lat":34.668355,"lng":135.503223,"area":"도톤보리","cat":"오코노미야키"},{"name":"토마토라멘 키오","lat":34.668615,"lng":135.499443,"area":"난바","cat":"라멘"},{"name":"노구치타로라멘 신사이바시","lat":34.672508,"lng":135.503377,"area":"신사이바시","cat":"라멘"},{"name":"무기토 토리","lat":34.677905,"lng":135.502502,"area":"신사이바시","cat":"라멘"},{"name":"라멘 텐도","lat":34.666267,"lng":135.505852,"area":"난바","cat":"라멘"},{"name":"라멘 초로","lat":34.683275,"lng":135.512317,"area":"신사이바시","cat":"라멘"},{"name":"NY Ramen 신사이바시","lat":34.672931,"lng":135.503387,"area":"신사이바시","cat":"라멘"},{"name":"킨무기 아메무라점","lat":34.672749,"lng":135.497121,"area":"아메무라","cat":"라멘"},{"name":"무한라멘 신이마미야","lat":34.649992,"lng":135.503747,"area":"신세카이","cat":"라멘"},{"name":"点心の気持ち","lat":34.666433,"lng":135.478697,"area":"난바","cat":"딤섬"},{"name":"야키니쿠 고리짱 우메다","lat":34.703724,"lng":135.503299,"area":"우메다","cat":"야키니쿠"},{"name":"마구로 잇테츠","lat":34.66762,"lng":135.503479,"area":"도톤보리","cat":"스시"},{"name":"카미나리 스시","lat":34.667599,"lng":135.503516,"area":"도톤보리","cat":"스시"},{"name":"우사기야","lat":34.653855,"lng":135.505959,"area":"신세카이","cat":"이자카야"},{"name":"우오토요","lat":34.664532,"lng":135.506716,"area":"난바","cat":"해산물"},{"name":"하치마루 오뎅","lat":34.665425,"lng":135.507851,"area":"난바","cat":"오뎅"},{"name":"잇포테이 본점","lat":34.662392,"lng":135.503725,"area":"난바","cat":"꼬치"},{"name":"쿠시카츠 다루마 총본점","lat":34.65157,"lng":135.506203,"area":"신세카이","cat":"쿠시카츠"},{"name":"Hanamichi","lat":34.651491,"lng":135.506234,"area":"신세카이","cat":"꼬치"},{"name":"오니기리 고리짱","lat":34.649417,"lng":135.505911,"area":"신세카이","cat":"오니기리"},{"name":"로쿠센 스시","lat":34.652747,"lng":135.506269,"area":"신세카이","cat":"스시"},{"name":"규카츠 다이후쿠","lat":34.653438,"lng":135.505999,"area":"신세카이","cat":"규카츠"},{"name":"고에몬","lat":34.651984,"lng":135.506634,"area":"신세카이","cat":"꼬치"},{"name":"수키야넨 오코노미야키","lat":34.671137,"lng":135.507576,"area":"신사이바시","cat":"오코노미야키"},{"name":"유세이 우라난바","lat":34.664884,"lng":135.505456,"area":"난바","cat":"이자카야"},{"name":"사시스 우메다점","lat":34.702602,"lng":135.499668,"area":"우메다","cat":"스시"},{"name":"사시스 난바점","lat":34.667016,"lng":135.505144,"area":"난바","cat":"스시"},{"name":"Tegetege","lat":34.662243,"lng":135.509144,"area":"난바","cat":"이자카야"},{"name":"Maruki","lat":34.655923,"lng":135.507219,"area":"신세카이","cat":"이자카야"},{"name":"규카츠 토미타","lat":34.662744,"lng":135.503953,"area":"난바","cat":"규카츠"},{"name":"마도라스카레","lat":34.659852,"lng":135.506648,"area":"신세카이","cat":"카레"},{"name":"쥬테이","lat":34.666213,"lng":135.502171,"area":"난바","cat":"이자카야"},{"name":"도톤보리 이마이","lat":34.668633,"lng":135.502714,"area":"도톤보리","cat":"우동"},{"name":"551 호라이만두","lat":34.666409,"lng":135.501346,"area":"난바","cat":"만두"},{"name":"Inanozi","lat":34.667812,"lng":135.504216,"area":"도톤보리","cat":"이자카야"},{"name":"和和鍋 道頓堀","lat":34.668829,"lng":135.501811,"area":"도톤보리","cat":"나베"},{"name":"무구니","lat":34.670574,"lng":135.499335,"area":"도톤보리","cat":"라멘"},{"name":"규카츠 모토무라 난바","lat":34.666617,"lng":135.501974,"area":"난바","cat":"규카츠"},{"name":"야키니쿠 호르몬 타카라","lat":34.66545,"lng":135.504074,"area":"구로몬시장","cat":"야키니쿠"},{"name":"토리키조쿠 난바","lat":34.664022,"lng":135.502738,"area":"난바","cat":"이자카야"},{"name":"후쿠타로","lat":34.665526,"lng":135.504499,"area":"난바","cat":"타코야키"},{"name":"멜론 브레드","lat":34.668784,"lng":135.503491,"area":"도톤보리","cat":"빵"}],
@@ -250,9 +260,32 @@ function updateMap(){
 }
 
 function fly(lat,lng,n){
-  map.setView([lat,lng],17);
-  const name=decodeURIComponent(n);
-  markers.forEach(m=>{if(m.getPopup&&m.getPopup()?.getContent()?.includes(name))m.openPopup()});
+  // 모바일이면 지도 자동 열기
+  if(window.innerWidth<=768) toggleMap(true);
+  setTimeout(()=>{
+    map.invalidateSize();
+    map.setView([lat,lng],17);
+    const name=decodeURIComponent(n);
+    markers.forEach(m=>{if(m.getPopup&&m.getPopup()?.getContent()?.includes(name))m.openPopup()});
+  },100);
+}
+
+function toggleMap(show){
+  const wrap=document.getElementById('mapWrap');
+  const close=document.getElementById('mapClose');
+  const fab=document.getElementById('fab');
+  if(show){
+    wrap.classList.add('show');
+    close.style.display='flex';
+    fab.innerHTML='&#128203; 목록 보기';
+    fab.onclick=()=>toggleMap(false);
+    setTimeout(()=>map.invalidateSize(),50);
+  } else {
+    wrap.classList.remove('show');
+    close.style.display='none';
+    fab.innerHTML='&#128506; 지도 보기';
+    fab.onclick=()=>toggleMap(true);
+  }
 }
 
 // Init

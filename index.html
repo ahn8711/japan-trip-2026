@@ -291,15 +291,15 @@ function updateMap(){
 
   // Accommodation
   const a=DATA.accom;
-  const am=L.circleMarker([a.lat,a.lng],{radius:10,fillColor:'#222',color:'#fff',weight:3,fillOpacity:1}).bindPopup(`<div style="font-family:Inter,sans-serif"><strong>&#127968; ${a.name}</strong><br><small style="color:#666">${a.addr}</small><br><small>${a.station}</small><br><a href="https://www.google.com/maps/search/?api=1&query=${a.lat},${a.lng}" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>`).bindTooltip('&#127968; 숙소',{direction:'top',offset:[0,-8]});
+  const am=L.circleMarker([a.lat,a.lng],{radius:10,fillColor:'#222',color:'#fff',weight:3,fillOpacity:1}).bindPopup(`<div style="font-family:Inter,sans-serif"><strong>&#127968; ${a.name}</strong><br><small style="color:#666">${a.addr}</small><br><small>${a.station}</small><br><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('日本橋5-1-15 大阪')}" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>`).bindTooltip('&#127968; 숙소',{direction:'top',offset:[0,-8]});
   am.addTo(map);markers.push(am);
 
   if(cur==='2026-04-17'){
-    const u=L.circleMarker([34.6654,135.4323],{radius:14,fillColor:'#ff385c',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127906; Universal Studios Japan</strong><br><a href="https://www.google.com/maps/search/?api=1&query=34.6654,135.4323" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127906; USJ',{direction:'top',offset:[0,-10],className:'tt'});
+    const u=L.circleMarker([34.6654,135.4323],{radius:14,fillColor:'#ff385c',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127906; Universal Studios Japan</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Universal+Studios+Japan" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127906; USJ',{direction:'top',offset:[0,-10],className:'tt'});
     u.addTo(map);markers.push(u);map.setView([34.6654,135.4323],14);return;
   }
   if(cur==='2026-04-18'&&places.length<=1){
-    const g=L.circleMarker([35.1750,137.0888],{radius:14,fillColor:'#4a7c23',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127795; Ghibli Park</strong><br><a href="https://www.google.com/maps/search/?api=1&query=35.1750,137.0888" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127795; 지브리파크',{direction:'top',offset:[0,-10]});
+    const g=L.circleMarker([35.1750,137.0888],{radius:14,fillColor:'#4a7c23',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127795; Ghibli Park</strong><br><a href="https://www.google.com/maps/search/?api=1&query=Ghibli+Park+愛知県" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127795; 지브리파크',{direction:'top',offset:[0,-10]});
     g.addTo(map);markers.push(g);
     if(places.length){
       const b=L.latLngBounds([[35.1750,137.0888],[places[0].lat,places[0].lng]]);map.fitBounds(b,{padding:[40,40]});
@@ -313,7 +313,7 @@ function updateMap(){
   const group=[];
   fp.forEach(p=>{
     const v=visited[p.name];
-    const m=L.circleMarker([p.lat,p.lng],{radius:7,fillColor:v?'#ccc':cc(p.cat),color:'#fff',weight:2,fillOpacity:v?.4:.9}).bindPopup(`<div style="font-family:Inter,sans-serif"><strong>${p.name}</strong><br><small style="color:#666">${p.area} · ${p.cat||''}</small>${p.note?'<br><small style="color:#ff385c">'+p.note+'</small>':''}<br><a href="https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}" target="_blank" style="color:#228be6;font-size:12px">Google Maps에서 보기 &#8599;</a></div>`).bindTooltip(p.name,{direction:'top',offset:[0,-6]});
+    const m=L.circleMarker([p.lat,p.lng],{radius:7,fillColor:v?'#ccc':cc(p.cat),color:'#fff',weight:2,fillOpacity:v?.4:.9}).bindPopup(`<div style="font-family:Inter,sans-serif"><strong>${p.name}</strong><br><small style="color:#666">${p.area} · ${p.cat||''}</small>${p.note?'<br><small style="color:#ff385c">'+p.note+'</small>':''}<br><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(p.name+' 大阪')}" target="_blank" style="color:#228be6;font-size:12px">Google Maps에서 보기 &#8599;</a></div>`).bindTooltip(p.name,{direction:'top',offset:[0,-6]});
     m.addTo(map);markers.push(m);group.push([p.lat,p.lng]);
   });
 

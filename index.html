@@ -92,86 +92,87 @@ hr.div{border:none;border-top:1px solid var(--border);margin:8px 0}
 #map{width:100%;height:100%}
 
 /* Mobile */
-.back-btn{display:none;position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:500;background:var(--text);color:#fff;border:none;border-radius:50px;padding:8px 18px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.3);-webkit-tap-highlight-color:transparent}
+.back-btn{display:none}
 
 @media(max-width:768px){
-  /* ── Layout ── */
+  /* Layout: 1 column, no gap */
   .main{grid-template-columns:1fr;padding:0;gap:0}
 
-  /* ── Map: 30vh at top ── */
-  .map-wrap{position:relative;top:0;height:30vh;order:-1;border-radius:0;border:none;border-bottom:1px solid var(--border)}
+  /* Map: compact, edge-to-edge */
+  .map-wrap{position:relative;top:0;height:28dvh;order:-1;border-radius:0;border:none;border-bottom:1px solid var(--border)}
 
-  /* ── Header: compact ── */
-  .header{padding:0}
-  .header-inner{padding:8px 16px}
-  .logo{font-size:17px}
+  /* Header */
+  .header-inner{padding:10px 16px}
+  .logo{font-size:18px}
   .header-tags{display:none}
 
-  /* ── Tabs: horizontal scroll, no wrap, all 5 accessible ── */
-  .tabs-wrap{top:41px}
-  .tabs{padding:0 12px;gap:0;display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
-  .tab{padding:10px 16px;font-size:13px;font-weight:500;min-width:max-content;flex-shrink:0}
-  .tab.active{font-weight:600}
-  .tab small{font-size:10px;margin-top:1px}
+  /* Tabs: scroll, all 5 visible */
+  .tabs-wrap{top:49px}
+  .tabs{padding:0 16px;gap:0;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .tabs::-webkit-scrollbar{display:none}
+  .tab{padding:10px 14px;font-size:14px;flex-shrink:0;min-width:max-content}
+  .tab small{font-size:11px;margin-top:2px}
 
-  /* ── Panel: breathing room ── */
-  .panel{padding:16px 16px 24px;gap:16px}
+  /* Content panel */
+  .panel{padding:20px 16px 32px;gap:16px}
 
-  /* ── Day heading: hierarchy ── */
-  .day-head{margin-bottom:0}
-  .day-head h2{font-size:18px;font-weight:700}
-  .day-head .label{font-size:12px;color:var(--text3)}
+  /* Day heading */
+  .day-head h2{font-size:20px}
+  .day-head .label{font-size:13px}
 
-  /* ── Flight card ── */
-  .flight{padding:16px;border-radius:12px}
-  .flight-city .city{font-size:17px}
-  .flight-city .time{font-size:12px}
-  .flight-code{font-size:11px}
+  /* Flight */
+  .flight{padding:20px;border-radius:14px}
+  .flight-city .city{font-size:20px}
+  .flight-city .time{font-size:13px}
+  .flight-code{font-size:12px}
 
-  /* ── Accommodation: compact on non-arrival days ── */
-  .accom{padding:12px 16px;border-radius:10px}
-  .accom h3{font-size:13px;margin-bottom:6px}
-  .accom-grid{font-size:11px;gap:3px 10px}
+  /* Accommodation */
+  .accom{padding:16px;border-radius:12px}
+  .accom h3{font-size:15px;margin-bottom:8px}
+  .accom-grid{font-size:13px;gap:4px 12px}
 
-  /* ── Events / schedule ── */
-  .ev{padding:12px 14px;gap:10px;border-radius:10px;border-color:var(--border)}
-  .ev-time{width:auto;min-width:56px;font-size:12px}
-  .ev-title{font-size:13px;font-weight:600}
-  .ev-note{font-size:11px;line-height:1.5;color:var(--text2)}
+  /* Events */
+  .ev{padding:14px 16px;gap:12px;border-radius:12px}
+  .ev-time{width:auto;min-width:60px;font-size:14px}
+  .ev-title{font-size:15px}
+  .ev-note{font-size:13px;line-height:1.5}
 
-  /* ── Special cards (USJ, Ghibli) ── */
-  .special{padding:16px;border-radius:12px;font-size:12px;line-height:1.7}
-  .special h3{font-size:16px;margin-bottom:8px}
+  /* Special cards (USJ, Ghibli) */
+  .special{padding:20px;border-radius:14px;font-size:14px;line-height:1.8}
+  .special h3{font-size:17px;margin-bottom:10px}
 
-  /* ── Section divider ── */
-  hr.div{margin:4px 0;border-color:transparent}
+  /* Divider */
+  hr.div{margin:8px 0}
 
-  /* ── Area chips: horizontal scroll, single row ── */
-  .area-chips{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}
+  /* Area chips: single row scroll */
+  .area-chips{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;padding-bottom:4px;scrollbar-width:none}
   .area-chips::-webkit-scrollbar{display:none}
-  .area-chip{padding:6px 12px;font-size:11px;border-radius:20px;flex-shrink:0;white-space:nowrap}
+  .area-chip{flex-shrink:0;white-space:nowrap;padding:8px 14px;font-size:13px;border-radius:20px}
 
-  /* ── Category filters: horizontal scroll, single row ── */
-  .filters{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}
+  /* Category filters: single row scroll */
+  .filters{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;gap:8px;padding-bottom:4px;scrollbar-width:none}
   .filters::-webkit-scrollbar{display:none}
-  .chip{padding:6px 12px;font-size:11px;flex-shrink:0;white-space:nowrap;border-radius:20px}
+  .chip{flex-shrink:0;white-space:nowrap;padding:8px 14px;font-size:13px;border-radius:20px}
 
-  /* ── Counter ── */
-  .counter{font-size:11px;padding:6px 0 2px}
+  /* Counter */
+  .counter{font-size:13px;padding:8px 0 4px}
 
-  /* ── Place list ── */
+  /* Place list */
   .plist{gap:8px;max-height:none;overflow-y:visible;padding-right:0}
 
-  /* ── Place cards: clean, good touch targets ── */
-  .pc{padding:12px 14px;gap:10px;border-radius:10px;min-height:44px;align-items:center}
-  .pn{font-size:13px;font-weight:500}
-  .pm{font-size:11px;gap:6px;margin-top:2px}
-  .pnote{font-size:11px;margin-top:2px}
-  .chk{width:36px;height:36px;min-width:36px;font-size:14px;border-width:2px}
-  .cdot{width:6px;height:6px}
+  /* Place cards */
+  .pc{padding:14px 16px;gap:12px;border-radius:12px;min-height:48px}
+  .pn{font-size:15px}
+  .pm{font-size:13px;gap:8px;margin-top:3px}
+  .pnote{font-size:12px;margin-top:3px}
+  .chk{width:40px;height:40px;min-width:40px;font-size:16px;border-width:2px}
+  .cdot{width:8px;height:8px}
 
-  /* ── "목록으로" button: hide on mobile ── */
+  /* Hide back button */
   .back-btn{display:none!important}
+
+  /* Leaflet tooltip */
+  .leaflet-tooltip{font-size:13px;padding:6px 12px}
 }
 </style>
 </head>

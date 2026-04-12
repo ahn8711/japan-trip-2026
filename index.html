@@ -95,44 +95,83 @@ hr.div{border:none;border-top:1px solid var(--border);margin:8px 0}
 .back-btn{display:none;position:absolute;bottom:12px;left:50%;transform:translateX(-50%);z-index:500;background:var(--text);color:#fff;border:none;border-radius:50px;padding:8px 18px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer;box-shadow:0 2px 10px rgba(0,0,0,.3);-webkit-tap-highlight-color:transparent}
 
 @media(max-width:768px){
-  .main{grid-template-columns:1fr;padding:12px;gap:12px}
-  .map-wrap{position:relative;top:0;height:35vh;order:-1;border-radius:var(--r-sm)}
+  /* ── Layout ── */
+  .main{grid-template-columns:1fr;padding:0;gap:0}
+
+  /* ── Map: 30vh at top ── */
+  .map-wrap{position:relative;top:0;height:30vh;order:-1;border-radius:0;border:none;border-bottom:1px solid var(--border)}
+
+  /* ── Header: compact ── */
   .header{padding:0}
-  .header-inner{padding:10px 16px}
-  .logo{font-size:18px}
+  .header-inner{padding:8px 16px}
+  .logo{font-size:17px}
   .header-tags{display:none}
-  .tabs-wrap{top:45px}
-  .tab{padding:8px 14px;font-size:13px}
-  .tab small{font-size:10px}
-  .day-head h2{font-size:18px}
-  .day-head .label{font-size:12px}
-  .flight{padding:16px;border-radius:var(--r-md)}
-  .flight-city .city{font-size:18px}
+
+  /* ── Tabs: horizontal scroll, no wrap, all 5 accessible ── */
+  .tabs-wrap{top:41px}
+  .tabs{padding:0 12px;gap:0;display:flex;flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch}
+  .tab{padding:10px 16px;font-size:13px;font-weight:500;min-width:max-content;flex-shrink:0}
+  .tab.active{font-weight:600}
+  .tab small{font-size:10px;margin-top:1px}
+
+  /* ── Panel: breathing room ── */
+  .panel{padding:16px 16px 24px;gap:16px}
+
+  /* ── Day heading: hierarchy ── */
+  .day-head{margin-bottom:0}
+  .day-head h2{font-size:18px;font-weight:700}
+  .day-head .label{font-size:12px;color:var(--text3)}
+
+  /* ── Flight card ── */
+  .flight{padding:16px;border-radius:12px}
+  .flight-city .city{font-size:17px}
   .flight-city .time{font-size:12px}
   .flight-code{font-size:11px}
-  .accom{padding:14px 16px;border-radius:var(--r-md)}
-  .accom h3{font-size:13px}
-  .accom-grid{font-size:11px;gap:4px 10px}
-  .ev{padding:10px 14px;gap:10px;border-radius:var(--r-sm)}
-  .ev-time{width:65px;font-size:12px}
-  .ev-title{font-size:13px}
-  .ev-note{font-size:11px}
-  .special{padding:16px;border-radius:var(--r-md);font-size:12px;line-height:1.7}
-  .special h3{font-size:15px}
-  .area-chips{gap:4px}
-  .area-chip{padding:6px 10px;font-size:11px;border-radius:6px}
-  .filters{gap:4px}
-  .chip{padding:4px 10px;font-size:11px}
-  .counter{font-size:11px}
-  .pc{padding:8px 12px;gap:8px;border-radius:6px}
-  .pn{font-size:12px}
-  .pm{font-size:10px}
-  .pnote{font-size:10px}
-  .chk{width:28px;height:28px;min-width:28px;font-size:12px}
+
+  /* ── Accommodation: compact on non-arrival days ── */
+  .accom{padding:12px 16px;border-radius:10px}
+  .accom h3{font-size:13px;margin-bottom:6px}
+  .accom-grid{font-size:11px;gap:3px 10px}
+
+  /* ── Events / schedule ── */
+  .ev{padding:12px 14px;gap:10px;border-radius:10px;border-color:var(--border)}
+  .ev-time{width:auto;min-width:56px;font-size:12px}
+  .ev-title{font-size:13px;font-weight:600}
+  .ev-note{font-size:11px;line-height:1.5;color:var(--text2)}
+
+  /* ── Special cards (USJ, Ghibli) ── */
+  .special{padding:16px;border-radius:12px;font-size:12px;line-height:1.7}
+  .special h3{font-size:16px;margin-bottom:8px}
+
+  /* ── Section divider ── */
+  hr.div{margin:4px 0;border-color:transparent}
+
+  /* ── Area chips: horizontal scroll, single row ── */
+  .area-chips{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}
+  .area-chips::-webkit-scrollbar{display:none}
+  .area-chip{padding:6px 12px;font-size:11px;border-radius:20px;flex-shrink:0;white-space:nowrap}
+
+  /* ── Category filters: horizontal scroll, single row ── */
+  .filters{display:flex;flex-wrap:nowrap;gap:6px;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:4px;scrollbar-width:none;-ms-overflow-style:none}
+  .filters::-webkit-scrollbar{display:none}
+  .chip{padding:6px 12px;font-size:11px;flex-shrink:0;white-space:nowrap;border-radius:20px}
+
+  /* ── Counter ── */
+  .counter{font-size:11px;padding:6px 0 2px}
+
+  /* ── Place list ── */
+  .plist{gap:8px;max-height:none;overflow-y:visible;padding-right:0}
+
+  /* ── Place cards: clean, good touch targets ── */
+  .pc{padding:12px 14px;gap:10px;border-radius:10px;min-height:44px;align-items:center}
+  .pn{font-size:13px;font-weight:500}
+  .pm{font-size:11px;gap:6px;margin-top:2px}
+  .pnote{font-size:11px;margin-top:2px}
+  .chk{width:36px;height:36px;min-width:36px;font-size:14px;border-width:2px}
   .cdot{width:6px;height:6px}
-  .plist{gap:5px}
-  .back-btn{display:block;font-size:12px;padding:6px 14px}
-  hr.div{margin:6px 0}
+
+  /* ── "목록으로" button: hide on mobile ── */
+  .back-btn{display:none!important}
 }
 </style>
 </head>

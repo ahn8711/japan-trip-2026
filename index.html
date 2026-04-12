@@ -293,11 +293,11 @@ function updateMap(){
     u.addTo(map);markers.push(u);map.setView([34.6654,135.4323],14);return;
   }
   if(cur==='2026-04-18'&&places.length<=1){
-    const g=L.circleMarker([35.1784,137.0585],{radius:14,fillColor:'#4a7c23',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127795; Ghibli Park</strong><br><a href="https://www.google.com/maps/search/?api=1&query=35.1784,137.0585" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127795; 지브리파크',{direction:'top',offset:[0,-10]});
+    const g=L.circleMarker([35.1750,137.0888],{radius:14,fillColor:'#4a7c23',color:'#fff',weight:3,fillOpacity:1}).bindPopup('<div style="font-family:Inter,sans-serif"><strong>&#127795; Ghibli Park</strong><br><a href="https://www.google.com/maps/search/?api=1&query=35.1750,137.0888" target="_blank" style="color:#228be6;font-size:12px">Google Maps &#8599;</a></div>').bindTooltip('&#127795; 지브리파크',{direction:'top',offset:[0,-10]});
     g.addTo(map);markers.push(g);
     if(places.length){
-      const b=L.latLngBounds([[35.1784,137.0585],[places[0].lat,places[0].lng]]);map.fitBounds(b,{padding:[40,40]});
-    }else map.setView([35.1784,137.0585],11);
+      const b=L.latLngBounds([[35.1750,137.0888],[places[0].lat,places[0].lng]]);map.fitBounds(b,{padding:[40,40]});
+    }else map.setView([35.1750,137.0888],11);
     // still add nagoya places below
   }
 

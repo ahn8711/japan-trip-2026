@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>지브리파크 완전 동선 가이드 | 4월 18일 (토)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;500;600;700;800&display=swap');
+
+  :root {
+    --bg: #faf9f6;
+    --surface: #fff;
+    --text: #1a1a1a;
+    --text2: #666;
+    --accent: #2d6a4f;
+    --accent-light: #eaf4ec;
+    --orange: #e07a2f;
+    --orange-light: #fef3e6;
+    --blue: #2563eb;
+    --blue-light: #eff6ff;
+    --red: #dc2626;
+    --red-light: #fef2f2;
+    --border: #e8e5e0;
+    --r: 12px;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Noto Sans KR', 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 24px 60px;
+  }
+
+  /* Header */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .header-icon { font-size: 48px; margin-bottom: 12px; }
+  .header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .header .sub {
+    font-size: 16px;
+    color: var(--text2);
+    font-weight: 500;
+  }
+  .header .badge {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 16px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  /* Ticket info */
+  .ticket-box {
+    background: var(--accent-light);
+    border: 2px solid var(--accent);
+    border-radius: var(--r);
+    padding: 20px 24px;
+    margin-bottom: 30px;
+  }
+  .ticket-box h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 10px;
+  }
+  .ticket-box ul { list-style: none; font-size: 14px; }
+  .ticket-box li { padding: 3px 0; }
+  .ticket-box li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+
+  /* Section */
+  .section {
+    margin-bottom: 32px;
+    page-break-inside: avoid;
+  }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+  .section-time {
+    flex-shrink: 0;
+    padding: 4px 12px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  .section-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .section-duration {
+    font-size: 12px;
+    color: var(--text2);
+    margin-left: auto;
+    white-space: nowrap;
+  }
+
+  /* Timeline */
+  .timeline { position: relative; padding-left: 20px; }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 4px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .tl-item {
+    position: relative;
+    padding: 8px 0 8px 16px;
+    font-size: 14px;
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 2px solid #fff;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .tl-time {
+    font-weight: 700;
+    color: var(--accent);
+    font-size: 13px;
+  }
+  .tl-title { font-weight: 600; }
+  .tl-note {
+    font-size: 13px;
+    color: var(--text2);
+    margin-top: 2px;
+  }
+
+  /* Meal box */
+  .meal-box {
+    background: var(--orange-light);
+    border-left: 4px solid var(--orange);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 16px 20px;
+    margin: 12px 0;
+  }
+  .meal-box h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 6px;
+  }
+  .meal-box p { font-size: 13px; }
+  .meal-menu {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2px 16px;
+    font-size: 13px;
+    margin-top: 6px;
+  }
+  .meal-menu .price { color: var(--text2); text-align: right; }
+
+  /* Warning */
+  .warn-box {
+    background: var(--red-light);
+    border-left: 4px solid var(--red);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .warn-box strong { color: var(--red); }
+
+  /* Tip */
+  .tip-box {
+    background: var(--blue-light);
+    border-left: 4px solid var(--blue);
+    border-radius: 0 var(--r) var(--r) 0;
+    padding: 14px 18px;
+    margin: 12px 0;
+    font-size: 13px;
+  }
+  .tip-box strong { color: var(--blue); }
+
+  /* Warehouse map */
+  .wh-grid {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 4px 12px;
+    font-size: 13px;
+    padding: 12px 0;
+  }
+  .wh-num {
+    width: 22px; height: 22px;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700;
+    flex-shrink: 0;
+  }
+  .wh-name { font-weight: 600; }
+  .wh-time { color: var(--text2); text-align: right; font-size: 12px; }
+
+  /* Food table */
+  .food-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin: 12px 0;
+  }
+  .food-table th {
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 12px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .food-table td {
+    padding: 8px 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .food-table tr:nth-child(even) td { background: #fafaf8; }
+
+  /* Checklist */
+  .checklist {
+    list-style: none;
+    font-size: 14px;
+  }
+  .checklist li {
+    padding: 6px 0 6px 28px;
+    position: relative;
+  }
+  .checklist li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--border);
+    border-radius: 4px;
+  }
+
+  /* Sources */
+  .sources {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--text2);
+  }
+  .sources h3 { font-size: 13px; color: var(--text); margin-bottom: 8px; }
+  .sources a { color: var(--blue); text-decoration: none; }
+  .sources ol { padding-left: 20px; }
+  .sources li { padding: 1px 0; }
+
+  /* Print button */
+  .print-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--accent);
+    padding: 12px;
+    text-align: center;
+    z-index: 100;
+  }
+  .print-btn {
+    background: #fff;
+    color: var(--accent);
+    border: none;
+    padding: 10px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .print-btn:hover { opacity: 0.9; }
+
+  @media print {
+    .print-bar { display: none; }
+    body { background: #fff; font-size: 12px; }
+    .container { padding: 20px; max-width: 100%; }
+    .header h1 { font-size: 22px; }
+    .section { page-break-inside: avoid; }
+    .section-header { page-break-after: avoid; }
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 20px 16px 80px; }
+    .header h1 { font-size: 22px; }
+    .section-title { font-size: 16px; }
+    .section-header { flex-wrap: wrap; }
+    .section-duration { margin-left: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="header">
+  <div class="header-icon">🏡</div>
+  <h1>지브리파크 완전 동선 가이드</h1>
+  <div class="sub">2026년 4월 18일 (토) · 프리미엄 티켓 · 대창고 14시</div>
+  <div class="badge">33개 출처 분석 기반 · 2026.04 최신</div>
+</div>
+
+<!-- Ticket -->
+<div class="ticket-box">
+  <h3>프리미엄 티켓 (大さんぽ券プレミアム) — 7,800엔/인</h3>
+  <ul>
+    <li>5개 에리어 전부 입장 + 모든 건물 내부 관람 가능</li>
+    <li>하울의 성, 오키노 저택, 마녀의 집, 사츠키와 메이의 집, 지구야</li>
+    <li>대창고만 시간 지정 (14:00~15:00 사이 입장), 나머지 4곳은 자유</li>
+    <li>리스트밴드를 12:00까지 첫 에리어에서 수령해야 함</li>
+    <li>대창고 빼고 나머지 에리어는 재입장 가능</li>
+  </ul>
+</div>
+
+<!-- Transport -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">06:30~08:50</span>
+    <span class="section-title">🚄 이동 (오사카 → 지브리파크)</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div><span class="tl-time">06:30</span> <span class="tl-title">숙소 출발</span></div>
+      <div class="tl-note">닛폰바시 → 신오사카역 지하철 약 15분</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">07:15</span> <span class="tl-title">NOZOMI 236 탑승</span></div>
+      <div class="tl-note">신오사카→나고야 · 12호차 7D·7E·8D·8E · 08:04 도착</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">08:04</span> <span class="tl-title">나고야역 도착</span></div>
+      <div class="tl-note">지하철 히가시야마선 → 후지가오카(28분) → 리니모(13분)</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">08:50</span> <span class="tl-title">지브리파크 도착</span></div>
+      <div class="tl-note">입구에서 지도 수령 · 토요일 9시 개장</div>
+    </div>
+  </div>
+</div>
+
+<!-- 1. Witch Valley -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">09:00~10:30</span>
+    <span class="section-title">🧹 마녀의 골짜기</span>
+    <span class="section-duration">약 1.5시간</span>
+  </div>
+
+  <div class="tip-box">
+    <strong>여기서 리스트밴드 수령!</strong> 첫 에리어 입장 시 QR 티켓 제시 → 리스트밴드 받음. 12시까지 필수.
+  </div>
+
+  <div class="timeline">
+    <div class="tl-item">
+      <div><span class="tl-time">09:00</span> <span class="tl-title">키키의 빵집 구치파네</span></div>
+      <div class="tl-note">실제 빵 판매! 오전에 가야 안 팔림. 크림빵, 소시지롤 인기</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">09:15</span> <span class="tl-title">하울의 움직이는 성 내부</span></div>
+      <div class="tl-note">실물 크기. 프리미엄만 입장 가능. 하울의 방, 소피의 작업실 재현. 약 30분</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">09:45</span> <span class="tl-title">오키노 저택 + 마녀의 집</span></div>
+      <div class="tl-note">키키의 집, 아야와 마녀. 각 15~20분</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">10:15</span> <span class="tl-title">핫틴루프에서 아침 간식</span></div>
+      <div class="tl-note">10시 오픈. 고양이손빵 핫도그 + 현지 맥주(페일에일/히메화이트)</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">10:25</span> <span class="tl-title">에리어 외관 산책 · 포토존</span></div>
+      <div class="tl-note">정원, 턴헤드(순무머리) 등</div>
+    </div>
+  </div>
+</div>
+
+<!-- 2. Lunch -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">10:30~11:00</span>
+    <span class="section-title">🏠 청춘의 언덕</span>
+    <span class="section-duration">약 30분</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div><span class="tl-time">10:30</span> <span class="tl-title">마녀의 골짜기 → 청춘의 언덕 이동</span></div>
+      <div class="tl-note">도보 약 15분 (대창고 옆)</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">10:45</span> <span class="tl-title">지구야 골동품 가게 내부 관람</span></div>
+      <div class="tl-note">귀를 기울이면. 프리미엄만 입장 가능. 엘리베이터 탑 외관</div>
+    </div>
+  </div>
+</div>
+
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">11:00~11:45</span>
+    <span class="section-title">🍽️ 점 심</span>
+    <span class="section-duration">약 45분</span>
+  </div>
+
+  <div class="meal-box">
+    <h4>하늘을 나는 오븐 (空飛ぶオーブン) — 마녀의 골짜기</h4>
+    <p>토요일 9:30 오픈. <strong>11시 직후가 줄 가장 짧음.</strong> 14시쯤 인기 메뉴 매진 시작.</p>
+    <div class="meal-menu">
+      <span>코티지파이</span><span class="price">1,950엔</span>
+      <span>로스트 포크</span><span class="price">1,850엔</span>
+      <span>어둠의 카레</span><span class="price">1,600엔</span>
+      <span>컵케이크</span><span class="price">700엔</span>
+    </div>
+  </div>
+
+  <div class="warn-box">
+    <strong>12~13시는 어디나 대행렬.</strong> 33개 출처 중 가장 많이 반복된 팁: "점심은 11시 이전 또는 14시 이후"
+  </div>
+</div>
+
+<!-- 3. Mononoke -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">11:45~12:30</span>
+    <span class="section-title">👹 모노노케의 마을</span>
+    <span class="section-duration">약 45분</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div><span class="tl-time">11:45</span> <span class="tl-title">마녀의 골짜기 → 모노노케 이동</span></div>
+      <div class="tl-note">도보 약 10분</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">11:55</span> <span class="tl-title">타타라바 (제철소) + 오토리사마</span></div>
+      <div class="tl-note">원령공주 세계관. 미끄럼틀, 오곡 만들기 체험</div>
+    </div>
+  </div>
+</div>
+
+<!-- 4. Dondoko -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">12:30~13:30</span>
+    <span class="section-title">🌳 돈도코 숲</span>
+    <span class="section-duration">약 1시간</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div><span class="tl-time">12:30</span> <span class="tl-title">모노노케 → 돈도코 숲 이동</span></div>
+      <div class="tl-note">도보 10~15분. 셔틀버스 활용 가능</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">12:45</span> <span class="tl-title">사츠키와 메이의 집 내부 관람</span></div>
+      <div class="tl-note">이웃집 토토로. 프리미엄만 내부 입장 가능</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">13:15</span> <span class="tl-title">돈도코 산책로</span></div>
+      <div class="tl-note">숲길 산책</div>
+    </div>
+  </div>
+</div>
+
+<!-- Move -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">13:30~14:20</span>
+    <span class="section-title">🚶 이동 + 여유</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div><span class="tl-time">13:30</span> <span class="tl-title">돈도코 숲 → 대창고 방면 이동</span></div>
+      <div class="tl-note">셔틀버스 또는 도보 15~20분. 공원 곳곳의 지브리 조형물 구경. 스탠프 랠리 도장 찍기 (3/14~4/24)</div>
+    </div>
+  </div>
+</div>
+
+<!-- 5. Grand Warehouse -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">14:20~16:30</span>
+    <span class="section-title">🏛️ 지브리의 대창고</span>
+    <span class="section-duration">약 2시간</span>
+  </div>
+
+  <div class="warn-box">
+    <strong>14시 정각에 가지 마세요!</strong> 정각은 입장 러시. 14:20~30에 가면 대기 없이 바로 입장. (4개 출처 공통)
+  </div>
+
+  <div class="tip-box">
+    <strong>2025.12 대규모 리뉴얼 완료!</strong> 새로 추가: 그대들은 어떻게 살 것인가(소년과 왜가리), 이웃의 야마다군, On Your Mark. 장면 교체: 붉은 돼지, 추억은 방울방울, 가구야 공주. 포르코 로소 비행기(Savoia S-21) 실물 크기 전시. 성인도 고양이버스룸 입장 가능(촬영 금지).
+  </div>
+
+  <h4 style="font-size:14px;margin:16px 0 8px;color:var(--accent)">대창고 내부 순서 (우선순위 순)</h4>
+
+  <div class="wh-grid">
+    <span class="wh-num">1</span>
+    <span class="wh-name">나리키리 명장면전 (포토존)</span>
+    <span class="wh-time">14:20</span>
+
+    <span></span>
+    <span class="tl-note" style="grid-column:2/4">무조건 제일 먼저! 오후엔 복도까지 줄 → 1시간+ 대기. 입장 직후가 유일한 기회</span>
+    <span></span>
+
+    <span class="wh-num">2</span>
+    <span class="wh-name">하늘의 정원 (라퓨타 로봇병사)</span>
+    <span class="wh-time">14:50</span>
+
+    <span class="wh-num">3</span>
+    <span class="wh-name">유바바의 사무실</span>
+    <span class="wh-time">14:55</span>
+
+    <span class="wh-num">4</span>
+    <span class="wh-name">고양이버스룸 (성인 입장 가능, 촬영 금지)</span>
+    <span class="wh-time">15:00</span>
+
+    <span class="wh-num">5</span>
+    <span class="wh-name">오리온좌 극장 — 지브리 단편 영화 16분</span>
+    <span class="wh-time">15:10</span>
+
+    <span class="wh-num">6</span>
+    <span class="wh-name">아리에티 (작은 사람의 정원 + 바닥 아래 집)</span>
+    <span class="wh-time">15:30</span>
+
+    <span class="wh-num">7</span>
+    <span class="wh-name">포르코 로소 Savoia S-21 (신규 전시)</span>
+    <span class="wh-time">15:45</span>
+
+    <span class="wh-num">8</span>
+    <span class="wh-name">카페 대륙횡단비행 — 간식</span>
+    <span class="wh-time">15:50</span>
+
+    <span></span>
+    <span class="tl-note" style="grid-column:2/4">BLT샌드 920엔, 피자 920엔, 젤라또 600엔. 라스트오더 16:30 — 16시 전에 가야 안전!</span>
+    <span></span>
+
+    <span class="wh-num">9</span>
+    <span class="wh-name">기념품샵 "모험비행단" — 지브리파크 최대 샵</span>
+    <span class="wh-time">16:10</span>
+
+    <span></span>
+    <span class="tl-note" style="grid-column:2/4">16:50~ 줄 짧아짐. 한정 굿즈: 선캐처 3,300엔 등. 인기 상품 오후 품절 주의</span>
+    <span></span>
+  </div>
+
+  <div class="warn-box">
+    <strong>대창고는 재입장 불가!</strong> 한번 나가면 다시 못 들어갑니다. 쇼핑까지 다 끝내고 나오세요.
+  </div>
+</div>
+
+<!-- Return -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">17:00~19:39</span>
+    <span class="section-title">🚄 복귀</span>
+  </div>
+  <div class="timeline">
+    <div class="tl-item">
+      <div><span class="tl-time">17:00</span> <span class="tl-title">폐장! 지브리파크 출발</span></div>
+      <div class="tl-note">리니모+지하철로 나고야역 이동 (약 50분)</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">18:49</span> <span class="tl-title">NOZOMI 53 탑승</span></div>
+      <div class="tl-note">나고야→신오사카 · 15호차 13D·13E·14D·14E</div>
+    </div>
+    <div class="tl-item">
+      <div><span class="tl-time">19:39</span> <span class="tl-title">신오사카 도착 → 숙소</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- Food options -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">참고</span>
+    <span class="section-title">🍽️ 식사 옵션 전체 (공식 기준)</span>
+  </div>
+  <table class="food-table">
+    <tr>
+      <th>장소</th><th>에리어</th><th>영업 (토)</th><th>추천</th>
+    </tr>
+    <tr>
+      <td><strong>하늘을 나는 오븐</strong></td>
+      <td>마녀의 골짜기</td>
+      <td>9:30~17:00</td>
+      <td>점심 메인. 코티지파이, 카레</td>
+    </tr>
+    <tr>
+      <td><strong>핫틴루프</strong></td>
+      <td>마녀의 골짜기</td>
+      <td>10:00~16:30</td>
+      <td>아침 간식. 고양이손빵 핫도그</td>
+    </tr>
+    <tr>
+      <td><strong>카페 대륙횡단비행</strong></td>
+      <td>대창고</td>
+      <td>10:30~17:00</td>
+      <td>오후 간식. 피자, 샌드, 젤라또</td>
+    </tr>
+    <tr>
+      <td><strong>밀크스탠드 시베리앙</strong></td>
+      <td>대창고</td>
+      <td>소진 시 종료</td>
+      <td>시베리아 카스텔라 (바람이 분다)</td>
+    </tr>
+    <tr>
+      <td><strong>로탄다 바람언덕</strong></td>
+      <td>북쪽 입구 (무료)</td>
+      <td>10:00~18:00</td>
+      <td>나폴리탄. 입장 전후 이용</td>
+    </tr>
+  </table>
+</div>
+
+<!-- Checklist -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">필독</span>
+    <span class="section-title">✅ 준비물 & 주의사항</span>
+  </div>
+  <ul class="checklist">
+    <li><strong>편한 신발</strong> — 에리어 간 이동 총 3km+, 1만 보 예상</li>
+    <li><strong>보조 배터리</strong> — 사진 많이 찍으면 배터리 빠르게 소모</li>
+    <li><strong>양산/우산 반입 금지</strong> — 에리어 내 사용 불가</li>
+    <li><strong>외부 음식 반입 가능</strong> — 벤치에서 먹을 수 있음</li>
+    <li><strong>촬영 금지 구역</strong> — 건물 내부 일부, 고양이버스룸</li>
+    <li><strong>카오나시 포토존</strong> — 1시간 대기. 보기만 하면 스태프에게 말하면 통과</li>
+    <li><strong>대창고 재입장 불가</strong> — 쇼핑까지 끝내고 나올 것</li>
+    <li><strong>스탠프 랠리</strong> — 3/14~4/24 운영 중. 공원 곳곳에서 도장 모으기</li>
+    <li><strong>지브리 영화 미리 복습</strong> — 감동 2배!</li>
+  </ul>
+</div>
+
+<!-- Sources -->
+<div class="sources">
+  <h3>출처 (33개 — 후기, 가이드, 공식 사이트)</h3>
+  <ol>
+    <li><a href="https://www.jalan.net/kankou/spt_guide000000219516/kuchikomi/">じゃらん 리뷰 (2026.04)</a></li>
+    <li><a href="https://note.com/chieko_yagi/n/nc42a032d01fd">note チエコ 1박2일 (2026.03)</a></li>
+    <li><a href="https://ryokou-tabemono-osusumeblog.com/ghibli-park-summary-guide/">大人トルネード 완전 가이드 (2026.03)</a></li>
+    <li><a href="https://ryokou-tabemono-osusumeblog.com/ghibli-park-time-models/">大人トルネード 모델코스 (2026.04)</a></li>
+    <li><a href="https://ryokou-tabemono-osusumeblog.com/ghibli-park-time-and-route-guide/">大人トルネード GW 루트 (2026)</a></li>
+    <li><a href="https://ameblo.jp/yuruttolife-s/entry-12956586598.html">아메블로 대창고 후회담 (2026.02)</a></li>
+    <li><a href="https://note.com/915_vlog/n/ne9ab9038994d">note juri 굿즈 (2026.01)</a></li>
+    <li><a href="https://note.com/915_vlog/n/n4712a67c7f7b">note juri 방문기 (2026.01)</a></li>
+    <li><a href="https://packyourlittles.com/ghibli-park-review-2025-we-visited-and-heres-what-we-thought/">Pack Your Littles 프리미엄 (2026.01)</a></li>
+    <li><a href="https://ameblo.jp/cl2103-5/entry-12950516727.html">아메블로 리뉴얼 직후 (2025.12)</a></li>
+    <li><a href="https://ameblo.jp/watakushino-gutinikki/entry-12901538505.html">아메블로 프리미엄 전제패 (2025.05)</a></li>
+    <li><a href="https://tabirepo.com/entry/2024/11/05/152404">たびレポ 14시 대창고 공략 (2024.11)</a></li>
+    <li><a href="https://tabirepo.com/entry/2024/10/25/170913">みきてぃー 14시 오후반나절 (2024.10)</a></li>
+    <li><a href="https://note.com/uruchikome/n/n20dabd221dcd">note 프리미엄 시간배분 (2024.10)</a></li>
+    <li><a href="https://aurorai.hatenablog.com/entry/2024/07/28/082941">ばらで飾る生活 프리미엄+14시 (2024.07)</a></li>
+    <li><a href="https://momosta.jp/entry/diary20230115">momon stadium 14시 체험 (2023.01)</a></li>
+    <li><a href="https://www.neverendingvoyage.com/ghibli-park-review/">Never Ending Voyage 프리미엄</a></li>
+    <li><a href="https://wanderfulplans.com/ghibli-park-and-ghibli-cafe-nagoya/">Wanderful Plans 프리미엄</a></li>
+    <li><a href="https://travelbugg.substack.com/p/a-guide-to-ghibli-park-in-nagoya">Travel Bugg 15시 대창고</a></li>
+    <li><a href="https://hyperjapan.co.uk/traditional-culture/visiting-ghibli-park-ghiblis-grand-warehouse/">HYPER JAPAN 대창고</a></li>
+    <li><a href="https://theqoo.net/travel/2999376250">더쿠 지브리파크 후기</a></li>
+    <li><a href="https://bbs.ruliweb.com/community/board/300261/read/30564761">루리웹 프리미엄 후기</a></li>
+    <li><a href="https://gall.dcinside.com/board/view/?id=dcbest&no=190179">DC인사이드 후기</a></li>
+    <li><a href="https://sumatokoblog.wpx.jp/ghiblinodaisoukomawarikata/">すまブロ 대창고 3시간 루트</a></li>
+    <li><a href="https://shinki-blog.com/how-to-get-around-the-theme-ghiblipark-with-premium-ticket/2025/">めいじ 프리미엄 동선</a></li>
+    <li><a href="https://ghibli-park.jp/ticket">공식 — 티켓</a></li>
+    <li><a href="https://ghibli-park.jp/calendar/">공식 — 영업시간</a></li>
+    <li><a href="https://ghibli-park.jp/food/">공식 — 음식</a></li>
+    <li><a href="https://ghibli-park.jp/access/">공식 — 교통편</a></li>
+    <li><a href="https://ghibli-park.jp/info/2026/">공식 — 2026 최신정보</a></li>
+    <li><a href="https://matcha-jp.com/ko/18012">MATCHA 15가지 팁</a></li>
+    <li><a href="https://www.klook.com/ko/blog/1n2d-ghibli-park-nagakute-tour-from-nagoya-2024-mar-98263/">클룩 매거진</a></li>
+    <li><a href="https://www.iesabroad.org/blogs/emma-suzuki-szwajkowski/trip-ghibli-park">IES Abroad 유학생</a></li>
+  </ol>
+</div>
+
+</div>
+
+<div class="print-bar">
+  <button class="print-btn" onclick="window.print()">📄 PDF로 저장하기 (Ctrl+P / ⌘+P)</button>
+</div>
+
+</body>
+</html>

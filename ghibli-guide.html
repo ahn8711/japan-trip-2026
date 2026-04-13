@@ -208,25 +208,41 @@
   }
   .tip-box strong { color: var(--blue); }
 
-  /* Warehouse map */
-  .wh-grid {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 4px 12px;
+  /* Warehouse table */
+  .wh-table {
+    width: 100%;
+    border-collapse: collapse;
     font-size: 13px;
-    padding: 12px 0;
+    margin: 12px 0;
   }
-  .wh-num {
-    width: 22px; height: 22px;
+  .wh-table th {
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 10px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 12px;
+  }
+  .wh-table td {
+    padding: 10px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .wh-table tr:nth-child(even) td { background: #fafaf8; }
+  .wh-table .wh-num {
+    width: 24px; height: 24px;
     background: var(--accent);
     color: #fff;
     border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
+    display: inline-flex; align-items: center; justify-content: center;
     font-size: 11px; font-weight: 700;
-    flex-shrink: 0;
   }
-  .wh-name { font-weight: 600; }
-  .wh-time { color: var(--text2); text-align: right; font-size: 12px; }
+  .wh-table .wh-note {
+    display: block;
+    font-size: 12px;
+    color: var(--text2);
+    margin-top: 3px;
+  }
 
   /* Food table */
   .food-table {
@@ -525,55 +541,54 @@
 
   <h4 style="font-size:14px;margin:16px 0 8px;color:var(--accent)">대창고 내부 순서 (우선순위 순)</h4>
 
-  <div class="wh-grid">
-    <span class="wh-num">1</span>
-    <span class="wh-name">나리키리 명장면전 (포토존)</span>
-    <span class="wh-time">14:20</span>
-
-    <span></span>
-    <span class="tl-note" style="grid-column:2/4">무조건 제일 먼저! 오후엔 복도까지 줄 → 1시간+ 대기. 입장 직후가 유일한 기회</span>
-    <span></span>
-
-    <span class="wh-num">2</span>
-    <span class="wh-name">하늘의 정원 (라퓨타 로봇병사)</span>
-    <span class="wh-time">14:50</span>
-
-    <span class="wh-num">3</span>
-    <span class="wh-name">유바바의 사무실</span>
-    <span class="wh-time">14:55</span>
-
-    <span class="wh-num">4</span>
-    <span class="wh-name">고양이버스룸 (성인 입장 가능, 촬영 금지)</span>
-    <span class="wh-time">15:00</span>
-
-    <span class="wh-num">5</span>
-    <span class="wh-name">오리온좌 극장 — 지브리 단편 영화 16분</span>
-    <span class="wh-time">15:10</span>
-
-    <span class="wh-num">6</span>
-    <span class="wh-name">아리에티 (작은 사람의 정원 + 바닥 아래 집)</span>
-    <span class="wh-time">15:30</span>
-
-    <span class="wh-num">7</span>
-    <span class="wh-name">포르코 로소 Savoia S-21 (신규 전시)</span>
-    <span class="wh-time">15:45</span>
-
-    <span class="wh-num">8</span>
-    <span class="wh-name">카페 대륙횡단비행 — 간식</span>
-    <span class="wh-time">15:50</span>
-
-    <span></span>
-    <span class="tl-note" style="grid-column:2/4">BLT샌드 920엔, 피자 920엔, 젤라또 600엔. 라스트오더 16:30 — 16시 전에 가야 안전!</span>
-    <span></span>
-
-    <span class="wh-num">9</span>
-    <span class="wh-name">기념품샵 "모험비행단" — 지브리파크 최대 샵</span>
-    <span class="wh-time">16:10</span>
-
-    <span></span>
-    <span class="tl-note" style="grid-column:2/4">16:50~ 줄 짧아짐. 한정 굿즈: 선캐처 3,300엔 등. 인기 상품 오후 품절 주의</span>
-    <span></span>
-  </div>
+  <table class="wh-table">
+    <tr><th style="width:36px"></th><th>장소</th><th style="width:52px">시간</th></tr>
+    <tr>
+      <td><span class="wh-num">1</span></td>
+      <td><strong>나리키리 명장면전 (포토존)</strong><span class="wh-note">무조건 제일 먼저! 오후엔 복도까지 줄 → 1시간+ 대기. 입장 직후가 유일한 기회</span></td>
+      <td>14:20</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">2</span></td>
+      <td><strong>하늘의 정원 (라퓨타 로봇병사)</strong><span class="wh-note">5분 대기. 여러 각도에서 사진 촬영 가능</span></td>
+      <td>14:50</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">3</span></td>
+      <td><strong>유바바의 사무실</strong><span class="wh-note">바로 근처, 짧게 구경</span></td>
+      <td>14:55</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">4</span></td>
+      <td><strong>고양이버스룸</strong><span class="wh-note">리뉴얼 후 성인 입장 가능. 촬영 금지</span></td>
+      <td>15:00</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">5</span></td>
+      <td><strong>오리온좌 극장</strong><span class="wh-note">지브리 단편 영화 상영 (약 16분). 티켓에 포함</span></td>
+      <td>15:10</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">6</span></td>
+      <td><strong>아리에티 (작은 사람의 정원 + 바닥 아래 집)</strong><span class="wh-note">약 15분 소요</span></td>
+      <td>15:30</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">7</span></td>
+      <td><strong>포르코 로소 Savoia S-21</strong><span class="wh-note">2025.11~ 신규 전시. 실물 크기 비행기</span></td>
+      <td>15:45</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">8</span></td>
+      <td><strong>카페 대륙횡단비행 — 간식</strong><span class="wh-note">BLT샌드 920엔, 피자 920엔, 젤라또 600엔. 라스트오더 16:30 — 16시 전에 가야 안전!</span></td>
+      <td>15:50</td>
+    </tr>
+    <tr>
+      <td><span class="wh-num">9</span></td>
+      <td><strong>기념품샵 "모험비행단"</strong><span class="wh-note">지브리파크 최대 샵. 16:50~ 줄 짧아짐. 한정 굿즈: 선캐처 3,300엔 등</span></td>
+      <td>16:10</td>
+    </tr>
+  </table>
 
   <div class="warn-box">
     <strong>대창고는 재입장 불가!</strong> 한번 나가면 다시 못 들어갑니다. 쇼핑까지 다 끝내고 나오세요.

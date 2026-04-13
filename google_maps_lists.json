@@ -1,0 +1,2301 @@
+{
+  "간식": [
+    {
+      "name": "Dia-pan ( Dia Bakery ) Hanshin Umeda",
+      "lat": 34.701341299999996,
+      "lng": 135.4973124,
+      "address": "阪神梅田本店 B1 Hanshin Food Hall, 1 Chome-13-13 Umeda, Kita Ward, Osaka, 530-8224 일본",
+      "note": ""
+    },
+    {
+      "name": "DIA Seipan Takashimaya Osaka Store",
+      "lat": 34.6645481,
+      "lng": 135.5012434,
+      "address": "5 Chome-1-5 Namba, Chuo Ward, Osaka, 542-8510 일본",
+      "note": ""
+    },
+    {
+      "name": "grenier 우메다 점",
+      "lat": 34.7035422,
+      "lng": 135.4991909,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "코바토 빵공장",
+      "lat": 34.6927259,
+      "lng": 135.5157141,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "이모야 킨지로 그랜드 프론트 오사카점",
+      "lat": 34.7034236,
+      "lng": 135.4941943,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Dr.Fruits",
+      "lat": 34.6760884,
+      "lng": 135.5014591,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "앤드류의 에그타르트 도톤보리 본점",
+      "lat": 34.6687797,
+      "lng": 135.50075529999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "타바네노시 오사카 신사이바시점",
+      "lat": 34.6726601,
+      "lng": 135.4992191,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "오코노미야키 미즈노",
+      "lat": 34.668354799999996,
+      "lng": 135.5032226,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Naniwaya",
+      "lat": 34.663688,
+      "lng": 135.5068602,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Mitoya",
+      "lat": 34.6657417,
+      "lng": 135.5071276,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "라이트교자(Right Gyouza)",
+      "lat": 34.667451199999995,
+      "lng": 135.5057677,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Dipper Dan Namba Walk",
+      "lat": 34.667101699999996,
+      "lng": 135.4996993,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Takoyaki Senju",
+      "lat": 34.6513924,
+      "lng": 135.50663889999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "파블로(PABLO) 신사이바시 본점",
+      "lat": 34.671877099999996,
+      "lng": 135.5011951,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "하브스 난바파크스점",
+      "lat": 34.661587,
+      "lng": 135.5018433,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "까눌레 드 재팬 사쿠라가와점",
+      "lat": 34.6663414,
+      "lng": 135.4919753,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Goonies",
+      "lat": 34.6604878,
+      "lng": 135.50566039999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Pompi",
+      "lat": 43.7756425,
+      "lng": 11.2522174,
+      "address": "Via Faenza, 37/R, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Ciocomiti Schololade St. Ulrich",
+      "lat": 46.5743228,
+      "lng": 11.6717715,
+      "address": "Strada Rezia, 15, 39046 Ortisei BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Squisitezze Gioia gelato italiano di produzione propria",
+      "lat": 46.57306,
+      "lng": 11.675099999999999,
+      "address": "Strada Rezia, 125, 39046 Ortisei BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "올드브릿지 젤라또",
+      "lat": 41.9064049,
+      "lng": 12.4563677,
+      "address": "Viale dei Bastioni di Michelangelo, 5, 00192 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "지올리띠 젤라또",
+      "lat": 41.9010245,
+      "lng": 12.4772026,
+      "address": "Via degli Uffici del Vicario, 40, 00186 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "Pompi",
+      "lat": 41.9065067,
+      "lng": 12.480869799999999,
+      "address": "V. della Croce, 88, 00187 Roma RM, 이탈리아",
+      "note": "로마 간식 (티라미수)"
+    },
+    {
+      "name": "Venchi Cioccolato e Gelato Via del Corso",
+      "lat": 41.9001204,
+      "lng": 12.480687399999999,
+      "address": "Via del Corso, 335, 00186 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "Frigidarium",
+      "lat": 41.898265099999996,
+      "lng": 12.4704698,
+      "address": "V. del Governo Vecchio, 112, 00186 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "Gelateria del Teatro",
+      "lat": 41.9004943,
+      "lng": 12.469494599999999,
+      "address": "V. dei Coronari, 65/66, 00186 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "The Gelatist - Via Nazionale",
+      "lat": 41.9008743,
+      "lng": 12.4938307,
+      "address": "Via Nazionale, 19a, 00184 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "Flor Gelato",
+      "lat": 41.893620299999995,
+      "lng": 12.4885629,
+      "address": "Via Cavour, 337, 00184 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "Regoli Pasticceria",
+      "lat": 41.8948172,
+      "lng": 12.500949199999999,
+      "address": "Via dello Statuto, 60, 00185 Roma RM, 이탈리아",
+      "note": "로마 간식 (마리토쪼, 산딸기타르트)"
+    },
+    {
+      "name": "Antica Gelateria Fiorentina",
+      "lat": 43.775282399999995,
+      "lng": 11.2525742,
+      "address": "Via Faenza, 2a, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 간식 (젤라또)"
+    },
+    {
+      "name": "All’Antico Vinaio",
+      "lat": 43.7684668,
+      "lng": 11.257459899999999,
+      "address": "Via dei Neri, 65r, 50122 Firenze FI, 이탈리아",
+      "note": "피렌체 간식 (샌드위치)"
+    },
+    {
+      "name": "Caffe Concerto Paszkowski",
+      "lat": 43.7719491,
+      "lng": 11.253717199999999,
+      "address": "Piazza della Repubblica, 6, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 간식 (빵, 커피)"
+    },
+    {
+      "name": "Come il Latte",
+      "lat": 41.9071107,
+      "lng": 12.496025,
+      "address": "Via Silvio Spaventa, 24/26, 00187 Roma RM, 이탈리아",
+      "note": "로마 간식 (젤라또)"
+    },
+    {
+      "name": "Two Sizes",
+      "lat": 41.897993299999996,
+      "lng": 12.471549699999999,
+      "address": "V. del Governo Vecchio, 88, 00186 Roma RM, 이탈리아",
+      "note": "로마 간식 (티라미수)"
+    },
+    {
+      "name": "La Gelatiera",
+      "lat": 43.7756306,
+      "lng": 11.255225,
+      "address": "Via de' Ginori, 21R, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 간식 (젤라또)"
+    },
+    {
+      "name": "Cafe Tapirosu",
+      "lat": 35.6600365,
+      "lng": 139.7320876,
+      "address": "일본 〒106-0032 Tokyo, Minato City, Roppongi, 6 Chome−8−28 宮崎 ビル 2F",
+      "note": ""
+    },
+    {
+      "name": "파티스리 사다하루 아오키 파리",
+      "lat": 35.665981599999995,
+      "lng": 139.7305269,
+      "address": "9 Chome-7-4 Akasaka, Minato City, Tokyo 107-0052 일본",
+      "note": ""
+    },
+    {
+      "name": "RONDINO",
+      "lat": 35.3185001,
+      "lng": 139.5499563,
+      "address": "1-10 Onarimachi, Kamakura, Kanagawa 248-0012 일본",
+      "note": ""
+    },
+    {
+      "name": "Kabura Coffee",
+      "lat": 35.3118724,
+      "lng": 139.5353313,
+      "address": "2 Chome-15-14 Hase, Kamakura, Kanagawa 248-0016 일본",
+      "note": ""
+    },
+    {
+      "name": "DAILY by LONG TRACK FOODS",
+      "lat": 35.317013599999996,
+      "lng": 139.55121029999998,
+      "address": "1 Chome-13-10 Komachi, Kamakura, Kanagawa 248-0006 일본",
+      "note": ""
+    },
+    {
+      "name": "츠키지긴다코 신바시점",
+      "lat": 35.6680699,
+      "lng": 139.75716309999999,
+      "address": "일본 〒105-0004 Tokyo, Minato City, Shinbashi, 1 Chome−15−9 大塚ビル 1F 新橋店",
+      "note": ""
+    },
+    {
+      "name": "츠키지 긴다코",
+      "lat": 35.6951588,
+      "lng": 139.70205389999998,
+      "address": "일본 〒160-0021 Tokyo, Shinjuku City, Kabukicho, 1 Chome−19−1, Shinjuku Toho Building, 店",
+      "note": ""
+    },
+    {
+      "name": "츠키지긴다코 본점",
+      "lat": 35.6667889,
+      "lng": 139.77010149999998,
+      "address": "일본 〒104-0045 Tokyo, Chuo City, Tsukiji, 4 Chome−7−5 1F",
+      "note": ""
+    },
+    {
+      "name": "카멜백 샌드위치 \\u0026 에스프레소",
+      "lat": 35.665578,
+      "lng": 139.6922285,
+      "address": "42-2 Kamiyamacho, Shibuya City, Tokyo 150-0047 일본",
+      "note": ""
+    },
+    {
+      "name": "IMOS cafestand -お芋スイーツとコーヒー",
+      "lat": 35.3055017,
+      "lng": 139.5096371,
+      "address": "일본 〒248-0026 Kanagawa, Kamakura, Shichirigahama, 1 Chome−2−12 IMOS cafestand",
+      "note": ""
+    },
+    {
+      "name": "브랏스리 비론 시부야",
+      "lat": 35.6608958,
+      "lng": 139.6968211,
+      "address": "일본 〒150-0042 Tokyo, Shibuya City, Udagawacho, 33−8, Tsukada Bldg., ２Ｆ",
+      "note": ""
+    },
+    {
+      "name": "카토레아",
+      "lat": 35.687047299999996,
+      "lng": 139.7981874,
+      "address": "1 Chome-6-10 Morishita, Koto City, Tokyo 135-0004 일본",
+      "note": ""
+    },
+    {
+      "name": "돈스케 베이커리",
+      "lat": 35.698408,
+      "lng": 139.7109333,
+      "address": "7 Chome-13-3 Shinjuku, Shinjuku City, Tokyo 160-0022 일본",
+      "note": ""
+    },
+    {
+      "name": "Le Ressort",
+      "lat": 35.6591751,
+      "lng": 139.68261289999998,
+      "address": "일본 〒153-0041 Tokyo, Meguro City, Komaba, 3 Chome−11−6 桑野ビル 1F",
+      "note": ""
+    },
+    {
+      "name": "토호 베이커리",
+      "lat": 35.6918815,
+      "lng": 139.5695887,
+      "address": "1 Chome-9-19 Shimorenjaku, Mitaka, Tokyo 181-0013 일본",
+      "note": ""
+    },
+    {
+      "name": "소금빵 팡・메종 스미다 아사쿠사도오리점",
+      "lat": 35.708660699999996,
+      "lng": 139.80239079999998,
+      "address": "2 Chome-4-1 Azumabashi, Sumida City, Tokyo 130-0001 일본",
+      "note": ""
+    },
+    {
+      "name": "소금빵 팡 메종 긴자점",
+      "lat": 35.6715607,
+      "lng": 139.7705344,
+      "address": "일본 〒104-0061 Tokyo, Chuo City, Ginza, 2 Chome−14−5 Twg銀座イースト 1階",
+      "note": ""
+    }
+  ],
+  "Favorite places": [
+    {
+      "name": "지브리 파크",
+      "lat": 35.175044899999996,
+      "lng": 137.0887689,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "훼미리마트",
+      "lat": 34.6606022,
+      "lng": 135.5055213,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "세븐일레븐",
+      "lat": 34.6580136,
+      "lng": 135.5055831,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "LAWSON Nihombashi 4 Chome Store",
+      "lat": 34.660714399999996,
+      "lng": 135.5074723,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "신세카이 시장",
+      "lat": 34.6536555,
+      "lng": 135.5056051,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "5-chōme-1-15 Nipponbashi",
+      "lat": 34.658580799999996,
+      "lng": 135.506697,
+      "address": "5-chōme-1-15 Nipponbashi, Naniwa Ward, Osaka, 556-0005 일본",
+      "note": ""
+    },
+    {
+      "name": "Mh 플로렌스 호텔 \\u0026 스파",
+      "lat": 43.7787493,
+      "lng": 11.2449427,
+      "address": "Via Luigi Alamanni, 37, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Fortyfive Squared Hotel",
+      "lat": 41.903833999999996,
+      "lng": 12.5024263,
+      "address": "Piazza dell'Indipendenza, 13, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "feldthurnerhof vinum-natur-relax",
+      "lat": 46.6666762,
+      "lng": 11.5914865,
+      "address": "Via Pradello, 1, 39040 Velturno BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "BVLGARI",
+      "lat": 35.6729828,
+      "lng": 139.7671428,
+      "address": "Bulgari Ginza Tower, 1-4F, 2 Chome-7-12, Chuo City, Tokyo 104-0061 일본",
+      "note": ""
+    },
+    {
+      "name": "코유루기 신사",
+      "lat": 35.306454699999996,
+      "lng": 139.493156,
+      "address": "2 Chome-9-12 Koshigoe, Kamakura, Kanagawa 248-0033 일본",
+      "note": ""
+    },
+    {
+      "name": "세이부 시부야점",
+      "lat": 35.660227,
+      "lng": 139.70033039999998,
+      "address": "21-1 Udagawacho, Shibuya City, Tokyo 150-8330 일본",
+      "note": ""
+    },
+    {
+      "name": "1-chōme-7-27 Tsurumibashi",
+      "lat": 34.6473205,
+      "lng": 135.4960969,
+      "address": "1-chōme-7-27 Tsurumibashi, Nishinari Ward, Osaka, 557-0031 일본",
+      "note": ""
+    },
+    {
+      "name": "Higurashi",
+      "lat": 34.9362547,
+      "lng": 135.7590341,
+      "address": "Higurashi, 357 Higomachi, Fushimi Ward, Kyoto, 612-8352 일본",
+      "note": ""
+    },
+    {
+      "name": "HOTEL AO KAMAKURA",
+      "lat": 35.3082085,
+      "lng": 139.4919849,
+      "address": "3 Chome-1-7 Koshigoe, Kamakura, Kanagawa 248-0033 일본",
+      "note": ""
+    },
+    {
+      "name": "도쿄 프린스 호텔",
+      "lat": 35.658961999999995,
+      "lng": 139.7481391,
+      "address": "3 Chome-3-1 Shibakoen, Minato City, Tokyo 105-8560 일본",
+      "note": ""
+    },
+    {
+      "name": "모미지",
+      "lat": 34.666499099999996,
+      "lng": 135.5139634,
+      "address": "9-19 Ikutamacho, Tennoji Ward, Osaka, 543-0071 일본",
+      "note": ""
+    },
+    {
+      "name": "Osaka Cabinet 荷物預かり所（ロッカー / キャリーケース預かり）行李寄放 / 置物櫃 / luggage storage / 짐보관 / \\n락커 / 수하물보관소 / 코인락커",
+      "lat": 34.6664185,
+      "lng": 135.5058211,
+      "address": "일본 〒542-0073 Osaka, 中央区Chuo Ward, Nipponbashi, 1 Chome−18−4 オーケビル2F",
+      "note": ""
+    },
+    {
+      "name": "야스베 츠케멘",
+      "lat": 34.669288699999996,
+      "lng": 135.5007602,
+      "address": "2 Chome-4-4 Shinsaibashisuji, Chuo Ward, Osaka, 542-0085 일본",
+      "note": ""
+    },
+    {
+      "name": "그램 팬케이크 카페",
+      "lat": 34.6725687,
+      "lng": 135.5015311,
+      "address": "일본 〒542-0085 Osaka, Chuo Ward, Shinsaibashisuji, 1 Chome−5−24 ｇｒａｍ",
+      "note": ""
+    },
+    {
+      "name": "다이마루 백화점 신사이바시점",
+      "lat": 34.6732406,
+      "lng": 135.5009613,
+      "address": "1 Chome-7-1 Shinsaibashisuji, Chuo Ward, Osaka, 542-8501 일본",
+      "note": ""
+    },
+    {
+      "name": "Red Roof Inn \\u0026 Suites Osaka - Namba/Nippombashi",
+      "lat": 34.6633419,
+      "lng": 135.5056653,
+      "address": "2 Chome-7-9 Nipponbashi, Chuo Ward, Osaka, 542-0073 일본",
+      "note": ""
+    },
+    {
+      "name": "간사이 공항",
+      "lat": 34.4358892,
+      "lng": 135.243459,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "유니버설 스튜디오 재팬",
+      "lat": 34.6656768,
+      "lng": 135.4323185,
+      "address": "2 Chome-1-33 Sakurajima, Konohana Ward, Osaka, 554-0031 일본",
+      "note": ""
+    }
+  ],
+  "맛집": [
+    {
+      "name": "스시킨 화이티 우메다점",
+      "lat": 34.703472999999995,
+      "lng": 135.4996311,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "구로몬사카에스시 黒門さかえすし",
+      "lat": 34.6661852,
+      "lng": 135.50734749999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "사카에스시 타마야초점",
+      "lat": 34.670268199999995,
+      "lng": 135.5044771,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "슈하리",
+      "lat": 34.682253599999996,
+      "lng": 135.5145653,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "난반테이",
+      "lat": 34.659367599999996,
+      "lng": 135.5042793,
+      "address": "",
+      "note": "현금, 꼬치"
+    },
+    {
+      "name": "HALAL Mori BBQ 【食八】木垒烧烤",
+      "lat": 34.6627388,
+      "lng": 135.5086992,
+      "address": "",
+      "note": "꼬치"
+    },
+    {
+      "name": "Takoshige",
+      "lat": 34.660226099999996,
+      "lng": 135.5080547,
+      "address": "",
+      "note": "흡연"
+    },
+    {
+      "name": "炭火海鲜串烧居酒屋 Tottotto 难波千日前店",
+      "lat": 34.6667833,
+      "lng": 135.501811,
+      "address": "",
+      "note": "로바타야끼"
+    },
+    {
+      "name": "Mallory Pork Steak Namba CITY Store",
+      "lat": 34.6631491,
+      "lng": 135.5015631,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "치보 오코노미야키",
+      "lat": 34.6688073,
+      "lng": 135.5039074,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "야바톤 사카에 센트라이즈점",
+      "lat": 35.1679811,
+      "lng": 136.90544599999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "모헤지 우메다 루쿠아점",
+      "lat": 34.703255399999996,
+      "lng": 135.495578,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "모지오 몬자야키",
+      "lat": 34.664793599999996,
+      "lng": 135.5052802,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "무겐라멘 난바 본점",
+      "lat": 34.6597595,
+      "lng": 135.4984993,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "이치란 도톤보리점 본관",
+      "lat": 34.669299599999995,
+      "lng": 135.5030722,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "오코노미야키 미즈노",
+      "lat": 34.668354799999996,
+      "lng": 135.5032226,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "규슈라멘 키오-토마토라멘",
+      "lat": 34.6686154,
+      "lng": 135.4994434,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "노구치타로라멘 신사이바시점",
+      "lat": 34.672508199999996,
+      "lng": 135.5033769,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "무기토 토리",
+      "lat": 34.6779054,
+      "lng": 135.5025021,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "라멘 텐도.",
+      "lat": 34.6662669,
+      "lng": 135.5058518,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "라멘 초로",
+      "lat": 34.6832752,
+      "lng": 135.51231669999999,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "New York Ramen Shinsaibashi Branch",
+      "lat": 34.672930699999995,
+      "lng": 135.5033866,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "킨무기 아메무라점",
+      "lat": 34.6727491,
+      "lng": 135.4971206,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "무한라멘 신이마미야역앞점",
+      "lat": 34.6499921,
+      "lng": 135.5037473,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "日式飲茶 点心の気持ち",
+      "lat": 34.6664332,
+      "lng": 135.4786967,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "야키니쿠 고리짱 우메다 본점",
+      "lat": 34.7037239,
+      "lng": 135.5032994,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "타치스시 마구로 잇테츠 센니치마에점",
+      "lat": 34.6676198,
+      "lng": 135.5034792,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "카미나리 스시",
+      "lat": 34.667598999999996,
+      "lng": 135.503516,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "우사기야",
+      "lat": 34.6538547,
+      "lng": 135.5059588,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "우오토요",
+      "lat": 34.6645317,
+      "lng": 135.50671599999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "하치마루 오뎅",
+      "lat": 34.665425299999995,
+      "lng": 135.5078515,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "잇포테이 본점",
+      "lat": 34.6623922,
+      "lng": 135.5037247,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "쿠시카츠 다루마 신세카이 총본점",
+      "lat": 34.6515704,
+      "lng": 135.5062032,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Hanamichi",
+      "lat": 34.6514915,
+      "lng": 135.5062338,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "오니기리 고리짱 에비스요코초점",
+      "lat": 34.649416699999996,
+      "lng": 135.5059109,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "로쿠센 스시",
+      "lat": 34.652746799999996,
+      "lng": 135.5062688,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "규카츠 다이후쿠",
+      "lat": 34.6534384,
+      "lng": 135.5059987,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "고에몬",
+      "lat": 34.6519836,
+      "lng": 135.5066342,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "수키야넨 오코노모야키",
+      "lat": 34.6711367,
+      "lng": 135.5075765,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "유세이 우라난바점",
+      "lat": 34.6648845,
+      "lng": 135.5054559,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "스시사카바 사시스 화이티우메다점",
+      "lat": 34.702602399999996,
+      "lng": 135.4996683,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "스시사카바 사시스",
+      "lat": 34.6984792,
+      "lng": 135.49974989999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "스시 사카바 사시스 난바점",
+      "lat": 34.6670162,
+      "lng": 135.5051444,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Tegetege",
+      "lat": 34.662242899999995,
+      "lng": 135.5091444,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Maruki",
+      "lat": 34.655923099999995,
+      "lng": 135.5072193,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "규카츠 토미타",
+      "lat": 34.6627436,
+      "lng": 135.5039528,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "마도라스카레",
+      "lat": 34.6598519,
+      "lng": 135.5066483,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Restaurant Pizzeria Kutscherhof",
+      "lat": 46.715409,
+      "lng": 11.655861999999999,
+      "address": "Via Vescovado, 6, 39042 Bressanone BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Casa del Vin Santo - Ristorante Braceria Firenze",
+      "lat": 43.770190299999996,
+      "lng": 11.2547743,
+      "address": "Via Porta Rossa, 15-17/R, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Trattoria Zà Zà",
+      "lat": 43.7763546,
+      "lng": 11.254448499999999,
+      "address": "Piazza del Mercato Centrale, 26r, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Trattoria Giovanni",
+      "lat": 43.767593,
+      "lng": 11.245948,
+      "address": "Via Sant'Agostino, 38r, 50125 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Le Cappelle Medicee Restorante",
+      "lat": 43.7752853,
+      "lng": 11.2531722,
+      "address": "Via del Canto dei Nelli, 30/r, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Osteria Il Basilico",
+      "lat": 43.777994199999995,
+      "lng": 11.253070899999999,
+      "address": "Via Nazionale, 124/R, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Fattoria Rossi Firenze",
+      "lat": 43.7703844,
+      "lng": 11.2525496,
+      "address": "Piazza dei Davanzati, 3/r, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "The Old Stove Irish Pub",
+      "lat": 43.769931899999996,
+      "lng": 11.2536542,
+      "address": "Via Pellicceria, 2, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "I Re d'Egitto",
+      "lat": 43.7748327,
+      "lng": 11.2464479,
+      "address": "Via della Scala, 49R, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Trattoria Cecio",
+      "lat": 41.8984235,
+      "lng": 12.5011844,
+      "address": "Via Principe Amedeo, 104, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "STRADAROMANA Restaurant",
+      "lat": 41.9042087,
+      "lng": 12.504581,
+      "address": "Via Vicenza, 19, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Osteria Macondo",
+      "lat": 41.903999,
+      "lng": 12.5030938,
+      "address": "Via dei Mille, 10, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Istanbul KEBAB bar-caffetteria",
+      "lat": 41.9042479,
+      "lng": 12.5030948,
+      "address": "Piazza dell'Indipendenza, 8, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Ristorante Pizzeria El Bronsin",
+      "lat": 46.534816,
+      "lng": 12.141428999999999,
+      "address": "Via Roma, 47, 32043 Cortina d'Ampezzo BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "La Tor",
+      "lat": 46.588264599999995,
+      "lng": 11.9030171,
+      "address": "Strada Colz, 9, 39030 La Villa BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "La Murada",
+      "lat": 46.438004,
+      "lng": 11.982393,
+      "address": "Località Saviner di Laste, 87, 32023 Rocca Pietore BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Rifugio Larin",
+      "lat": 46.4613156,
+      "lng": 12.194015199999999,
+      "address": "Località Senes, Via degli Alpini, 1, 32046 San Vito di Cadore BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Birraria da Bauce",
+      "lat": 46.430076,
+      "lng": 12.2325936,
+      "address": "Via Enrico Mattei, 62, 32040 Borca di Cadore BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Baita Resch",
+      "lat": 46.5231399,
+      "lng": 12.1002238,
+      "address": "Son dei Prade, 1, 32043 Cortina d'Ampezzo BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Ustaria Da Checco",
+      "lat": 46.5738433,
+      "lng": 11.6754999,
+      "address": "Strada Rezia, 185, 39046 Ortisei BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Malga Misurina",
+      "lat": 46.5786099,
+      "lng": 12.2475092,
+      "address": "Via Monte Piana, 5, 32041 Auronzo di Cadore BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Pontejel Bierstube Forst",
+      "lat": 46.53873,
+      "lng": 12.135926399999999,
+      "address": "Largo delle Poste, 11, 32043 Cortina d'Ampezzo BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Pizzeria Mediterraneo",
+      "lat": 46.4997076,
+      "lng": 11.3582985,
+      "address": "Via Piave, 12, 39100 Bolzano BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Chalet Lago Antorno",
+      "lat": 46.5944657,
+      "lng": 12.2638568,
+      "address": "Località Lago Antorno, 1, 32040 Misurina BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Il Vizietto Di Cortina",
+      "lat": 46.5368043,
+      "lng": 12.1377344,
+      "address": "Corso Italia, 53, 32043 Cortina d'Ampezzo BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Dolom'eats all'Aquila",
+      "lat": 46.5393045,
+      "lng": 12.1352493,
+      "address": "Piazza Pittori Fratelli Ghedina, 1, 32043 Cortina d'Ampezzo BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Eirisch Grill",
+      "lat": 46.7351427,
+      "lng": 12.2230791,
+      "address": "Piazza Municipio, 4B, 39034 Dobbiaco BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Camping Toblacher See",
+      "lat": 46.7062743,
+      "lng": 12.2179713,
+      "address": "Toblacher See 3, 39034 Dobbiaco BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Cascade Ristorante Pizzeria Bar",
+      "lat": 46.5722125,
+      "lng": 11.6745526,
+      "address": "Strada Promenade, 1, 39046 Ortisei BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Istanbul Kebab Pizza Grill",
+      "lat": 46.5749048,
+      "lng": 11.6676243,
+      "address": "Strada Johann Baptist Purger, 39046 Ortisei BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Turonda | pizza · bistrot · drinks",
+      "lat": 46.5748463,
+      "lng": 11.6704976,
+      "address": "Strada Johann Baptist Purger, 5, 39046 Ortisei BZ, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Al Camin",
+      "lat": 46.5443723,
+      "lng": 12.1508182,
+      "address": "Località Alverà, 99, 32043 Cortina d'Ampezzo BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Panini Toscani",
+      "lat": 43.7733278,
+      "lng": 11.257634699999999,
+      "address": "Piazza del Duomo, 34/R, 50122 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (파니니)"
+    },
+    {
+      "name": "Trattoria Marione",
+      "lat": 43.771747399999995,
+      "lng": 11.250555799999999,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Mr.Clood Bistrot",
+      "lat": 41.887868399999995,
+      "lng": 12.470717299999999,
+      "address": "Via Luciano Manara, 13, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집 (맛피아)"
+    },
+    {
+      "name": "Piccolo Buco (NO PRENOTAZIONI-NO RESERVATIONS)",
+      "lat": 41.9012999,
+      "lng": 12.4846381,
+      "address": "Via del Lavatore, 91, 00187 Roma RM, 이탈리아",
+      "note": "로마 맛집 (피자)"
+    },
+    {
+      "name": "Ristorante Pizzeria Mino",
+      "lat": 41.902076199999996,
+      "lng": 12.504392099999999,
+      "address": "Via Milazzo, 18, Via Magenta, 48, 00185 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Pane e Salame",
+      "lat": 41.900628999999995,
+      "lng": 12.481772,
+      "address": "Via Santa Maria in Via, 19, 00187 Roma RM, 이탈리아",
+      "note": "로마 맛집 (플래터, 샌드위치)"
+    },
+    {
+      "name": "Pinsitaly Trevi",
+      "lat": 41.9017645,
+      "lng": 12.4844245,
+      "address": "Via della Panetteria, 12, 00187 Roma RM, 이탈리아",
+      "note": "로마 맛집 (피자)"
+    },
+    {
+      "name": "La Tavernetta 29 da Tony e Andrea",
+      "lat": 41.8903842,
+      "lng": 12.4704876,
+      "address": "Via della Pelliccia, 29a, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Quel che c’è laboratorio Di Cucina",
+      "lat": 41.901328299999996,
+      "lng": 12.4957996,
+      "address": "Via Torino, 129, 00184 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Trattoria dall'Oste Chianineria",
+      "lat": 43.771318,
+      "lng": 11.2562831,
+      "address": "Via dei Cerchi, 40/R, 50122 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (스테이크)"
+    },
+    {
+      "name": "L'Osteria di Giovanni",
+      "lat": 43.7714072,
+      "lng": 11.248562399999999,
+      "address": "Via del Moro, 22r, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (스테이크, 트러플)"
+    },
+    {
+      "name": "Ciro and Sons - Restaurant Pizzeria Firenze",
+      "lat": 43.774627699999996,
+      "lng": 11.252417699999999,
+      "address": "Via del Giglio, 28/r, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집"
+    },
+    {
+      "name": "Tonnarello | Paglia",
+      "lat": 41.889804,
+      "lng": 12.4693004,
+      "address": "V. della Paglia, 1/2/3, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Cantina e Cucina",
+      "lat": 41.8979498,
+      "lng": 12.4716396,
+      "address": "V. del Governo Vecchio, 87, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Nannarella",
+      "lat": 41.8889194,
+      "lng": 12.4707297,
+      "address": "Piazza di S. Calisto, 7/a, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "/g/1vqt28nx",
+      "lat": 41.8999563,
+      "lng": 12.4934666,
+      "address": "Via Palermo, 46, Piazza del Viminale, 3-4, 00184 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "XiangYueGe 香悦阁 Chinese Restaurant",
+      "lat": 41.899495699999996,
+      "lng": 12.498592499999999,
+      "address": "Via Cavour, 50, 00185 Roma RM, 이탈리아",
+      "note": "로마 맛집 (중식)"
+    },
+    {
+      "name": "Matricianella",
+      "lat": 41.9037351,
+      "lng": 12.477405,
+      "address": "Via del Leone, 4, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Babette",
+      "lat": 41.9095894,
+      "lng": 12.478219,
+      "address": "",
+      "note": "로마 맛집 (비프웰링턴)"
+    },
+    {
+      "name": "Da Nerbone",
+      "lat": 43.7762847,
+      "lng": 11.253286899999999,
+      "address": "Piazza del Mercato Centrale, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (곱창버거)"
+    },
+    {
+      "name": "Antico Ristorante Paoli 1827",
+      "lat": 43.7708915,
+      "lng": 11.2557616,
+      "address": "Via dei Tavolini, 12/R, 50122 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (스테이크 더포크)"
+    },
+    {
+      "name": "GUSTARIUM",
+      "lat": 43.7705789,
+      "lng": 11.2558992,
+      "address": "Via dei Cimatori, 24r, 50122 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (피자)"
+    },
+    {
+      "name": "옐로우바",
+      "lat": 43.771201399999995,
+      "lng": 11.257886599999999,
+      "address": "Via del Proconsolo, 39r, 50122 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집"
+    },
+    {
+      "name": "오스테리아 파스텔라 트리플파스타",
+      "lat": 43.7738868,
+      "lng": 11.2477938,
+      "address": "Via della Scala, 17 R, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (트러플 파스타)"
+    },
+    {
+      "name": "L'Insalata Ricca - Piazza Risorgimento",
+      "lat": 41.9065625,
+      "lng": 12.456584699999999,
+      "address": "Piazza del Risorgimento, 5, 00192 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Trattoria Osteria Dall'Oste SMN",
+      "lat": 43.775965,
+      "lng": 11.2467927,
+      "address": "Via Luigi Alamanni, 3/5r, 50100 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (스테이크)"
+    },
+    {
+      "name": "Trattoria Dall'oste",
+      "lat": 43.7765971,
+      "lng": 11.2458318,
+      "address": "Via degli Orti Oricellari, 29, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 맛집 (스테이크)"
+    },
+    {
+      "name": "Le Sorgenti",
+      "lat": 43.7773213,
+      "lng": 11.2530827,
+      "address": "Via Chiara, 6, 50123 Firenze FI, 이탈리아",
+      "note": "피렌 맛집 (중식)"
+    },
+    {
+      "name": "All'Antico Vinaio",
+      "lat": 43.776441,
+      "lng": 11.248173399999999,
+      "address": "Piazza della Stazione, 50123 Firenze FI, 이탈리아",
+      "note": "피렌 맛집 (샌드위치)"
+    },
+    {
+      "name": "Roscioli Salumeria con Cucina",
+      "lat": 41.894256,
+      "lng": 12.4742417,
+      "address": "Via dei Giubbonari, 21, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Pastificio Guerra",
+      "lat": 41.9064463,
+      "lng": 12.4809389,
+      "address": "V. della Croce, 8, 00187 Roma RM, 이탈리아",
+      "note": "로마 맛집 (테아 파스타 저렴)"
+    },
+    {
+      "name": "Ristorante Magno Roma",
+      "lat": 41.9076702,
+      "lng": 12.457094699999999,
+      "address": "Via Germanico, 46/48, 00192 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Scialla The Original Street Food",
+      "lat": 41.9035096,
+      "lng": 12.4594685,
+      "address": "Vicolo del Farinone, 27, 00193 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Old Bear",
+      "lat": 41.901638999999996,
+      "lng": 12.4732524,
+      "address": "Via dei Gigli d'Oro, 3, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Trattoria Da Enzo al 29",
+      "lat": 41.8880847,
+      "lng": 12.4778554,
+      "address": "Via dei Vascellari, 29, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Trattoria Vecchia Roma",
+      "lat": 41.8936997,
+      "lng": 12.502435,
+      "address": "Via Ferruccio, 12/b/c, 00185 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Felice a Testaccio (파스타 맛집)",
+      "lat": 41.8785303,
+      "lng": 12.477432499999999,
+      "address": "Via Mastro Giorgio, 29, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Armando al Pantheon",
+      "lat": 41.8990672,
+      "lng": 12.476245899999999,
+      "address": "Salita de' Crescenzi, 31, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Supplì Roma",
+      "lat": 41.8871198,
+      "lng": 12.4716737,
+      "address": "Via di S. Francesco a Ripa, 137, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집 (테이크아웃 수플리)"
+    },
+    {
+      "name": "Saltimbocca San Lorenzo",
+      "lat": 41.897213099999995,
+      "lng": 12.5128316,
+      "address": "Via dei Falisci, 1/3,5, 00185 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Ornelli Black Angus Steakhouse",
+      "lat": 41.8926805,
+      "lng": 12.5013203,
+      "address": "Via Merulana, 224, 00185 Roma RM, 이탈리아",
+      "note": "로마 맛집 (스테이크)"
+    },
+    {
+      "name": "Osteria Barberini",
+      "lat": 41.9044303,
+      "lng": 12.487508799999999,
+      "address": "Via della Purificazione, 21, 00187 Roma RM, 이탈리아",
+      "note": "로마 맛집 (트러플)"
+    },
+    {
+      "name": "La Taverna dei Fori Imperiali",
+      "lat": 41.894021599999995,
+      "lng": 12.4884915,
+      "address": "Via della Madonna dei Monti, 9, 00184 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Bonci Pizzarium",
+      "lat": 41.906675799999995,
+      "lng": 12.446670899999999,
+      "address": "Via della Meloria, 43, 00136 Roma RM, 이탈리아",
+      "note": "로마 맛집 (피자 테이크아웃)"
+    },
+    {
+      "name": "이조식당",
+      "lat": 41.8869368,
+      "lng": 12.4691622,
+      "address": "Via Roma Libera, 26, 00153 Roma RM, 이탈리아",
+      "note": "로마 맛집 (한식)"
+    },
+    {
+      "name": "华味居 Restaurant Chinese Huaweiju",
+      "lat": 41.8991268,
+      "lng": 12.5014857,
+      "address": "Via Filippo Turati, 9, 00185 Roma RM, 이탈리아",
+      "note": "로마 맛집 (중식)"
+    },
+    {
+      "name": "일 키안티",
+      "lat": 41.9011716,
+      "lng": 12.484165599999999,
+      "address": "Via del Lavatore, 81/82/82A, 00187 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Osteria da Fortunata - Pantheon",
+      "lat": 41.8992918,
+      "lng": 12.476453399999999,
+      "address": "Piazza della Rotonda, 6, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "CiPASSO",
+      "lat": 41.9020219,
+      "lng": 12.4758908,
+      "address": "Via Metastasio, 21, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "Rimessa Roscioli",
+      "lat": 41.892712499999995,
+      "lng": 12.472769999999999,
+      "address": "Via del Conservatorio, 58, 00186 Roma RM, 이탈리아",
+      "note": "로마 맛집"
+    },
+    {
+      "name": "50 Kalò di Ciro Salvo - Roma",
+      "lat": 41.906016099999995,
+      "lng": 12.4957453,
+      "address": "Via Flavia, 3b, 00187 Roma RM, 이탈리아",
+      "note": "로마 맛집 (피자)"
+    },
+    {
+      "name": "Mobomoga",
+      "lat": 35.6624804,
+      "lng": 139.6977086,
+      "address": "일본 〒150-0042 Tokyo, Shibuya, Udagawacho, 4−9 Kuretake Bldg., 2F",
+      "note": ""
+    },
+    {
+      "name": "쥬테이",
+      "lat": 34.6662135,
+      "lng": 135.5021705,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "도톤보리 이마이",
+      "lat": 34.6686331,
+      "lng": 135.5027144,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "551 호라이만두",
+      "lat": 34.6664088,
+      "lng": 135.5013457,
+      "address": "3 Chome-6-3 Namba, Chuo Ward, Osaka, 542-0076 일본",
+      "note": ""
+    },
+    {
+      "name": "Inanozi",
+      "lat": 34.6678125,
+      "lng": 135.50421649999998,
+      "address": "1 Chome-8-2 Sennichimae, Chuo Ward, Osaka, 542-0074 일본",
+      "note": ""
+    },
+    {
+      "name": "和和鍋 道頓堀",
+      "lat": 34.6688289,
+      "lng": 135.50181139999998,
+      "address": "일본 〒542-0071 Osaka, Chuo Ward, Dotonbori, 1 Chome−6−15 コムラード・ドウトンビル 8F",
+      "note": ""
+    },
+    {
+      "name": "お蕎麦 結(ゆい)",
+      "lat": 35.310556,
+      "lng": 139.4966369,
+      "address": "4 Chome-2-13 Koshigoe, Kamakura, Kanagawa 248-0033 일본",
+      "note": ""
+    },
+    {
+      "name": "Sangosho Moana Makai",
+      "lat": 35.3057084,
+      "lng": 139.5089711,
+      "address": "1 Chome-3-22 Shichirigahama, Kamakura, Kanagawa 248-0026 일본",
+      "note": ""
+    },
+    {
+      "name": "NAGI→『広島焼き おっこんゆきちゃん』",
+      "lat": 35.3076272,
+      "lng": 139.4937747,
+      "address": "2 Chome-12-19 Koshigoe, Kamakura, Kanagawa 248-0033 일본",
+      "note": ""
+    },
+    {
+      "name": "아라시야마 요시무라",
+      "lat": 35.0136055,
+      "lng": 135.6772744,
+      "address": "일본 〒616-8385 Kyoto, Ukyo Ward, Sagatenryuji Susukinobabacho, ３",
+      "note": ""
+    },
+    {
+      "name": "데마치 후타바",
+      "lat": 35.0301048,
+      "lng": 135.7696451,
+      "address": "236 Seiryucho, Kamigyo Ward, Kyoto, 602-0822 일본",
+      "note": ""
+    },
+    {
+      "name": "Ginza Kagari (Roppongi Hills)",
+      "lat": 35.6615483,
+      "lng": 139.7296634,
+      "address": "일본 〒106-0032 Tokyo, Minato City, Roppongi, 6 Chome−4−1 メトロハット／ハリウッドプラザ 地下２階",
+      "note": ""
+    },
+    {
+      "name": "이루카 도쿄 롯폰기",
+      "lat": 35.6648012,
+      "lng": 139.7316413,
+      "address": "4 Chome-12-12 Roppongi, Minato City, Tokyo 106-0032 일본",
+      "note": ""
+    },
+    {
+      "name": "이마카츠 롯폰기 본점",
+      "lat": 35.664450099999996,
+      "lng": 139.7315786,
+      "address": "일본 〒106-0032 Tokyo, Minato City, Roppongi, 4 Chome−12−5 フェニキア ルクソス １階",
+      "note": ""
+    },
+    {
+      "name": "샤모지 일정식",
+      "lat": 35.3129732,
+      "lng": 139.5358578,
+      "address": "1 Chome-15-2 Hase, Kamakura, Kanagawa 248-0016 일본",
+      "note": ""
+    },
+    {
+      "name": "Yamataro Onigiri",
+      "lat": 35.7194934,
+      "lng": 139.7153746,
+      "address": "2 Chome-10-7 Zoshigaya, Toshima City, Tokyo 171-0032 일본",
+      "note": ""
+    },
+    {
+      "name": "키요이",
+      "lat": 35.309091699999996,
+      "lng": 139.4915599,
+      "address": "3 Chome-6-2 Koshigoe, Kamakura, Kanagawa 248-0033 일본",
+      "note": ""
+    },
+    {
+      "name": "Sangoshō",
+      "lat": 35.3091029,
+      "lng": 139.5166015,
+      "address": "3 Chome-1-2 Shichirigahamahigashi, Kamakura, Kanagawa 248-0025 일본",
+      "note": ""
+    },
+    {
+      "name": "규카츠 전문점 가츠규 가마쿠라점",
+      "lat": 35.3188692,
+      "lng": 139.5497867,
+      "address": "일본 〒248-0012 Kanagawa, Kamakura, Onarimachi, 11−3 ウインズ駅前 １Ｆ",
+      "note": ""
+    },
+    {
+      "name": "Sometaro",
+      "lat": 35.3126739,
+      "lng": 139.5350147,
+      "address": "일본 〒248-0016 Kanagawa, Kamakura, Hase, 3 Chome−12−11 ツタヤビル 2階",
+      "note": ""
+    },
+    {
+      "name": "마고코로",
+      "lat": 35.3103096,
+      "lng": 139.5381526,
+      "address": "2 Chome-8-11 Hase, Kamakura, Kanagawa 248-0016 일본",
+      "note": ""
+    },
+    {
+      "name": "요리도코로",
+      "lat": 35.304531,
+      "lng": 139.5239217,
+      "address": "1 Chome-12-16 Inamuragasaki, Kamakura, Kanagawa 248-0024 일본",
+      "note": ""
+    },
+    {
+      "name": "Yakiuo Ishikawa",
+      "lat": 35.662064199999996,
+      "lng": 139.730838,
+      "address": "일본 〒106-0032 Tokyo, Minato City, Roppongi, 6 Chome−2−5 GEMS六本木 5F",
+      "note": ""
+    },
+    {
+      "name": "야겐보리 아카사카점",
+      "lat": 35.6756514,
+      "lng": 139.7363225,
+      "address": "3 Chome-19-5 Akasaka, Minato City, Tokyo 107-0052 일본",
+      "note": ""
+    },
+    {
+      "name": "레이쿄 시부야점",
+      "lat": 35.659469,
+      "lng": 139.697681,
+      "address": "2 Chome-25-18 Dogenzaka, Shibuya City, Tokyo 150-0043 일본",
+      "note": ""
+    },
+    {
+      "name": "츠케멘 고노카미제작소",
+      "lat": 35.6873346,
+      "lng": 139.7037881,
+      "address": "일본 〒151-0051 Tokyo, Shibuya City, Sendagaya, 5 Chome−33−16 シャトレー新宿御苑第一 1F",
+      "note": ""
+    },
+    {
+      "name": "니혼바시 돈카츠 하지메",
+      "lat": 35.6864255,
+      "lng": 139.77547289999998,
+      "address": "일본 〒103-0022 Tokyo, Chuo City, Nihonbashimuromachi, 1 Chome−13−9 池田ビル １Ｆ",
+      "note": ""
+    },
+    {
+      "name": "카츠레츠 요츠야 타케다",
+      "lat": 35.6864668,
+      "lng": 139.7293389,
+      "address": "일본 〒160-0004 Tokyo, Shinjuku City, Yotsuya, 1 Chome−４−2 峯村ビル １Ｆ",
+      "note": ""
+    },
+    {
+      "name": "요네큐 본점",
+      "lat": 35.715924099999995,
+      "lng": 139.7937215,
+      "address": "2 Chome-17-10 Asakusa, 台東区 Taito City, Tokyo 111-0032 일본",
+      "note": ""
+    },
+    {
+      "name": "Chūka-gai Kichijōji",
+      "lat": 35.7036308,
+      "lng": 139.5821638,
+      "address": "일본 〒180-0001 Tokyo, Musashino, Kichijoji Honcho, 1 Chome−31−13 アサカビル 1Ｆ",
+      "note": ""
+    },
+    {
+      "name": "몬자사토",
+      "lat": 35.6685525,
+      "lng": 139.6900439,
+      "address": "일본 〒151-0063 Tokyo, Shibuya City, Tomigaya, 1 Chome−9−22, Tomigaya Aiu Building, 1F",
+      "note": ""
+    },
+    {
+      "name": "무구니",
+      "lat": 34.6705737,
+      "lng": 135.4993352,
+      "address": "Mittera Hall, 2 Chome-9-5 Nishishinsaibashi, Chuo Ward, Osaka, 542-0086 일본",
+      "note": ""
+    },
+    {
+      "name": "규카츠 모토무라 난바점",
+      "lat": 34.666616999999995,
+      "lng": 135.50197409999998,
+      "address": "일본 〒542-0076 Osaka, Chuo Ward, Namba, 3 Chome−3−1 スガタビル B1F",
+      "note": ""
+    },
+    {
+      "name": "야키니쿠 호르몬 타카라(구로몬-난바)",
+      "lat": 34.6654498,
+      "lng": 135.50407429999998,
+      "address": "11-28 Nanbasennichimae, Chuo Ward, Osaka, 542-0075 일본",
+      "note": ""
+    },
+    {
+      "name": "토리키조쿠 난바점",
+      "lat": 34.6640224,
+      "lng": 135.5027385,
+      "address": "13-10 Nanbasennichimae, Chuo Ward, Osaka, 542-0075 일본",
+      "note": ""
+    },
+    {
+      "name": "후쿠타로",
+      "lat": 34.6655261,
+      "lng": 135.5044991,
+      "address": "2 Chome-3-17 Sennichimae, Chuo Ward, Osaka, 542-0074 일본",
+      "note": ""
+    },
+    {
+      "name": "오미규 불고기 니쿠 TATSU 긴자점",
+      "lat": 35.6709248,
+      "lng": 139.76437909999999,
+      "address": "일본 〒104-0061 Tokyo, Chuo City, Ginza, 5 Chome−7−6, I Liv, 15F",
+      "note": ""
+    },
+    {
+      "name": "스시잔마이",
+      "lat": 35.6658772,
+      "lng": 139.7706801,
+      "address": "4 Chome-11-9 Tsukiji, Chuo City, Tokyo 104-0045 일본",
+      "note": ""
+    },
+    {
+      "name": "아게.산 긴자",
+      "lat": 35.6727584,
+      "lng": 139.77129449999998,
+      "address": "일본 〒104-0061 Tokyo, Chuo City, Ginza, 1 Chome−24−11 杉浦ビル 1Ｆ",
+      "note": ""
+    },
+    {
+      "name": "멜론 브레드",
+      "lat": 34.6687838,
+      "lng": 135.50349119999998,
+      "address": "Shibata.Bld, 1 Chome-5-8 Dotonbori, Chuo Ward, Osaka, 542-0071 일본",
+      "note": ""
+    },
+    {
+      "name": "츠지한",
+      "lat": 35.6807167,
+      "lng": 139.7715771,
+      "address": "일본 〒103-0027 Tokyo, Chuo City, Nihonbashi, 3 Chome−1−15 久栄ビル １Ｆ",
+      "note": ""
+    }
+  ],
+  "카페": [
+    {
+      "name": "마루후쿠 커피 센니치마에 본점",
+      "lat": 34.6676096,
+      "lng": 135.50416289999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "카페 안논 난바",
+      "lat": 34.6642499,
+      "lng": 135.5041282,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "샬롱 드 테 알시온",
+      "lat": 34.668126199999996,
+      "lng": 135.501902,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "tolala",
+      "lat": 34.6687899,
+      "lng": 135.5247745,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "à la mode osaka アラモード大阪",
+      "lat": 34.669299699999996,
+      "lng": 135.5036299,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "COLONY by EQI 心斎橋アメ村店",
+      "lat": 34.67042,
+      "lng": 135.4979008,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Le Sorelline Wine Bar Cafe",
+      "lat": 43.7760363,
+      "lng": 11.2450435,
+      "address": "Via degli Orti Oricellari, 58, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Danesi Caffè",
+      "lat": 41.9049628,
+      "lng": 12.4992453,
+      "address": "Via Volturno, 2F, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Beduschi Chocolate And Pastry",
+      "lat": 46.393736499999996,
+      "lng": 12.368630999999999,
+      "address": "Loc, 32010 Caralte BL, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "안티코 카페 그레코",
+      "lat": 41.9055606,
+      "lng": 12.4814639,
+      "address": "Via dei Condotti, 86, 00187 Roma RM, 이탈리아",
+      "note": "로마 카페 (3대커피)"
+    },
+    {
+      "name": "산트 유스타치오 더 커피",
+      "lat": 41.8982749,
+      "lng": 12.475425399999999,
+      "address": "Piazza di S. Eustachio, 82, 00186 Roma RM, 이탈리아",
+      "note": "로마 카페 (3대커피)"
+    },
+    {
+      "name": "타짜 도로 커피",
+      "lat": 41.8994973,
+      "lng": 12.4773862,
+      "address": "Via degli Orfani, 84, 00186 Roma RM, 이탈리아",
+      "note": "로마 카페 (3대커피, 그라니따)"
+    },
+    {
+      "name": "D’Angelo Caffè \\u0026 Gastronomia - Bar Bistro Caffetteria Napoletana a Roma",
+      "lat": 41.905499,
+      "lng": 12.495645,
+      "address": "Via Venti Settembre, 25, 00185 Roma RM, 이탈리아",
+      "note": "로마 카페 (빵)"
+    },
+    {
+      "name": "Tazza d'Oro",
+      "lat": 41.8793195,
+      "lng": 12.5175098,
+      "address": "Via Appia Nuova, 231, 00183 Roma RM, 이탈리아",
+      "note": "로마 카페 (3대커피, 그라니따)"
+    },
+    {
+      "name": "BAR AL CAFFE ROMANO",
+      "lat": 41.8962441,
+      "lng": 12.5047853,
+      "address": "Via Principe Amedeo, 176, 00185 Roma RM, 이탈리아",
+      "note": "로마 카페"
+    },
+    {
+      "name": "Sciascia Caffè 1919",
+      "lat": 41.909859,
+      "lng": 12.461993999999999,
+      "address": "Via Fabio Massimo, n.80/a, 00192 Roma RM, 이탈리아",
+      "note": "로마 카페 (초콜릿 에스프레소)"
+    },
+    {
+      "name": "Faro - Caffè Specialty",
+      "lat": 41.9101512,
+      "lng": 12.498392599999999,
+      "address": "Via Piave, 55, 00187 Roma RM, 이탈리아",
+      "note": "로마 카페 (아이스커피)"
+    },
+    {
+      "name": "View on Art Rooftop Cocktail Bar",
+      "lat": 43.7721039,
+      "lng": 11.2548534,
+      "address": "",
+      "note": "피렌체 카페 (뷰, 예약, 칵테일)"
+    }
+  ],
+  "쇼핑": [
+    {
+      "name": "mont-bell Umekita Store",
+      "lat": 34.7038341,
+      "lng": 135.4947549,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "KALDI COFFEE FARM",
+      "lat": 34.7026081,
+      "lng": 135.4944693,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "칼디 커피 팜",
+      "lat": 34.665614999999995,
+      "lng": 135.5009015,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "칼디",
+      "lat": 34.663672999999996,
+      "lng": 135.501671,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "DAISO - Umeda station(Underground)",
+      "lat": 34.70475,
+      "lng": 135.4997105,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "다이소 링크스 우메다점",
+      "lat": 34.7045068,
+      "lng": 135.496178,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Daiso Namba Ebisubashi",
+      "lat": 34.6678087,
+      "lng": 135.5014099,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "다이소 난바워크점",
+      "lat": 34.6669139,
+      "lng": 135.5038706,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "DAISO",
+      "lat": 34.663106,
+      "lng": 135.5033808,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "DAISO",
+      "lat": 34.6654451,
+      "lng": 135.5064514,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Standard Products 梅田DTタワー店",
+      "lat": 34.6997064,
+      "lng": 135.4978073,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Standard Products",
+      "lat": 34.704729799999996,
+      "lng": 135.5007616,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "MontBell @ Namba City",
+      "lat": 34.6626502,
+      "lng": 135.5025999,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "Bshop 단톤",
+      "lat": 34.703845699999995,
+      "lng": 135.4947901,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "한신우메다 본점",
+      "lat": 34.7012797,
+      "lng": 135.4983196,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "한큐 우메다 본점",
+      "lat": 34.7028186,
+      "lng": 135.4985323,
+      "address": "",
+      "note": "지하1층/3층 비비안"
+    },
+    {
+      "name": "루쿠아 오사카",
+      "lat": 34.7028866,
+      "lng": 135.4953236,
+      "address": "",
+      "note": "4층 비비안"
+    },
+    {
+      "name": "FREAK'S STORE",
+      "lat": 34.6618583,
+      "lng": 135.5020049,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "BEAMS NAMBA",
+      "lat": 34.664338799999996,
+      "lng": 135.5008973,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "SOU・SOU 타비",
+      "lat": 35.0044207,
+      "lng": 135.7675454,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "SOU・SOU hotei",
+      "lat": 35.0042908,
+      "lng": 135.76798739999998,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "SOUSOU(소우소우) 이세모멘",
+      "lat": 35.004190099999995,
+      "lng": 135.7677349,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "SOU・SOU Yousou.",
+      "lat": 35.0042307,
+      "lng": 135.7683489,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "메가돈키호테 신세카이점",
+      "lat": 34.6503278,
+      "lng": 135.5047528,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "GU 난바 마루이점",
+      "lat": 34.6656286,
+      "lng": 135.5010278,
+      "address": "",
+      "note": ""
+    },
+    {
+      "name": "La Bottega del Tartufo",
+      "lat": 41.906368,
+      "lng": 12.4800424,
+      "address": "V. della Croce, 77 A, 00187 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Conad - Supermarket SAPORI \\u0026 DINTORNI STORE",
+      "lat": 41.9016826,
+      "lng": 12.5025195,
+      "address": "Piazza dei Cinquecento, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "CONAD",
+      "lat": 41.8914955,
+      "lng": 12.501843599999999,
+      "address": "Via Guicciardini, SNC, 00184 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Conad - Supermarket",
+      "lat": 41.893536399999995,
+      "lng": 12.502231199999999,
+      "address": "Via Buonarroti, 41852, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Carrefour Market Supermarket",
+      "lat": 41.897972599999996,
+      "lng": 12.5170655,
+      "address": "Via dei Sabelli, 125-129, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "CONAD CITY",
+      "lat": 41.9046302,
+      "lng": 12.502029,
+      "address": "Piazza dell'Indipendenza, 28, 00185 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Leather market",
+      "lat": 43.7761181,
+      "lng": 11.2531229,
+      "address": "Via Sant'Antonino, 58-60, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "피렌체 중앙시장",
+      "lat": 43.7764676,
+      "lng": 11.2528338,
+      "address": "Piazza del Mercato Centrale, Via dell'Ariento, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Carpisa",
+      "lat": 43.770336799999995,
+      "lng": 11.2551689,
+      "address": "Via dei Calzaiuoli, 11/13,15, 50122 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "RINASCENTE Rome",
+      "lat": 41.9027487,
+      "lng": 12.4845887,
+      "address": "Via del Tritone, 61, 00187 Roma RM, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Biscottificio Antonio Mattei Museo Bottega a Firenze",
+      "lat": 43.770368999999995,
+      "lng": 11.2517924,
+      "address": "Via Porta Rossa, 76/r, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Eataly Firenze",
+      "lat": 43.7741141,
+      "lng": 11.2557072,
+      "address": "Via de' Martelli, 22R, 50122 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "La Bottega del Tartufo 2",
+      "lat": 43.7733754,
+      "lng": 11.253416,
+      "address": "Via de' Cerretani, 31/R, 50123 Firenze FI, 이탈리아",
+      "note": ""
+    },
+    {
+      "name": "Sapori \\u0026 Dintorni Conad",
+      "lat": 43.767232,
+      "lng": 11.253275,
+      "address": "Via de' Bardi, 45/47, 50125 Firenze FI, 이탈리아",
+      "note": "피렌체 쇼핑 (마트)"
+    },
+    {
+      "name": "SAPORI \\u0026 DINTORNI STORE",
+      "lat": 43.77477,
+      "lng": 11.254503999999999,
+      "address": "Borgo S. Lorenzo, 15/17, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 쇼핑 (마트)"
+    },
+    {
+      "name": "Conad City",
+      "lat": 43.776295,
+      "lng": 11.250074,
+      "address": "Largo Fratelli Alinari, 6/7, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 쇼핑 (식료품)"
+    },
+    {
+      "name": "Carrefour Express",
+      "lat": 43.7771884,
+      "lng": 11.240763099999999,
+      "address": "Via Il Prato, 72, 50123 Firenze FI, 이탈리아",
+      "note": "피렌체 쇼핑 (식료품)"
+    },
+    {
+      "name": "Paciotti Salumeria",
+      "lat": 41.9060424,
+      "lng": 12.446207399999999,
+      "address": "Via Marcantonio Bragadin, 51, 00136 Roma RM, 이탈리아",
+      "note": "로마 쇼핑 (식료품)"
+    },
+    {
+      "name": "Shopping Mall Porta di Roma",
+      "lat": 41.9718327,
+      "lng": 12.5402753,
+      "address": "Via Alberto Lionello, 201, 00139 Roma RM, 이탈리아",
+      "note": "로마 쇼핑 (대형쇼핑몰)"
+    },
+    {
+      "name": "Castroni",
+      "lat": 41.9073023,
+      "lng": 12.463173099999999,
+      "address": "Via Cola di Rienzo, 196/198, 00192 Roma RM, 이탈리아",
+      "note": "로마 쇼핑 (식료품)"
+    },
+    {
+      "name": "La Boutique del Limoncello Roma",
+      "lat": 41.8980769,
+      "lng": 12.471246599999999,
+      "address": "V. del Governo Vecchio, 94, 00186 Roma RM, 이탈리아",
+      "note": "로마 쇼핑 (리몬첼로)"
+    },
+    {
+      "name": "Giuliani Marrons Glacés e Cioccolatini",
+      "lat": 41.9101563,
+      "lng": 12.4628654,
+      "address": "Via Paolo Emilio, 67a, 00192 Roma RM, 이탈리아",
+      "note": "로마 쇼핑 (초콜릿)"
+    },
+    {
+      "name": "Tigre Supermarket",
+      "lat": 41.9011691,
+      "lng": 12.5039182,
+      "address": "Via Marsala, 35, 00185 Roma RM, 이탈리아",
+      "note": "로마 쇼핑 (마트)"
+    },
+    {
+      "name": "포르타 포르테제",
+      "lat": 41.8838643,
+      "lng": 12.474095199999999,
+      "address": "Piazza di Porta Portese, 00153 Roma RM, 이탈리아",
+      "note": "로마 쇼핑 (일요 벼룩시장)"
+    },
+    {
+      "name": "Brandy Melville - Rione Colonna",
+      "lat": 41.9041742,
+      "lng": 12.4807059,
+      "address": "Via Frattina, 109, 00187 Roma RM, 이탈리아",
+      "note": "로마 쇼핑"
+    },
+    {
+      "name": "Brandy Melville Roma",
+      "lat": 41.9050626,
+      "lng": 12.478378999999999,
+      "address": "Via del Corso, 435, 00187 Roma RM, 이탈리아",
+      "note": "로마 쇼핑"
+    },
+    {
+      "name": "Brandy Melville - Prati",
+      "lat": 41.908034199999996,
+      "lng": 12.4661726,
+      "address": "Via Cola di Rienzo, 136, 00197 Roma RM, 이탈리아",
+      "note": "로마 쇼핑"
+    },
+    {
+      "name": "로손 카타세카이간점",
+      "lat": 35.3081076,
+      "lng": 139.4849624,
+      "address": "1 Chome-13-18 Katasekaigan, Fujisawa, Kanagawa 251-0035 일본",
+      "note": ""
+    },
+    {
+      "name": "Fresh Store YAOMINE",
+      "lat": 35.3094974,
+      "lng": 139.4912076,
+      "address": "3 Chome-7-23 Koshigoe, Kamakura, Kanagawa 248-0033 일본",
+      "note": ""
+    },
+    {
+      "name": "메가 돈키호테 시부야본점",
+      "lat": 35.6603873,
+      "lng": 139.6978172,
+      "address": "28-6 Udagawacho, Shibuya City, Tokyo 154-0042 일본",
+      "note": ""
+    },
+    {
+      "name": "BILLY'S ENT OSAKA MINAMIHORIE",
+      "lat": 34.6712279,
+      "lng": 135.496249,
+      "address": "1 Chome-9-1 Minamihorie, Nishi Ward, Osaka, 550-0015 일본",
+      "note": ""
+    },
+    {
+      "name": "White Atelier by Converse",
+      "lat": 35.665412499999995,
+      "lng": 139.7038695,
+      "address": "일본 〒150-0001 Tokyo, Shibuya City, Jingumae, 6 Chome−16−5 HOLONⅢ 1階",
+      "note": ""
+    },
+    {
+      "name": "FREAK ' S STORE Umedarukuamenzuten",
+      "lat": 34.703074199999996,
+      "lng": 135.4957624,
+      "address": "일본 〒530-8217 Osaka, Kita Ward, Umeda, 3 Chome−1−3 7F LUCUA",
+      "note": ""
+    },
+    {
+      "name": "GU 신사이바시",
+      "lat": 34.6712548,
+      "lng": 135.501611,
+      "address": "2 Chome-1-17 Shinsaibashisuji, Chuo Ward, Osaka, 542-0085 일본",
+      "note": ""
+    },
+    {
+      "name": "kindal minamisenba second hand store",
+      "lat": 34.675789699999996,
+      "lng": 135.4978879,
+      "address": "일본 〒542-0081 Osaka, Chuo Ward, Minamisenba, 4 Chome−13−21 片山ビル 1-2階",
+      "note": ""
+    },
+    {
+      "name": "꼼데가르송",
+      "lat": 35.6672187,
+      "lng": 139.7069192,
+      "address": "5 Chome-10-1 Jingumae, 渋谷区 Shibuya City, Tokyo 150-0001 일본",
+      "note": ""
+    }
+  ]
+}

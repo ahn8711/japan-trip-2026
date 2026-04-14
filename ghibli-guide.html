@@ -87,7 +87,7 @@
   }
   .ticket-box ul { list-style: none; font-size: 14px; }
   .ticket-box li { padding: 3px 0; }
-  .ticket-box li::before { content: "✓ "; color: var(--accent); font-weight: 700; }
+  .ticket-box li::before { content: "\2713 "; color: var(--accent); font-weight: 700; }
 
   /* Section */
   .section {
@@ -298,6 +298,69 @@
   .sources ol { padding-left: 20px; }
   .sources li { padding: 1px 0; }
 
+  /* ===== INFOGRAPHIC THREE-COLUMN LAYOUT ===== */
+  .infographic {
+    display: grid;
+    grid-template-columns: 20% 1fr 20%;
+    gap: 8px;
+    margin: 16px -150px;
+    position: relative;
+  }
+  .info-left, .info-right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: space-around;
+  }
+  .info-center {
+    position: relative;
+  }
+  .info-center img.area-map {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+  }
+  .info-center svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  .spot-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 6px rgba(0,0,0,.12);
+    border: 2px solid #e8e5e0;
+  }
+  .spot-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+  .spot-card .sc-cap {
+    padding: 4px 8px;
+    font-size: 10px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .sc-num {
+    display: inline-flex;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
   /* Print button */
   .print-bar {
     position: fixed;
@@ -329,6 +392,23 @@
     .header h1 { font-size: 22px; }
     .section { page-break-inside: avoid; }
     .section-header { page-break-after: avoid; }
+    .infographic { margin: 12px 0; grid-template-columns: 18% 1fr 18%; break-inside: avoid; }
+  }
+
+  @media (max-width: 900px) {
+    .infographic {
+      grid-template-columns: 1fr;
+      margin: 16px 0;
+    }
+    .info-left, .info-right {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .info-left .spot-card, .info-right .spot-card {
+      width: calc(50% - 3px);
+    }
+    .info-center svg { display: none; }
   }
 
   @media (max-width: 600px) {
@@ -349,6 +429,24 @@
   <h1>지브리파크 완전 동선 가이드</h1>
   <div class="sub">2026년 4월 18일 (토) · 프리미엄 티켓 · 대창고 14시</div>
   <div class="badge">33개 출처 분석 기반 · 2026.04 최신</div>
+</div>
+
+<!-- Route Map -->
+<div class="section">
+  <div class="section-header">
+    <span class="section-time">동선</span>
+    <span class="section-title">공원 지도 + 방문 경로</span>
+  </div>
+  <div style="margin:0 auto 8px">
+    <img src="https://ghibli-park.jp/site/img/index/map.webp" alt="지브리파크 공식 지도" style="width:100%;border-radius:var(--r);display:block">
+  </div>
+  <!-- 범례 -->
+  <div style="display:flex;gap:16px;font-size:12px;color:var(--text2);margin:10px 0 4px;justify-content:center;flex-wrap:wrap;align-items:center">
+    <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:24px;height:3px;background:#1a73e8;border-radius:2px"></span> 오전 (야외)</span>
+    <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:24px;height:3px;background:#e07a2f;border-radius:2px"></span> 오후 (대창고)</span>
+    <span style="display:flex;align-items:center;gap:4px"><span style="display:inline-block;width:24px;height:3px;background:#1a73e8;border-radius:2px;border:none;background:repeating-linear-gradient(90deg,#1a73e8 0,#1a73e8 4px,transparent 4px,transparent 7px)"></span> 네코버스</span>
+    <span>총 약 3km</span>
+  </div>
 </div>
 
 <!-- Ticket -->
@@ -389,7 +487,7 @@
   </div>
 </div>
 
-<!-- 1. Witch Valley -->
+<!-- ① 마녀의 골짜기 -->
 <div class="section">
   <div class="section-header">
     <span class="section-time">09:00~10:30</span>
@@ -399,6 +497,107 @@
 
   <div class="tip-box">
     <strong>여기서 리스트밴드 수령!</strong> 첫 에리어 입장 시 QR 티켓 제시 → 리스트밴드 받음. 12시까지 필수.
+  </div>
+
+  <!-- INFOGRAPHIC: 마녀의 골짜기 — 3-column -->
+  <div class="infographic">
+    <!-- LEFT photos -->
+    <div class="info-left">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/majonotani/img01-1.jpg" alt="하울의 성">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">2</span>하울의 성</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/majonotani/img05.jpg" alt="마녀의 집">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">4</span>마녀의 집</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/majonotani/img12.jpg" alt="하늘을 나는 오븐">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">6</span>하늘을 나는 오븐 (점심)</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/majonotani/img14.jpg" alt="13인의 마녀단">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">7</span>13인의 마녀단 (기념품)</div>
+      </div>
+    </div>
+    <!-- CENTER map + SVG -->
+    <div class="info-center">
+      <img src="https://ghibli-park.jp/site/img/about/majonotani/map.webp" alt="마녀의 골짜기 상세 지도" class="area-map">
+      <svg viewBox="0 0 100 120" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none">
+        <!-- === 마녀의 골짜기: 실제 도로를 따라 전체 경로 === -->
+        <!-- 흰색 그림자 -->
+        <path d="M72 90 Q68 88,64 86 L60 84 Q58 83,56 82 L54 81 Q50 80,48 78 L45 76 Q42 74,40 72 L38 70 Q36 68,35 66 L34 64 Q33 62,32 60 L31 58 Q30 56,30 54 L30 52 Q30 50,31 48 L32 46 Q33 44,35 42 L37 40 Q38 38,38 36 L36 34 Q34 32,32 30 L30 28 Q28 26,26 24 L24 22 Q22 20,22 18
+          M26 24 Q28 22,30 20 L34 18 Q38 16,42 15 L48 14 Q52 13,56 14 L60 16 Q62 18,64 20
+          M32 30 Q34 28,36 27 L38 26 Q40 25,42 26 L44 28 Q46 30,47 32 L48 35 Q48 38,47 42 L46 46 Q44 50,42 54 L40 58 Q38 60,37 62 L36 64
+          M40 58 Q38 62,36 66 L34 70 Q32 74,30 76 L28 78 Q26 80,24 82 L22 84 Q20 86,20 88
+          M30 52 Q28 54,26 56 L24 58 Q22 60,20 62 L18 64 Q16 66,16 68
+          M47 32 Q50 34,52 36 L54 38 Q56 40,55 42 L53 44 Q50 46,48 48"
+          stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <!-- 입구 → 빵집 방면 (올라가는 메인 도로) -->
+        <path d="M72 90 Q68 88,64 86 L60 84 Q58 83,56 82 L54 81 Q50 80,48 78 L45 76 Q42 74,40 72 L38 70 Q36 68,35 66 L34 64 Q33 62,32 60 L31 58 Q30 56,30 54 L30 52 Q30 50,31 48 L32 46 Q33 44,35 42 L37 40"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 빵집 → 하울의 성 (좌상단 올라감) -->
+        <path d="M37 40 Q38 38,38 36 L36 34 Q34 32,32 30 L30 28 Q28 26,26 24 L24 22 Q22 20,22 18"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 하울 → 오키노 (상단 가로질러 우측으로) -->
+        <path d="M26 24 Q28 22,30 20 L34 18 Q38 16,42 15 L48 14 Q52 13,56 14 L60 16 Q62 18,64 20"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 마녀의 집 방면 (하울 근처에서 좌측) -->
+        <path d="M30 52 Q28 54,26 56 L24 58 Q22 60,20 62 L18 64 Q16 66,16 68"
+          stroke="#1a73e8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+        <!-- 호수 남쪽 돌아서 핫틴루프·메리고라운드 방면 -->
+        <path d="M32 30 Q34 28,36 27 L38 26 Q40 25,42 26 L44 28 Q46 30,47 32 L48 35 Q48 38,47 42 L46 46 Q44 50,42 54 L40 58 Q38 60,37 62 L36 64"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 핫틴루프 → 회전목마 부근 소로 -->
+        <path d="M47 32 Q50 34,52 36 L54 38 Q56 40,55 42 L53 44 Q50 46,48 48"
+          stroke="#1a73e8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+        <!-- 하늘을 나는 오븐 방면 (좌측 아래로 내려감) -->
+        <path d="M40 58 Q38 62,36 66 L34 70 Q32 74,30 76 L28 78 Q26 80,24 82 L22 84 Q20 86,20 88"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 13인의 마녀단 → 입구 부근 -->
+        <path d="M56 82 Q54 84,52 86 L50 88 Q48 90,46 90"
+          stroke="#1a73e8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+        <!-- ● 번호 마커 — 실제 건물 위치 -->
+        <circle cx="72" cy="90" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="72" y="92" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">入</text>
+        <circle cx="56" cy="82" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="56" y="84" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">1</text>
+        <circle cx="22" cy="18" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="22" y="20" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">2</text>
+        <circle cx="64" cy="20" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="64" y="22" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">3</text>
+        <circle cx="16" cy="68" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="16" y="70" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">4</text>
+        <circle cx="48" cy="48" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="48" y="50" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">5</text>
+        <circle cx="20" cy="88" r="3.5" fill="#e07a2f" stroke="#fff" stroke-width="1"/><text x="20" y="90" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">6</text>
+        <circle cx="46" cy="90" r="3.5" fill="#e07a2f" stroke="#fff" stroke-width="1"/><text x="46" y="92" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">7</text>
+        <!-- 연결선: SVG마커 → 사진 (Y좌표=사진 세로 위치) -->
+        <!-- 1빵집(56,82) → 우측 1번째 사진 -->
+        <line x1="56" y1="82" x2="100" y2="24" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <!-- 2하울(22,18) → 좌측 1번째 사진 -->
+        <line x1="22" y1="18" x2="0" y2="12" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <!-- 3오키노(64,20) → 우측 2번째 사진 -->
+        <line x1="64" y1="20" x2="100" y2="60" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <!-- 4마녀의집(16,68) → 좌측 3번째 사진 -->
+        <line x1="16" y1="68" x2="0" y2="60" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <!-- 5핫틴루프(48,48) → 우측 3번째 사진 -->
+        <line x1="48" y1="48" x2="100" y2="96" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <!-- 6오븐(20,88) → 좌측 4번째 사진 -->
+        <line x1="20" y1="88" x2="0" y2="84" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <!-- 7마녀단(46,90) → 좌측 5번째 사진 -->
+        <line x1="46" y1="90" x2="0" y2="108" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+      </svg>
+    </div>
+    <!-- RIGHT photos -->
+    <div class="info-right">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/majonotani/img03.jpg" alt="구치파네 빵집">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">1</span>구치파네 빵집</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/majonotani/img02.jpg" alt="오키노 저택">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">3</span>오키노 저택</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/majonotani/img13-2.jpg" alt="핫틴루프">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">5</span>핫틴루프</div>
+      </div>
+    </div>
   </div>
 
   <div class="timeline">
@@ -425,13 +624,69 @@
   </div>
 </div>
 
-<!-- 2. Lunch -->
+<!-- ② 청춘의 언덕 -->
 <div class="section">
   <div class="section-header">
     <span class="section-time">10:30~11:00</span>
     <span class="section-title">🏠 청춘의 언덕</span>
     <span class="section-duration">약 30분</span>
   </div>
+
+  <!-- INFOGRAPHIC: 청춘의 언덕 — 3-column -->
+  <div class="infographic">
+    <!-- LEFT photos -->
+    <div class="info-left">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/seishunnooka/img01.jpg" alt="엘리베이터 탑">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">1</span>엘리베이터 탑</div>
+      </div>
+    </div>
+    <!-- CENTER map + SVG -->
+    <div class="info-center">
+      <img src="https://ghibli-park.jp/site/img/about/seishunnooka/map.webp" alt="청춘의 언덕 상세 지도" class="area-map">
+      <svg viewBox="0 0 100 75" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none">
+        <!-- === 청춘의 언덕: 다리→입구→엘리베이터탑→로터리→지구야→고양이사무소 === -->
+        <!-- 흰색 그림자 -->
+        <path d="M42 62 Q40 60,40 58 L40 56 Q41 54,42 52 L44 50 Q45 48,46 46 L46 44 Q46 42,44 40 L42 38 Q38 36,34 35 L30 34 Q28 34,26 36 L24 38 Q22 40,22 42 L22 44 Q22 46,24 48 L26 50 Q28 52,30 54 L28 56
+          M44 40 Q46 38,48 37 L50 36 Q52 36,54 37 L56 38 Q60 40,64 42 L66 44 Q68 46,70 48
+          M56 38 Q58 36,60 34 L62 32 Q64 30,66 28 L68 26"
+          stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <!-- 빨간 다리에서 입구로 올라오는 길 -->
+        <path d="M42 62 Q40 60,40 58 L40 56 Q41 54,42 52 L44 50 Q45 48,46 46"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 입구 → 좌측 엘리베이터 탑으로 내려가는 구불길 -->
+        <path d="M46 46 Q46 44,44 40 L42 38 Q38 36,34 35 L30 34 Q28 34,26 36 L24 38 Q22 40,22 42 L22 44 Q22 46,24 48 L26 50 Q28 52,30 54 L28 56"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 입구 → 우측 로터리 → 지구야 -->
+        <path d="M44 40 Q46 38,48 37 L50 36 Q52 36,54 37 L56 38 Q60 40,64 42 L66 44 Q68 46,70 48"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 지구야 뒤편 → 고양이 사무소 올라가는 길 -->
+        <path d="M56 38 Q58 36,60 34 L62 32 Q64 30,66 28 L68 26"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ● 번호 마커 -->
+        <circle cx="42" cy="62" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="42" y="64" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">入</text>
+        <circle cx="26" cy="50" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="26" y="52" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">1</text>
+        <circle cx="70" cy="48" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="70" y="50" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">2</text>
+        <circle cx="68" cy="26" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="68" y="28" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">3</text>
+        <!-- 연결선: 1엘리베이터→좌1, 2지구야→우1, 3고양이→우2 -->
+        <line x1="26" y1="50" x2="0" y2="38" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="70" y1="48" x2="100" y2="25" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="68" y1="26" x2="100" y2="55" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+      </svg>
+    </div>
+    <!-- RIGHT photos -->
+    <div class="info-right">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/seishunnooka/img02.jpg" alt="지구야">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">2</span>지구야</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/seishunnooka/img03.jpg" alt="고양이 사무소">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">3</span>고양이 사무소</div>
+      </div>
+    </div>
+  </div>
+
   <div class="timeline">
     <div class="tl-item">
       <div><span class="tl-time">10:30</span> <span class="tl-title">마녀의 골짜기 → 청춘의 언덕 이동</span></div>
@@ -444,6 +699,7 @@
   </div>
 </div>
 
+<!-- 점심 -->
 <div class="section">
   <div class="section-header">
     <span class="section-time">11:00~11:45</span>
@@ -467,13 +723,63 @@
   </div>
 </div>
 
-<!-- 3. Mononoke -->
+<!-- ③ 모노노케의 마을 -->
 <div class="section">
   <div class="section-header">
     <span class="section-time">11:45~12:30</span>
     <span class="section-title">👹 모노노케의 마을</span>
     <span class="section-duration">약 45분</span>
   </div>
+
+  <!-- INFOGRAPHIC: 모노노케의 마을 — 3-column -->
+  <div class="infographic">
+    <!-- LEFT (empty) -->
+    <div class="info-left"></div>
+    <!-- CENTER map + SVG -->
+    <div class="info-center">
+      <img src="https://ghibli-park.jp/site/img/about/mononoke/map.webp" alt="모노노케의 마을 상세 지도" class="area-map">
+      <svg viewBox="0 0 100 65" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none">
+        <!-- === 모노노케: 입구→밭사이길→타타리가미→타타라바→옷코토누시→체험동 === -->
+        <!-- 흰색 그림자 -->
+        <path d="M56 58 Q52 56,48 54 L44 52 Q42 50,40 48 L38 46 Q36 44,34 42 L32 40 Q30 38,28 36 L26 34 Q24 32,22 30 L20 28 Q18 26,18 24 L18 22 Q18 20,20 18
+          M34 42 Q36 40,38 38 L40 36 Q42 34,43 32 L44 30 Q45 28,44 26
+          M20 22 Q18 24,16 28 L14 32 Q12 36,10 42 L10 48 Q10 52,12 54"
+          stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <!-- 입구에서 밭 사이로 올라가는 메인 길 -->
+        <path d="M56 58 Q52 56,48 54 L44 52 Q42 50,40 48 L38 46 Q36 44,34 42 L32 40 Q30 38,28 36 L26 34 Q24 32,22 30 L20 28 Q18 26,18 24 L18 22 Q18 20,20 18"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 갈래길: 옷코토누시 미끄럼틀 방면 -->
+        <path d="M34 42 Q36 40,38 38 L40 36 Q42 34,43 32 L44 30 Q45 28,44 26"
+          stroke="#1a73e8" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 타타라바에서 좌측 체험동으로 내려가는 길 -->
+        <path d="M20 22 Q18 24,16 28 L14 32 Q12 36,10 42 L10 48 Q10 52,12 54"
+          stroke="#1a73e8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+        <!-- 옷코토누시에서 타타리가미 주변 소로 -->
+        <path d="M44 26 Q46 28,48 30 L50 32 Q52 34,50 36"
+          stroke="#1a73e8" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <!-- ● 번호 마커 -->
+        <circle cx="56" cy="58" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="56" y="60" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">入</text>
+        <circle cx="20" cy="18" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="20" y="20" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">1</text>
+        <circle cx="44" cy="26" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="44" y="28" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">2</text>
+        <circle cx="12" cy="54" r="3.5" fill="#1a73e8" stroke="#fff" stroke-width="1"/><text x="12" y="56" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">3</text>
+        <!-- 연결선: 1타타라바→우1, 2옷코토→우2 -->
+        <line x1="20" y1="18" x2="100" y2="22" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="44" y1="26" x2="100" y2="48" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+      </svg>
+    </div>
+    <!-- RIGHT photos -->
+    <div class="info-right">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/mononoke/img01.jpg" alt="타타라바">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">1</span>타타라바</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/mononoke/img03.jpg" alt="옷코토누시">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">2</span>옷코토누시 미끄럼틀</div>
+      </div>
+    </div>
+  </div>
+
   <div class="timeline">
     <div class="tl-item">
       <div><span class="tl-time">11:45</span> <span class="tl-title">마녀의 골짜기 → 모노노케 이동</span></div>
@@ -486,13 +792,68 @@
   </div>
 </div>
 
-<!-- 4. Dondoko -->
+<!-- ④ 돈도코 숲 -->
 <div class="section">
   <div class="section-header">
     <span class="section-time">12:30~13:30</span>
     <span class="section-title">🌳 돈도코 숲</span>
     <span class="section-duration">약 1시간</span>
   </div>
+
+  <!-- INFOGRAPHIC: 돈도코 숲 — 3-column -->
+  <div class="infographic">
+    <!-- LEFT photos -->
+    <div class="info-left">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/dondokomori/img04.jpg" alt="슬로프카">
+        <div class="sc-cap"><span class="sc-num" style="background:#16a34a">🚃</span>슬로프카 (이동수단)</div>
+      </div>
+    </div>
+    <!-- CENTER map + SVG -->
+    <div class="info-center">
+      <img src="https://ghibli-park.jp/site/img/about/dondokomori/map.webp" alt="돈도코 숲 상세 지도" class="area-map">
+      <svg viewBox="0 0 100 55">
+        <!-- Slope car track (straight diagonal) -->
+        <path d="M12 48 L14 44 Q16 40,18 36 L20 32 Q22 28,24 25 L26 22"
+          stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity=".5"/>
+        <path d="M12 48 L14 44 Q16 40,18 36 L20 32 Q22 28,24 25 L26 22"
+          stroke="#16a34a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity=".8" stroke-dasharray="4,3"/>
+        <!-- Walking path from slope car top to Mei's house -->
+        <path d="M26 22 Q28 20,30 19 L34 18 Q38 17,42 18 L46 20 Q50 22,52 24 L54 26 Q56 28,55 30"
+          stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <path d="M26 22 Q28 20,30 19 L34 18 Q38 17,42 18 L46 20 Q50 22,52 24 L54 26 Q56 28,55 30"
+          stroke="#1a73e8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- Mountain path from Mei's house up to Dondoko-do -->
+        <path d="M55 30 Q56 28,58 26 L60 24 Q62 22,64 20 L66 18 Q68 16,70 14 L72 12 Q74 10,73 8"
+          stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <path d="M55 30 Q56 28,58 26 L60 24 Q62 22,64 20 L66 18 Q68 16,70 14 L72 12 Q74 10,73 8"
+          stroke="#1a73e8" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- Path continuing down east side back towards entrance area -->
+        <path d="M55 30 Q54 34,52 38 L50 42 Q48 44,46 46 L44 48 Q42 50,40 50 L38 50 Q36 50,34 48"
+          stroke="#1a73e8" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5" stroke-dasharray="3,2"/>
+        <circle cx="12" cy="48" r="3" fill="#16a34a"/><text x="12" y="50" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">入</text>
+        <circle cx="26" cy="22" r="2.5" fill="#16a34a"/><text x="26" y="24" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">&#x1F683;</text>
+        <circle cx="55" cy="30" r="3" fill="#1a73e8"/><text x="55" y="32" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">1</text>
+        <circle cx="73" cy="8" r="3" fill="#1a73e8"/><text x="73" y="10" font-size="4" fill="#fff" text-anchor="middle" font-weight="800">2</text>
+        <!-- 슬로프카→좌1, 1메이의집→우1, 2돈도코도→우2 -->
+        <line x1="12" y1="48" x2="0" y2="28" stroke="#16a34a" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="55" y1="30" x2="100" y2="18" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="73" y1="8" x2="100" y2="42" stroke="#1a73e8" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+      </svg>
+    </div>
+    <!-- RIGHT photos -->
+    <div class="info-right">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/dondokomori/img01.jpg" alt="메이의 집">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">1</span>사츠키와 메이의 집</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/dondokomori/img02.jpg" alt="돈도코도">
+        <div class="sc-cap"><span class="sc-num" style="background:#1a73e8">2</span>돈도코도 (토토로)</div>
+      </div>
+    </div>
+  </div>
+
   <div class="timeline">
     <div class="tl-item">
       <div><span class="tl-time">12:30</span> <span class="tl-title">모노노케 → 돈도코 숲 이동</span></div>
@@ -523,7 +884,7 @@
   </div>
 </div>
 
-<!-- 5. Grand Warehouse -->
+<!-- ⑤ 대창고 -->
 <div class="section">
   <div class="section-header">
     <span class="section-time">14:20~16:30</span>
@@ -537,6 +898,111 @@
 
   <div class="tip-box">
     <strong>2025.12 대규모 리뉴얼 완료!</strong> 새로 추가: 그대들은 어떻게 살 것인가(소년과 왜가리), 이웃의 야마다군, On Your Mark. 장면 교체: 붉은 돼지, 추억은 방울방울, 가구야 공주. 포르코 로소 비행기(Savoia S-21) 실물 크기 전시. 성인도 고양이버스룸 입장 가능(촬영 금지).
+  </div>
+
+  <!-- INFOGRAPHIC: 대창고 — 3-column -->
+  <div class="infographic">
+    <!-- LEFT photos -->
+    <div class="info-left">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/item01-2.jpg" alt="나리키리 포토존">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">1</span>포토존</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/img15.jpg" alt="기념품샵">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">2</span>기념품샵</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/img33.jpg" alt="카페 대륙횡단비행">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">3</span>카페 대륙횡단비행</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/img16.jpg" alt="밀크스탠드">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">8</span>밀크스탠드</div>
+      </div>
+    </div>
+    <!-- CENTER map + SVG -->
+    <div class="info-center">
+      <img src="https://ghibli-park.jp/site/img/about/daisouko/map.webp?20231201" alt="대창고 플로어맵" class="area-map">
+      <svg viewBox="0 0 100 75" style="position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none">
+        <!-- === 대창고: 입구→①명장면전→②기념품→③카페→④로봇→⑤유바바→⑥고양이버스→⑦아리에티→⑧밀크스탠드 === -->
+        <!-- 흰색 그림자 -->
+        <path d="M8 70 Q10 66,14 62 L18 58 Q22 56,22 54
+          M22 54 Q24 50,28 46 L32 42 Q36 38,40 34 L45 28
+          M45 28 Q42 30,38 34 L34 38 Q28 42,22 46 L20 48
+          M45 28 Q42 32,38 36 L36 40 Q34 44,34 48 L35 52 Q36 56,38 60 L38 64 Q38 66,38 68
+          M45 28 Q50 26,55 24 L60 22 Q65 20,70 18 L75 15
+          M60 22 Q58 18,56 14 L55 10
+          M65 20 Q68 24,70 28 L72 32 Q73 36,72 40 L70 44
+          M70 44 Q72 46,74 48 L72 52"
+          stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".5"/>
+        <!-- 입구 → 중앙계단 올라감 -->
+        <path d="M8 70 Q10 66,14 62 L18 58 Q22 56,22 54"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- 중앙계단 → ①명장면전 (빨간건물 뒤쪽 상단으로) -->
+        <path d="M22 54 Q24 50,28 46 L32 42 Q36 38,40 34 L45 28"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ①명장면전 → ②기념품샵 (좌측으로 내려감) -->
+        <path d="M45 28 Q42 30,38 34 L34 38 Q28 42,22 46 L20 48"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ②기념품샵 → ③카페 (아래 미나미마치로) -->
+        <path d="M20 48 Q22 52,26 56 L30 60 Q34 64,38 68"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ③카페 → ④로봇병사 (우상단으로 크게 이동) -->
+        <path d="M38 68 Q38 64,36 58 L34 52 Q34 46,36 40 L40 34 L45 28 Q50 26,55 24 L60 22 Q65 20,70 18 L75 15"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ④로봇 → ⑤유바바 (상단 좌측으로) -->
+        <path d="M75 15 Q70 14,65 12 L60 11 Q57 10,55 10"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ⑤유바바 → ⑥고양이버스 (우측 아래로) -->
+        <path d="M55 10 Q58 14,60 18 L62 22 Q64 26,65 30 L66 35"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ⑥고양이 → ⑦아리에티 (우측 더 아래) -->
+        <path d="M66 35 Q68 38,70 42 L72 46"
+          stroke="#e07a2f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".8"/>
+        <!-- ⑦아리에티 → ⑧밀크스탠드 (좌하단 미나미마치로 복귀) -->
+        <path d="M72 46 Q68 50,62 54 L56 58 Q48 62,42 64 L36 66 Q32 66,32 64"
+          stroke="#e07a2f" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity=".6" stroke-dasharray="3,2"/>
+        <!-- ● 번호 마커 — 지도에서 확인한 실제 건물 위치 -->
+        <circle cx="8" cy="70" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="8" y="72" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">入</text>
+        <circle cx="45" cy="28" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="45" y="30" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">1</text>
+        <circle cx="20" cy="48" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="20" y="50" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">2</text>
+        <circle cx="38" cy="68" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="38" y="70" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">3</text>
+        <circle cx="75" cy="15" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="75" y="17" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">4</text>
+        <circle cx="55" cy="10" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="55" y="12" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">5</text>
+        <circle cx="66" cy="35" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="66" y="37" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">6</text>
+        <circle cx="72" cy="46" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="72" y="48" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">7</text>
+        <circle cx="32" cy="64" r="2.8" fill="#e07a2f" stroke="#fff" stroke-width=".8"/><text x="32" y="66" font-size="3.5" fill="#fff" text-anchor="middle" font-weight="800">8</text>
+        <!-- 연결선: 좌 1포토존(0,10), 2기념품(0,30), 3카페(0,50), 8밀크(0,70) / 우 4로봇(100,10), 5유바바(100,30), 6고양이(100,50), 7아리에티(100,70) -->
+        <line x1="45" y1="28" x2="0" y2="10" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="20" y1="48" x2="0" y2="30" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="38" y1="68" x2="0" y2="50" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="32" y1="64" x2="0" y2="70" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="75" y1="15" x2="100" y2="10" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="55" y1="10" x2="100" y2="30" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="66" y1="35" x2="100" y2="50" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+        <line x1="72" y1="46" x2="100" y2="70" stroke="#e07a2f" stroke-width=".5" stroke-dasharray="2,2" opacity=".35"/>
+      </svg>
+    </div>
+    <!-- RIGHT photos -->
+    <div class="info-right">
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/img31.jpg" alt="로봇 병사">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">4</span>로봇 병사</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/img30.jpg" alt="유바바">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">5</span>유바바</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/img03-1.jpg" alt="고양이버스">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">6</span>고양이버스</div>
+      </div>
+      <div class="spot-card">
+        <img src="https://ghibli-park.jp/site/img/about/daisouko/img33.jpg" alt="아리에티">
+        <div class="sc-cap"><span class="sc-num" style="background:#e07a2f">7</span>아리에티</div>
+      </div>
+    </div>
   </div>
 
   <h4 style="font-size:14px;margin:16px 0 8px;color:var(--accent)">대창고 내부 순서 (우선순위 순)</h4>

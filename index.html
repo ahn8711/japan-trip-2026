@@ -195,7 +195,8 @@ const DAYS=[
   {d:'2026-04-17',s:'4/17',l:'금',t:'4월 17일 (금)',desc:'유니버셜 스튜디오'},
   {d:'2026-04-18',s:'4/18',l:'토',t:'4월 18일 (토)',desc:'지브리파크'},
   {d:'2026-04-19',s:'4/19',l:'일',t:'4월 19일 (일)',desc:'자유일정 · 쇼핑'},
-  {d:'2026-04-20',s:'4/20',l:'월',t:'4월 20일 (월)',desc:'귀국'}
+  {d:'2026-04-20',s:'4/20',l:'월',t:'4월 20일 (월)',desc:'귀국'},
+  {d:'insurance',s:'보험',l:'🛡️',t:'여행자보험',desc:'카카오페이 해외여행보험'}
 ];
 
 // 카테고리 → 상위 그룹 매핑
@@ -234,6 +235,55 @@ function go(d){cur=d;filt='all';renderTabs();render()}
 
 function render(){
   const P=document.getElementById('panel'),day=DAYS.find(x=>x.d===cur),sch=DATA.schedule[cur],places=dayPlaces(cur);
+
+  // 보험 탭
+  if(cur==='insurance'){
+    P.innerHTML=`<div class="day-head"><h2>🛡️ 여행자보험</h2><span class="label">카카오페이 해외여행보험</span></div>
+<div class="special" style="background:linear-gradient(135deg,#1a1a2e,#16213e)">
+<h3>보험 개요</h3>
+<div><strong>증권번호</strong> FA20260000562660</div>
+<div><strong>보험기간</strong> 4/16 02:00 ~ 4/20 18:00</div>
+<div><strong>총 보험료</strong> 66,190원 (4인)</div>
+<div><strong>여행국가</strong> 일본</div>
+</div>
+<div style="font-size:13px;font-weight:600;color:var(--text2);margin:12px 0 6px">👥 인원별 보험료</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px">
+<div class="accom" style="padding:12px 16px"><strong>안기환</strong><div style="font-size:13px;color:var(--text2)">17,261원</div></div>
+<div class="accom" style="padding:12px 16px"><strong>천새롬</strong><div style="font-size:13px;color:var(--text2)">17,046원</div></div>
+<div class="accom" style="padding:12px 16px"><strong>김효진</strong><div style="font-size:13px;color:var(--text2)">16,887원</div></div>
+<div class="accom" style="padding:12px 16px"><strong>이예진</strong><div style="font-size:13px;color:var(--text2)">14,996원</div></div>
+</div>
+<div style="font-size:13px;font-weight:600;color:var(--text2);margin:12px 0 6px">📋 공통 보장 내용 (4인 동일)</div>
+<div class="accom"><dl class="accom-grid">
+<dt>해외 상해 의료비</dt><dd><strong>1억원</strong></dd>
+<dt>해외 질병 의료비</dt><dd><strong>1억원</strong></dd>
+<dt>중대사고 구조/송환</dt><dd>1억원 (입원 14일 이상)</dd>
+<dt>휴대물품 손해</dt><dd>200만원 (1개당 20만원, 분실 제외)</dd>
+<dt>배상책임</dt><dd>5,000만원 (자기부담 1만원)</dd>
+<dt>자택 도난 손해</dt><dd>100만원</dd>
+<dt>항공기 지연 (출국)</dt><dd>10만원 (2시간 이상)</dd>
+<dt>항공기 지연 (귀국)</dt><dd>20만원 (2시간 이상)</dd>
+<dt>수하물/경유편 지연</dt><dd>30만원 (4시간 이상)</dd>
+<dt>식중독 입원</dt><dd>30만원 (2일 이상)</dd>
+<dt>특정전염병 감염</dt><dd>30만원</dd>
+<dt>항공기 납치</dt><dd>140만원</dd>
+<dt>여권 재발급</dt><dd>가입</dd>
+<dt>중단사고 귀국 추가비용</dt><dd>30만원</dd>
+<dt>국내 상해/질병 의료비</dt><dd>각 1,000만원 (급여+비급여)</dd>
+<dt>안전귀국 환급</dt><dd>사고 없으면 보험료 일부 환급</dd>
+</dl></div>
+<div style="font-size:13px;font-weight:600;color:var(--text2);margin:12px 0 6px">⚠️ 안기환만 추가 보장</div>
+<div class="accom"><dl class="accom-grid">
+<dt>해외 상해사망</dt><dd>1억원</dd>
+<dt>질병사망 및 80% 이상 고도후유장해</dt><dd>3,000만원</dd>
+</dl></div>
+<div style="margin-top:16px;text-align:center"><a href="해외여행자보험_카카오페이손해보험.pdf" download style="display:inline-block;padding:12px 24px;background:var(--accent);color:#fff;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none">📄 보험증권 PDF 다운로드</a><div style="font-size:11px;color:var(--text2);margin-top:6px">비밀번호: 생년월일 6자리</div></div>`;
+    // 지도 숨기기
+    document.getElementById('mapWrap').style.display='none';
+    return;
+  }
+  document.getElementById('mapWrap').style.display='';
+
   let h=`<div class="day-head"><h2>${day.t}</h2><span class="label">${day.desc}</span></div>`;
 
   if(sch?.flight){const f=sch.flight;h+=`<div class="flight"><div class="flight-route"><div class="flight-city"><div class="city">${f.from}</div><div class="time">${f.dep}</div></div><div class="flight-line"><span class="plane">&#9992;</span></div><div class="flight-city"><div class="city">${f.to}</div><div class="time">${f.arr}</div></div></div><div class="flight-code">${f.code} · Asiana Airlines · Direct</div></div>`}

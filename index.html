@@ -280,9 +280,11 @@ function render(){
 <div style="margin-top:16px;text-align:center"><a href="해외여행자보험_카카오페이손해보험.pdf" download style="display:inline-block;padding:12px 24px;background:var(--accent);color:#fff;border-radius:8px;font-size:14px;font-weight:700;text-decoration:none">📄 보험증권 PDF 다운로드</a><div style="font-size:11px;color:var(--text2);margin-top:6px">비밀번호: 생년월일 6자리</div></div>`;
     // 지도 숨기기
     document.getElementById('mapWrap').style.display='none';
+    document.querySelector('.main').style.paddingRight='24px';
     return;
   }
   document.getElementById('mapWrap').style.display='';
+  document.querySelector('.main').style.paddingRight='';
 
   let h=`<div class="day-head"><h2>${day.t}</h2><span class="label">${day.desc}</span></div>`;
 
